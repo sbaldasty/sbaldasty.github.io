@@ -10,7 +10,7 @@ Good museums invite curiosity, wonder, and inspiration. They recall to memory lo
 
 You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
 
-![Typewriters](typewriters.jpg)
+![](typewriters.jpg)
 _**Typewriters.** My parents pose in front of a wall of typewriters. I used to write school papers on something very similar to these when I was a kid._
 
 I had a special reason to look forward to exploring this particular museum. I recently took a super interesting [class about information theory](https://www.uvm.edu/courses/ee_272) at the University of Vermont. Information theory considers (in the absense of any meaning that information may have) how we might measure it's quantity, store or trasmit it efficiently, and do so in a way that protects it from corruption.
@@ -31,19 +31,19 @@ The book tells the story of humanity's evolving dance with information and its t
 
 - How Claude Shannon and other brilliant thinkers like Andrei Kolmogorov formalized information theory, and laid the foundations for modern electronic communication.
 
-Among the final ideas in the book is, when information is difficult to access it is expensive; but when information is easily accessed then attention becomes expensive.
+Among the final ideas in the book is, when information is scarce and difficult to access it is expensive; but when information is plentiful and easy to access then attention is expensive.
 
-![Old Bibles](old-bibles.jpg)
+![](old-bibles.jpg)
 _**Old Bibles.** The museum has a whole room for Bibles. There was also a picture of the Serpent tempting Eve, in the process of swallowing a fruit far bigger than its mouth, as if it were a large tranquillized rodent. Was it just trying to demonstrate that the fruit was safe, or did it actually enjoy eating it?_
 
-![Printing presses](printing-presses.jpg)
+![](printing-presses.jpg)
 _**Printing presses.** The museum has mechanical printing presses from many eras. The basic idea was to cover raised writing in ink and press it onto a page. OSHA would likely take issue with most of these designs, if we still used them today._
 
-![Printing my name](printing-my-name.jpg)
+![](printing-my-name.jpg)
 _**Printing my name.** One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!_
 
-![Color printer](color-printer.jpg)
+![](color-printer.jpg)
 _**Color printer.** An early electronic device for doing color printing at scale. More modern devicecs are shown nearby to illustrate miniaturization._
 
-![Old computers](old-computers.jpg)
+![](old-computers.jpg)
 _**Old computers.** These bring back memories, they are artifacts from my living past. Machines like these taught me the love of programming and inspired me down the path I took in life._
