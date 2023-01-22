@@ -8,7 +8,7 @@ Good museums invite curiosity, wonder, and inspiration. They recall to memory lo
 
 > The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
 
-You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thransgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
+You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
 
 ![Typewriters](typewriters.jpg)
 _**Typewriters.** My parents pose in front of a wall of typewriters. I used to write school papers on something very similar to these when I was a kid._
