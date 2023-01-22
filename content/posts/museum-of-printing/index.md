@@ -1,7 +1,7 @@
 ---
 title: "Museum of Printing"
+author: "Steven Baldasty"
 date: 2023-01-19
-draft: false
 ---
 
 Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
@@ -15,7 +15,7 @@ _**Typewriters.** My parents pose in front of a wall of typewriters. I used to w
 
 I had a special reason to look forward to exploring this particular museum. I recently took a super interesting [class about information theory](https://www.uvm.edu/courses/ee_272) at the University of Vermont. Information theory considers (in the absense of any meaning that information may have) how we might measure it's quantity, store or trasmit it efficiently, and do so in a way that protects it from corruption.
 
-Information Theory was first and foremost a technical math oriented class. I will write more about it later because it easily ranks among my favorites topics in school so far, but I mention it here because its supplementary readings featured a [phenomenal less technical book](https://www.amazon.com/Information-History-Theory-Flood/dp/1400096235) called *The Information: A History, A Theory, A Flood*.
+Information Theory was first and foremost a technical math oriented class. I will write more about it later because it easily ranks among my favorites topics in school so far, but I mention it here because its supplementary readings included a [phenomenal less technical book](https://www.amazon.com/Information-History-Theory-Flood/dp/1400096235) called *The Information: A History, A Theory, A Flood*.
 
 The book tells the story of humanity's evolving dance with information and its transmission, from ancient history to the present day. It details the profound societal changes that happened each step along the way, and how it affected the thinking of everyday people. Well naturally the printing technologies and  artifacts on display at the Museum of Printing bring to life a large important swath of that story! But countless other less related highlights include
 
