@@ -1,0 +1,84 @@
+.page {
+    margin: auto;
+    max-width: 1200px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.site-header {
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: larger;
+    padding: 10px;
+}
+
+.breadcrumb-trail {
+    font-size: small;
+    margin: 5px 10px 20px;
+}
+
+main {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+article {
+    flex: 1;
+    min-width: 260px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar {
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    display: flex;
+    flex: row;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 250px;
+    padding: 18px;
+    width: 250px;
+}
+
+/* TODO This should not be in framework */
+
+.sidebar hr {
+    width: 100%;
+}
+
+.sidebar-header {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.selfie {
+    height: 80px;
+    width: 80px;
+}
+
+.selfie img {
+    border-radius: 5px;
+}
+
+.my-nametag {
+    font-size: small;
+}
+
+.my-name {
+    font-size: x-large;
+}
+
+.bio {
+    color: #404040;
+    font-style: italic;
+    text-align: center;
+}
