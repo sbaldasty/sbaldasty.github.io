@@ -7,6 +7,7 @@
 - Style blog index
 - Social media links
 - Rip out ananke theme remnants
+- Learn about px versus pt, etc.
 
 ## Done
 
