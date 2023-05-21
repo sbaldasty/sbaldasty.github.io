@@ -82,3 +82,12 @@ article {
     font-style: italic;
     text-align: center;
 }
+
+.social-media {
+    text-align: center;
+}
+
+.social-media img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
