@@ -1,6 +1,5 @@
 ## Backlog
 
-- Split out "about" stylesheet
 - Add styling for post index
 - Format post dates to post index
 - Figure out why page widths differ slightly
@@ -24,3 +23,4 @@
 - Figure out home and blog index page names
 - Switch from yaml to toml for all configuration
 - Use summaries for post listings
+- Split out "about" stylesheet

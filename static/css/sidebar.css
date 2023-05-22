@@ -1,0 +1,43 @@
+.sidebar hr {
+    width: 100%;
+}
+
+.sidebar-header {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.selfie {
+    height: 80px;
+    width: 80px;
+}
+
+.selfie img {
+    border-radius: 5px;
+}
+
+.my-nametag {
+    font-size: small;
+}
+
+.my-name {
+    font-size: x-large;
+}
+
+.bio {
+    color: #404040;
+    font-style: italic;
+    text-align: center;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
