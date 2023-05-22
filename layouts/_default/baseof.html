@@ -20,7 +20,12 @@
       <div class="site-header">
         Unwritten Document
       </div>
-      {{ partial "breadcrumbs.html" . }}
+      <div class="breadcrumb-trail">
+        {{- range .Ancestors.Reverse }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
+        {{- end }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
+      </div>
       <main>
         <article>
           {{ block "main" . }}{{ end }}
