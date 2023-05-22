@@ -1,9 +1,13 @@
 ## Backlog
 
+- Split out "about" stylesheet
+- Add styling for post index
+- Format post dates to post index
 - Figure out why page widths differ slightly
 - Image partials for posts
+- Write discussion for post index
+- Write post summaries
 - Write homepage
-- Use summaries for post listings
 - Add styling for page titles
 - Move blog index out of homepage
 - Style blog index
@@ -19,3 +23,4 @@
 - Resolve breadcrumb issue on GitHub Actions
 - Figure out home and blog index page names
 - Switch from yaml to toml for all configuration
+- Use summaries for post listings
