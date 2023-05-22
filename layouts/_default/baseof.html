@@ -35,9 +35,7 @@
       <div class="site-header">
         Unwritten Document
       </div>
-      <div class="breadcrumb-trail">
-        Breadcrumb trail coming soon...
-      </div>
+      {{ partial "breadcrumbs.html" . }}
       <main>
         <article>
           {{ block "main" . }}{{ end }}
