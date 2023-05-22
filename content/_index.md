@@ -1,8 +1,8 @@
----
-title: "Home"
-author: "Steven Baldasty"
-layout: "single"
----
++++
+title = 'Home'
+author = 'Steven Baldasty'
+layout = 'single'
++++
 
 Content coming soon...
 
