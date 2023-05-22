@@ -2,9 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
-    {{ $public := not .Params.private }}
     <meta name="robots" content="index, follow">
     
     {{ block "favicon" . }}
@@ -13,6 +10,7 @@
 
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/sidebar.css">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
   </head>
 
   <body>
