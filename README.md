@@ -17,3 +17,4 @@
 - Figure out relative links to images
 - Social media links
 - Figure out breadcrumb trail
+- Resolve breadcrumb issue on GitHub Actions
