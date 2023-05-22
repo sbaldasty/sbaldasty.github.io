@@ -3,16 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
-    
-    {{ block "favicon" . }}
-      {{ partialCached "site-favicon.html" . }}
-    {{ end }}
-
     <link rel="stylesheet" href="/css/site.css">
     <link rel="stylesheet" href="/css/sidebar.css">
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
   </head>
-
   <body>
     <div class="page">
       <div class="site-header">
