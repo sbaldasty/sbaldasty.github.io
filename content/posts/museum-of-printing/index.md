@@ -2,6 +2,7 @@
 title = 'Museum of Printing'
 author = 'Steven Baldasty'
 date = 2023-01-19
+summary = 'Summary of museum of printing coming soon...'
 +++
 
 Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
