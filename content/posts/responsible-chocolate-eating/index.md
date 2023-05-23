@@ -1,9 +1,9 @@
-+++
-title = 'Responsible Chocolate Eating'
-date = 2023-01-16
-author = 'Steven Baldasty'
-summary = 'Summary of responsible chocolate eating coming soon...'
-+++
+---
+title: 'Responsible Chocolate Eating'
+date: 2023-01-16
+author: 'Steven Baldasty'
+summary: 'Managing junk food intake with a time release lock'
+---
 
 Commitment devices are tricks we can use to limit what choices we will have later. They can help us reach our goals when we think our willpower may fail. I wanted to share about a particular commitment device I use, because it works well for me and many people haven't heard of it.
 

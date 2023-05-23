@@ -4,15 +4,12 @@
 - Figure out why page widths differ slightly
 - Image partials for posts
 - Write discussion for post index
-- Write post summaries
 - Write homepage
 - Add styling for page titles
-- Move blog index out of homepage
-- Style blog index
 - Rip out ananke theme remnants
 - Learn about px versus pt, etc.
 - Make post dates look good when shrinking list
-- 
+
 ## Done
 
 - Figure out relative links to stylesheets
@@ -26,3 +23,4 @@
 - Split out "about" stylesheet
 - Add styling for post index
 - Format post dates to post index
+- Write post summaries
