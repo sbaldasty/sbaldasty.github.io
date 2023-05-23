@@ -1,14 +1,18 @@
 ## Backlog
 
 - Image partials for posts
+- Home should be index.md not _index.md
 - Add styling for page titles
+- Rework chocolate post
+- Rework museum post
+- Write homepage
 - Post index iterate over children not pages
 - Figure out why page widths differ slightly
 - Write discussion for post index
-- Write homepage
 - Rip out ananke theme remnants
 - Learn about px versus pt, etc.
 - Make post dates look good when shrinking list
+- Argument map layout
 
 ## Done
 
