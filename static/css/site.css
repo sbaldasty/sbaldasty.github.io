@@ -30,8 +30,10 @@ main {
 article {
     flex: 1;
     min-width: 260px;
-    padding-left: 10px;
-    padding-right: 10px;
+}
+
+.slight-indent {
+    margin-left: 5px;
 }
 
 .sidebar {

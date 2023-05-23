@@ -19,9 +19,7 @@
         <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
       </div>
       <main>
-        <article>
-          {{ block "main" . }}{{ end }}
-        </article>
+        {{ block "main" . }}{{ end }}
         <div class="sidebar">
           <div class="sidebar-header">
             <div class="selfie">
