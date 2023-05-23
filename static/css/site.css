@@ -46,3 +46,22 @@ article {
     padding: 18px;
     width: 250px;
 }
+
+/* TODO Maybe move this into its own file */
+
+.gallery {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+}
+
+.image img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.image .caption {
+    color: #404040;
+    font-size: small;
+    text-align: center;
+    width: 320px;
+}
