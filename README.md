@@ -1,6 +1,6 @@
 ## Backlog
 
-- Reconsider image sizes
+- Reconsider image sizes: 286 width to match sidebar?
 - Try using pipelines for image processing
 - Rework chocolate post
 - Rework museum post
