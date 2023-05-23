@@ -1,6 +1,5 @@
 +++
 title = 'Home'
-author = 'Steven Baldasty'
 layout = 'home'
 +++
 
