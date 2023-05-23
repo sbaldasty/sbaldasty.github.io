@@ -1,0 +1,27 @@
+.post-listing {
+    display: flex;
+    flex-flow: wrap;
+    gap: 15px;
+    padding: 20px;
+    min-width: 300px;
+}
+
+.post-listing .date {
+    color: #404040;
+    min-width: 100px;
+    text-align: right;
+    width: 100px;
+}
+
+.post-listing .year {
+    font-size: larger;
+}
+
+.post-link {
+    flex: 1;
+    min-width: 200px;
+}
+
+.post-listing h1 {
+    margin: 0;
+}

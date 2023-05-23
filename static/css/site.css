@@ -29,7 +29,7 @@ main {
 
 article {
     flex: 1;
-    min-width: 260px;
+    min-width: 350px;
 }
 
 .slight-indent {
@@ -40,7 +40,6 @@ article {
     background-color: #e7e7e7;
     border-radius: 5px;
     display: flex;
-    flex: row;
     flex-direction: column;
     gap: 20px;
     min-width: 250px;

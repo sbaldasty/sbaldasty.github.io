@@ -5,15 +5,23 @@
     </section>
     <section>
       {{ range .Paginator.Pages }}
-        <div>
-          {{ .Date }}
-          <h1 class="f3 near-black">
-            <a href="{{ .RelPermalink }}" class="link black dim">
-              {{ .Title }}
-            </a>
-          </h1>
-          <div class="nested-links f5 lh-copy nested-copy-line-height">
-            {{ .Summary }}
+        <div class="post-listing">
+          <div class="date">
+            {{ .PublishDate.Month }}
+            {{ .Date.Day }}
+            <span class="year">
+              {{ .PublishDate.Year }}
+            </span>
+          </div>
+          <div class="post-link">
+            <h1>
+              <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+              </a>
+            </h1>
+            <div>
+              {{ .Summary }}
+            </div>
           </div>
         </div>
       {{ end }}
