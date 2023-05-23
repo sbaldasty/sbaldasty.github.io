@@ -17,7 +17,7 @@ a:link {
 
 .breadcrumb-trail {
     font-size: small;
-    margin: 10px 5px 10px 5px;
+    margin: 10px 5px 30px 5px;
 }
 
 main {
@@ -49,6 +49,23 @@ article {
 
 /* TODO Maybe move this into its own file */
 
+h1.title {
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0 20px 5px 0;
+}
+
+.summary {
+    color: #404040;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.by-line {
+    font-size: small;
+    margin-bottom: 20px;
+}
+
 .gallery {
     display: flex;
     flex-flow: wrap;
@@ -59,6 +76,7 @@ article {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+
 .image .caption {
     color: #404040;
     font-size: small;

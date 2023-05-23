@@ -1,8 +1,6 @@
 ## Backlog
 
-- Image partials for posts
-- Home should be index.md not _index.md
-- Add styling for page titles
+- Use gallery for MOP photos
 - Rework chocolate post
 - Rework museum post
 - Write homepage
@@ -13,6 +11,7 @@
 - Learn about px versus pt, etc.
 - Make post dates look good when shrinking list
 - Argument map layout
+- Home should be index.md not _index.md
 
 ## Done
 
@@ -28,3 +27,5 @@
 - Add styling for post index
 - Format post dates to post index
 - Write post summaries
+- Image partials for posts
+- Add styling for page titles
