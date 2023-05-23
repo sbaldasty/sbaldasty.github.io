@@ -1,6 +1,7 @@
 ## Backlog
 
-- Use gallery for MOP photos
+- Reconsider image sizes
+- Try using pipelines for image processing
 - Rework chocolate post
 - Rework museum post
 - Write homepage
@@ -15,6 +16,7 @@
 
 ## Done
 
+- Use gallery for MOP photos
 - Figure out relative links to stylesheets
 - Figure out relative links to images
 - Social media links
