@@ -1,7 +1,7 @@
 +++
 title = 'Home'
 author = 'Steven Baldasty'
-layout = 'single'
+layout = 'home'
 +++
 
 Content coming soon...
