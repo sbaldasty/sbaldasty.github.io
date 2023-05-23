@@ -1,11 +1,11 @@
 ## Backlog
 
+- Image partials for posts
+- Add styling for page titles
 - Post index iterate over children not pages
 - Figure out why page widths differ slightly
-- Image partials for posts
 - Write discussion for post index
 - Write homepage
-- Add styling for page titles
 - Rip out ananke theme remnants
 - Learn about px versus pt, etc.
 - Make post dates look good when shrinking list
