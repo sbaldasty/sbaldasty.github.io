@@ -4,14 +4,14 @@
       <h1 class="title">
         {{- .Title -}}
       </h1>
+      <div class="summary">
+        {{- .Summary -}}
+      </div>
       <div class="by-line">
         Steven Baldasty - 
         <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
           {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
         </time>
-      </div>
-      <div class="summary">
-        {{- .Summary -}}
       </div>
     </header>
     <div>
