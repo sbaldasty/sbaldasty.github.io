@@ -1,6 +1,6 @@
 .page {
     margin: auto;
-    max-width: 1200px;
+    max-width: 1250px;
 }
 
 a:link {
@@ -43,7 +43,7 @@ article {
     flex-direction: column;
     gap: 20px;
     min-width: 250px;
-    padding: 18px;
+    padding: 15px;
     width: 250px;
 }
 
@@ -69,6 +69,7 @@ h1.title {
     display: flex;
     flex-flow: wrap;
     gap: 20px;
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -82,5 +83,5 @@ h1.title {
     color: #404040;
     font-size: small;
     text-align: center;
-    width: 320px;
+    width: 280px;
 }
