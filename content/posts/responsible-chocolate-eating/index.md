@@ -10,10 +10,13 @@ Commitment devices are tricks we can use to limit what choices we will have late
 I have no self restraint around eating chocolate. I usually eat any chocolate available to me until it is gone. I genuinely enjoy it. I am genuinely thankful to have it. And in earlier years of my life I suffered no consequences from eating it. But now too much chocolate badly affects my mood, and my weight too. I wanted a way to still eat chocolate, but to eat it responsibly. My willpower alone wasn't strong enough. So here's how this commitment device I discovered works.
 
 {{< gallery >}}
-  {{< image src="box.jpg" alt="Junk food" x="3000" y="2900" width="2980" angle="0" >}}
+  {{< image src="box.jpg" alt="Junk food" >}}
     Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
   {{< /image >}}
-  {{< image src="lock.jpg" alt="Time release lock" x="1000" y="1000" width="500" angle="0" >}}
+  {{< image src="closed.jpg" alt="Closed time release lock" >}}
+    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+  {{< /image >}}
+  {{< image src="open.jpg" alt="Time release lock" >}}
     The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
   {{< /image >}}
 {{< /gallery >}}

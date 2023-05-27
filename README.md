@@ -1,6 +1,6 @@
 ## Backlog
 
-- Try using pipelines for image processing
+- Revisit chocolate post images
 - Rework chocolate post
 - Rework museum post
 - Write homepage
@@ -31,3 +31,4 @@
 - Image partials for posts
 - Add styling for page titles
 - Reconsider image sizes: 286 width to match sidebar?
+- Try using pipelines for image processing

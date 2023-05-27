@@ -1,19 +1,6 @@
 <div class="image">
-  {{ $trgw := 280 }}
-  {{ $trgh := 210 }}
-
-  {{ $angle := int (.Get "angle") }}
-  {{ $x := int (.Get "x") }}
-  {{ $y := int (.Get "y") }}
-  {{ $width := int (.Get "width") }}
-  {{ $height := int (mul 0.75 $width) }}
-
   {{ $alt := .Get "alt" }}
   {{ $img := .Page.Resources.GetMatch (.Get "src") }}
-  {{ $img := $img.Resize (printf "%dx%d r%d" $img.Width $img.Height $angle) }}
-  {{ $img := $img.Crop (printf "%dx%d BottomRight" $x $y) }}
-  {{ $img := $img.Crop (printf "%dx%d TopLeft" $width $height) }}
-  {{ $img := $img.Resize (printf "%dx jpg q75" $trgw) }}
 
   <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" title="{{ $alt }}" width="280px" height="210px">
   <div class="caption">
