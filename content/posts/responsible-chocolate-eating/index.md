@@ -2,7 +2,7 @@
 title: 'Responsible Chocolate Eating'
 date: 2023-01-16
 author: 'Steven Baldasty'
-summary: 'How to limit daily junk food intake with a time release lock'
+summary: 'How to limit daily junkfood intake with a time release lock.'
 ---
 
 Commitment devices are tricks we can use to limit what choices we will have later. They can help us reach our goals when we think our willpower may fail. I wanted to share about a particular commitment device I use, because it works well for me and many people haven't heard of it.
@@ -12,9 +12,6 @@ I have no self restraint around eating chocolate. I usually eat any chocolate av
 {{< gallery >}}
   {{< image src="box.jpg" alt="Junk food" >}}
     Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
-  {{< /image >}}
-  {{< image src="closed.jpg" alt="Closed time release lock" >}}
-    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
   {{< /image >}}
   {{< image src="open.jpg" alt="Time release lock" >}}
     The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
@@ -30,5 +27,14 @@ You will need two things to get started.
 Put all your chocolate in the box. Every morning, enjoy picking from the box a reasonable amount of your most delicious chocolate to last the day, whatever "reasonable" looks like for you. Then lock the box. This is your commitment. I keep the timer set for twenty hours for some wiggle room, and that way it opens reliably while I am still sleeping.
 
 If you are like me, the chocolate you took from the box will disappear well before lunch. You may notice that cravings happen in the afternoon, if you are home. You may feel upset that your chocolate is not accessible to you. Try to take some deep breaths. Remember that your past self was just watching out for you, and did this to help you. Remember that in the morning you will get to pick out more chocolate to eat, and then you help your future self of that day in the exact same way your past self is helping you!
+
+{{< gallery >}}
+  {{< image src="closed.jpg" alt="Closed time release lock" >}}
+    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+  {{< /image >}}
+  {{< image src="usb.jpg" alt="USB-B port" >}}
+    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+  {{< /image >}}
+{{< /gallery >}}
 
 At some point though you will need to restock your box. Restocking is a disruption to your routine, and a period of vulnerability: whatever chocolate you buy will be accessible to you until your lock pops open. You may consider timing your shopping trip in such a way as to minimize your access to the chocolate. I personally just accept the possibility that I may eat too much on restocking days. Another reason I buy in bulk, besides cost savings, is that I need to restock far less often.

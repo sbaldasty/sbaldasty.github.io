@@ -1,17 +1,28 @@
-## Backlog
+## Expansion
 
-- Revisit chocolate post images
-- Rework chocolate post
-- Rework museum post
 - Write homepage
-- Post index iterate over children not pages
-- Figure out why page widths differ slightly
 - Write discussion for post index
-- Rip out ananke theme remnants
-- Learn about px versus pt, etc.
-- Make post dates look good when shrinking list
 - Argument map layout
+- Extended bio
+
+## Editing
+
+- Rework museum pictures
+- Rework chocolate post
+
+## Improvements
+
+- Make post dates look good when shrinking list
+- Figure out why page widths differ slightly
+- Wrap sidebar before wrapping post images
+- Site logo / favicon
+
+## Backend
+
+- Learn about px versus pt, etc.
 - Home should be index.md not _index.md
+- Rip out ananke theme remnants
+- Post index iterate over children not pages
 
 ## Done
 
@@ -32,3 +43,4 @@
 - Add styling for page titles
 - Reconsider image sizes: 286 width to match sidebar?
 - Try using pipelines for image processing
+- Revisit chocolate post images
