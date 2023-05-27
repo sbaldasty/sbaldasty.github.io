@@ -12,9 +12,9 @@ Good museums invite curiosity, wonder, and inspiration. They recall to memory lo
 You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
 
 {{< gallery >}}
-  {{< image src="typewriters.jpg" alt="Typewriter exhibit">}}
+  {{< image src="typewriters.jpg" alt="Typewriter exhibit" x="1000" y="1000" width="500" angle="0" >}}
     My parents pose in front of a wall of typewriters. I used to write school papers on something very similar to these when I was a kid.
-  {{< /image>}}
+  {{< /image >}}
 {{< /gallery >}}
 
 I had a special reason to look forward to exploring this particular museum. I recently took a super interesting [class about information theory](https://www.uvm.edu/courses/ee_272) at the University of Vermont. Information theory considers (in the absense of any meaning that information may have) how we might measure it's quantity, store or trasmit it efficiently, and do so in a way that protects it from corruption.
@@ -38,19 +38,19 @@ The book tells the story of humanity's evolving dance with information and its t
 Among the final ideas in the book is, when information is scarce and difficult to access it is expensive; but when information is plentiful and easy to access then attention is expensive.
 
 {{< gallery >}}
-  {{< image src="old-bibles.jpg" alt="Bible illustration">}}
+  {{< image src="old-bibles.jpg" alt="Bible illustration" x="1000" y="1000" width="500" angle="0" >}}
     The museum has a whole room for Bibles. There was also a picture of the Serpent tempting Eve, in the process of swallowing a fruit far bigger than its mouth, as if it were a large tranquillized rodent. Was it just trying to demonstrate that the fruit was safe, or did it actually enjoy eating it?
   {{< /image>}}
-  {{< image src="printing-presses.jpg" alt="Printing presses">}}
+  {{< image src="printing-presses.jpg" alt="Printing presses" x="1000" y="1000" width="500" angle="0" >}}
     The museum has mechanical printing presses from many eras. The basic idea was to cover raised writing in ink and press it onto a page. OSHA would likely take issue with most of these designs, if we still used them today.
   {{< /image>}}
-  {{< image src="printing-my-name.jpg" alt="Printing my name">}}
+  {{< image src="printing-my-name.jpg" alt="Printing my name" x="1000" y="1000" width="500" angle="0" >}}
     One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
   {{< /image>}}
-  {{< image src="color-printer.jpg" alt="Color printer">}}
+  {{< image src="color-printer.jpg" alt="Color printer" x="1000" y="1000" width="500" angle="0" >}}
     An early electronic device for doing color printing at scale. More modern devicecs are shown nearby to illustrate miniaturization.
   {{< /image>}}
-  {{< image src="old-computers.jpg" alt="Old computers">}}
+  {{< image src="old-computers.jpg" alt="Old computers" x="1000" y="1000" width="500" angle="0" >}}
     These bring back memories, they are artifacts from my living past. Machines like these taught me the love of programming and inspired me down the path I took in life.
-  {{< /image>}}
+  {{< /image >}}
 {{< /gallery >}}
