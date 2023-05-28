@@ -14,7 +14,7 @@ I have no self restraint around eating chocolate. I usually eat any chocolate av
     Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
   {{< /image >}}
   {{< image src="open.jpg" alt="Time release lock" >}}
-    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+    Example of a good time release lock by iayokocc, available on Amazon 
   {{< /image >}}
 {{< /gallery >}}
 
@@ -30,10 +30,10 @@ If you are like me, the chocolate you took from the box will disappear well befo
 
 {{< gallery >}}
   {{< image src="closed.jpg" alt="Closed time release lock" >}}
-    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+    Setting the timer for 20 hours lets the box open overnight, leaving some wiggle room in the schedule
   {{< /image >}}
   {{< image src="usb.jpg" alt="USB-B port" >}}
-    The lock charges over USB, but retains its charge well. It has a straightforward UI, remembers its last timer setting, and the beeping sounds it makes when opening and closing can be muted.
+    Type-B Micro USB port on the bottom of the lock for charging every couple months (if the charge runs out the shackle will not release)
   {{< /image >}}
 {{< /gallery >}}
 
