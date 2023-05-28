@@ -1,40 +1,46 @@
 ---
 title: 'Responsible Chocolate Eating'
 date: 2023-01-16
-author: 'Steven Baldasty'
 summary: 'How to limit daily junkfood intake with a time release lock.'
 ---
 
-Commitment devices are tricks we can use to limit what choices we will have later. They can help us reach our goals when we think our willpower may fail. I wanted to share about a particular commitment device I use, because it works well for me and many people haven't heard of it.
+Eating junkfood in moderation feels good, but eating too much junkfood does not. In my personal experience, too much junkfood negatively affects my mood and weight - yet my cravings often overpower my resolve to prioritize my health. I share a solution that uses a **commitment device** (a choice one makes in the present to limit what choices one can make in the future) because it works exceptionally well for me and many people haven't heard of it.
 
-I have no self restraint around eating chocolate. I usually eat any chocolate available to me until it is gone. I genuinely enjoy it. I am genuinely thankful to have it. And in earlier years of my life I suffered no consequences from eating it. But now too much chocolate badly affects my mood, and my weight too. I wanted a way to still eat chocolate, but to eat it responsibly. My willpower alone wasn't strong enough. So here's how this commitment device I discovered works.
+# Setup
+
+You will need a **container** to store your junkfood in. Any container with a hole you can slip the shackle of a lock through will do, but you might consider a large container because then you can save money by taking advantage of bulk deals on your favorite junkfood and still have adequate space for it all. I use a repurposed toolbox.
+
+You will need a special kind of lock called a **time release lock**. A time release lock requires no key or combination; instead it has a timer you can set. When you close the lock and start the timer, the lock opens when the timer reaches zero.
 
 {{< gallery >}}
   {{< image src="box.jpg" alt="Junk food" >}}
     Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
   {{< /image >}}
   {{< image src="open.jpg" alt="Time release lock" >}}
-    Example of a good time release lock by iayokocc, available on Amazon 
+    Example of a suitable time release lock by iayokocc that I use, available on Amazon 
   {{< /image >}}
 {{< /gallery >}}
 
-You will need two things to get started.
+# Process
 
-- You will need a box. The box should be large enough to fit all your chocolate in. I like to find good bulk deals on chocolate, so I use a large repurposed toolbox - but any box with a hole you can slip the shackle of a lock through will do. 
+In the morning, enjoy choosing a reasonable amount of junkfood from your container to last the day. Trust yourself about what _reasonable_ means for you. Then make your commitment by locking your container, choosing a time slightly less than 24 hours. The lock conveniently remembers the previous time you set.
 
-- You will need a special kind of lock, called a _timer lock_. This lock has no key or combination to open it. Instead, it has a timer. You close the lock, set the timer, and push a button. When the timer reaches zero, the lock pops open. I use a [iayokocc product](https://www.amazon.com/Display-Multi-Function-Electronic-Rechargeable-Padlock/dp/B09D7RC5WX), but I'm sure other good options exist too.
-
-Put all your chocolate in the box. Every morning, enjoy picking from the box a reasonable amount of your most delicious chocolate to last the day, whatever "reasonable" looks like for you. Then lock the box. This is your commitment. I keep the timer set for twenty hours for some wiggle room, and that way it opens reliably while I am still sleeping.
-
-If you are like me, the chocolate you took from the box will disappear well before lunch. You may notice that cravings happen in the afternoon, if you are home. You may feel upset that your chocolate is not accessible to you. Try to take some deep breaths. Remember that your past self was just watching out for you, and did this to help you. Remember that in the morning you will get to pick out more chocolate to eat, and then you help your future self of that day in the exact same way your past self is helping you!
+Ideally, restock your container infrequently and fully. Restocking days are vulnerable days: you will have access to whatever junkfood you buy until the lock opens. You might consider shopping in the early morning before closing your lock, or just accept the possibility you may overeat that day.
 
 {{< gallery >}}
   {{< image src="closed.jpg" alt="Closed time release lock" >}}
-    Setting the timer for 20 hours lets the box open overnight, leaving some wiggle room in the schedule
+    Setting the timer for 20 hours causes the lock to open overnight, leaving some wiggle room in your morning schedule
   {{< /image >}}
   {{< image src="usb.jpg" alt="USB-B port" >}}
-    Type-B Micro USB port on the bottom of the lock for charging every couple months (if the charge runs out the shackle will not release)
+    Type-B Micro USB port on the bottom of the lock for charging every couple months (but if the charge runs out the lock will not release)
   {{< /image >}}
 {{< /gallery >}}
 
-At some point though you will need to restock your box. Restocking is a disruption to your routine, and a period of vulnerability: whatever chocolate you buy will be accessible to you until your lock pops open. You may consider timing your shopping trip in such a way as to minimize your access to the chocolate. I personally just accept the possibility that I may eat too much on restocking days. Another reason I buy in bulk, besides cost savings, is that I need to restock far less often.
+# Reflection
+
+The chocolate I choose from my container usually disappears long before lunch. Cravings rise and fall the rest of the day. They usually correlate with emotional discomfort. I sometimes feel upset when I notice the rest my chocolate is not accessible to me. Taking deep breaths helps. I remember that in the morning I can choose more chocolate. I remember how my past self limited the choices I have now because he cared about me, just like I will limit the choices my future self will have because I care for him.
+
+# References
+
+- [Product page for my time release lock](https://www.amazon.com/Display-Multi-Function-Electronic-Rechargeable-Padlock/dp/B09D7RC5WX)
+- [Article about commitment devices](https://medium.com/behavior-design-hub/your-commitment-devices-database-35a54df3a64f)

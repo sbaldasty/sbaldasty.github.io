@@ -8,7 +8,6 @@
 ## Editing
 
 - Rework museum pictures
-- Rework chocolate post
 
 ## Improvements
 
@@ -16,6 +15,8 @@
 - Figure out why page widths differ slightly
 - Wrap sidebar before wrapping post images
 - Site logo / favicon
+- Markdown headers styling
+- Markdown blockquote styling
 
 ## Backend
 
@@ -44,3 +45,4 @@
 - Reconsider image sizes: 286 width to match sidebar?
 - Try using pipelines for image processing
 - Revisit chocolate post images
+- Rework chocolate post
