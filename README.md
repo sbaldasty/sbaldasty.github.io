@@ -46,3 +46,4 @@
 - Try using pipelines for image processing
 - Revisit chocolate post images
 - Rework chocolate post
+- Telephone museum pictures

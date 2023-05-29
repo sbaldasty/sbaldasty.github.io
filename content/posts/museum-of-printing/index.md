@@ -1,6 +1,5 @@
 ---
 title: Information Theory, Telephones, Museum of Printing
-author: Steven Baldasty
 date: 2023-01-19
 summary: "Reflections on connections between humanity's evolving relationship with information described in _The Information: A History, A Theory, A Flood_ by James Gleick and exhibits from two museums dedicated to historical printing and telephony technologies"
 ---
@@ -37,20 +36,51 @@ The book tells the story of humanity's evolving dance with information and its t
 
 Among the final ideas in the book is, when information is scarce and difficult to access it is expensive; but when information is plentiful and easy to access then attention is expensive.
 
+# Museum of Printing
+
 {{< gallery >}}
   {{< image src="old-bibles.jpg" alt="Bible illustration" x="1000" y="1000" width="500" angle="0" >}}
     The museum has a whole room for Bibles. There was also a picture of the Serpent tempting Eve, in the process of swallowing a fruit far bigger than its mouth, as if it were a large tranquillized rodent. Was it just trying to demonstrate that the fruit was safe, or did it actually enjoy eating it?
-  {{< /image>}}
+  {{< /image >}}
   {{< image src="printing-presses.jpg" alt="Printing presses" x="1000" y="1000" width="500" angle="0" >}}
     The museum has mechanical printing presses from many eras. The basic idea was to cover raised writing in ink and press it onto a page. OSHA would likely take issue with most of these designs, if we still used them today.
-  {{< /image>}}
+  {{< /image >}}
   {{< image src="printing-my-name.jpg" alt="Printing my name" x="1000" y="1000" width="500" angle="0" >}}
     One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
-  {{< /image>}}
+  {{< /image >}}
   {{< image src="color-printer.jpg" alt="Color printer" x="1000" y="1000" width="500" angle="0" >}}
     An early electronic device for doing color printing at scale. More modern devicecs are shown nearby to illustrate miniaturization.
-  {{< /image>}}
+  {{< /image >}}
   {{< image src="old-computers.jpg" alt="Old computers" x="1000" y="1000" width="500" angle="0" >}}
     These bring back memories, they are artifacts from my living past. Machines like these taught me the love of programming and inspired me down the path I took in life.
   {{< /image >}}
 {{< /gallery >}}
+
+# Telephone Museum
+
+_**Update:** We later visited the New Hampshire Telephone Museum._
+
+{{< gallery >}}
+  {{< image src="telephone-cable-cross-section.jpg" alt="Telephone cable" >}}
+    Cross section of a large telephone cable
+  {{< /image >}}
+  {{< image src="telegraph.jpg" alt="Telegraph" >}}
+    Telegraph
+  {{< /image >}}
+  {{< image src="automated-switchboard.jpg" alt="Automated mechanical switchboard" >}}
+    Automated mechanical switchboard
+  {{< /image >}}
+  {{< image src="undersea-telephone-cable.jpg" alt="Undersea telephone cable" >}}
+    Undersea telephone cable
+  {{< /image >}}
+  {{< image src="manual-switchboard.jpg" alt="Manual switchboard" >}}
+    Manual switchboard
+  {{< /image >}}
+  {{< image src="telephone.jpg" alt="Telephone" >}}
+    Telephone
+  {{< /image >}}
+{{< /gallery >}}
+
+# References
+
+- Coming soon
