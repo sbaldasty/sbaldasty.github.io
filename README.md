@@ -20,6 +20,7 @@
 
 ## Backend
 
+- Get permission from museums (?)
 - Learn about px versus pt, etc.
 - Home should be index.md not _index.md
 - Rip out ananke theme remnants

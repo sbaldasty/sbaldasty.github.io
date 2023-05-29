@@ -49,6 +49,10 @@ article {
 
 /* TODO Maybe move this into its own file */
 
+header {
+    margin-bottom: 40px;
+}
+
 h1.title {
     font-size: 50px;
     font-weight: normal;
@@ -62,7 +66,6 @@ h1.title {
 
 .by-line {
     font-size: small;
-    margin-bottom: 40px;
 }
 
 .gallery {
