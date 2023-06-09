@@ -1,5 +1,6 @@
 ## Expansion
 
+- Add telephone museum
 - Write homepage
 - Write discussion for post index
 - Argument map layout
@@ -7,15 +8,12 @@
 
 ## Editing
 
+- Rewrite chocolate post as a narrative
 - Rework museum pictures
 
 ## Improvements
 
-- Make post dates look good when shrinking list
-- Figure out why page widths differ slightly
-- Wrap sidebar before wrapping post images
 - Site logo / favicon
-- Markdown headers styling
 - Markdown blockquote styling
 
 ## Backend
@@ -48,3 +46,9 @@
 - Revisit chocolate post images
 - Rework chocolate post
 - Telephone museum pictures
+- Figure out why page widths differ slightly
+- Wrap sidebar before wrapping post images
+- Flow layout for post sections
+- Fix glitchy expansion and shrinking
+- Make post dates look good when shrinking list
+- Markdown headers styling

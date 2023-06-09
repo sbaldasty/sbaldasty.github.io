@@ -11,6 +11,14 @@ a:link {
     text-decoration: none;
 }
 
+a:visited {
+    color: blue;
+}
+
+article h1 {
+    border-bottom: 1px solid #aaa;
+}
+
 .site-header {
     background-color: #000000;
     border-radius: 5px;
@@ -28,7 +36,7 @@ main {
     display: flex;
     flex-flow: wrap;
     gap: 40px;
-    justify-items: center;
+    justify-content: center;
 }
 
 article {
@@ -57,18 +65,13 @@ header {
     margin-bottom: 40px;
 }
 
-h1.title {
+header .title {
     font-size: 50px;
     font-weight: normal;
-    margin: 0 20px 20px 0;
+    margin-bottom: 10px;
 }
 
-.summary {
-    color: #808080;
-    margin-bottom: 20px;
-}
-
-.by-line {
+header {
     font-size: small;
 }
 
@@ -77,8 +80,7 @@ h1.title {
     flex-flow: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 10px;
 }
 
 .image img {
@@ -91,4 +93,22 @@ h1.title {
     font-size: small;
     text-align: center;
     width: 280px;
+}
+
+.flexzone {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.flexzone .flextext {
+    align-self: center;
+    flex: 1;
+    flex-basis: 300px;
+    min-width: 200px;
+}
+
+.flexzone .gallery {
+    align-self: center;
 }

@@ -8,6 +8,7 @@
 
 .post-listing .date {
     color: #404040;
+    margin-top: 4px;
     min-width: 100px;
     text-align: right;
     width: 100px;
@@ -22,6 +23,6 @@
     min-width: 200px;
 }
 
-.post-listing h1 {
+.post-listing h2 {
     margin: 0;
 }

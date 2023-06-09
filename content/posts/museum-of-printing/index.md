@@ -58,7 +58,7 @@ Among the final ideas in the book is, when information is scarce and difficult t
 
 # Telephone Museum
 
-_**Update:** We later visited the New Hampshire Telephone Museum._
+_**Update:** We later visited the New Hampshire Telephone Museum._ More on this coming soon, but for now here is [the link to their site](https://www.nhtelephonemuseum.org/)
 
 {{< gallery >}}
   {{< image src="telephone-cable-cross-section.jpg" alt="Telephone cable" >}}
