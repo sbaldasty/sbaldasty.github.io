@@ -112,3 +112,7 @@ header {
 .flexzone .gallery {
     align-self: center;
 }
+
+.log-link {
+    padding-right: 10px;
+}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article class="slight-indent">
+    <section>
+      {{- .Content -}}
+    </section>
+    <section>
+      {{ range .Paginator.Pages }}
+        <a href="{{ .RelPermalink }}" class="log-link">
+          {{ .File.BaseFileName }}
+        </a>
+      {{ end }}
+    </section>
+  </article>
+{{ end }}

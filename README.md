@@ -1,28 +1,31 @@
 ## Expansion
 
+- Description of log pages
 - Add telephone museum
-- Write homepage
+- Write homepage, include link to logs
 - Write discussion for post index
 - Argument map layout
 - Extended bio
+- Add historical logs
 
 ## Editing
 
-- Rewrite chocolate post as a narrative
 - Rework museum pictures
 
 ## Improvements
 
 - Site logo / favicon
 - Markdown blockquote styling
+- Fix breadcrumbs for logs or only show parents
+- Styling for log content
 
 ## Backend
 
-- Get permission from museums (?)
 - Learn about px versus pt, etc.
 - Home should be index.md not _index.md
 - Rip out ananke theme remnants
 - Post index iterate over children not pages
+- Description more appropriate than summary for posts
 
 ## Done
 
@@ -52,3 +55,5 @@
 - Fix glitchy expansion and shrinking
 - Make post dates look good when shrinking list
 - Markdown headers styling
+- Get permission from museums
+- Add logs
