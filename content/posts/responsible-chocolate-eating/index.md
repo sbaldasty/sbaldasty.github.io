@@ -1,7 +1,7 @@
 ---
-title: 'Responsible Chocolate Eating'
+title: Responsible Chocolate Eating
 date: 2023-01-16
-summary: 'How to limit daily junkfood intake with a time release lock.'
+description: Limiting daily junkfood intake with a time release lock
 ---
 
 In my personal experience, eating junkfood in moderation feels good but eating too much junkfood does not. Too much junkfood negatively affects my mood and weight - yet my cravings often overpower my resolve to prioritize my health. This solution uses a **commitment device** (a choice one makes in the present to limit what choices one can make in the future). It works exceptionally well for me.

@@ -23,7 +23,6 @@
 
 - Learn about px versus pt, etc.
 - Home should be index.md not _index.md
-- Rip out ananke theme remnants
 - Post index iterate over children not pages
 - Description more appropriate than summary for posts
 
@@ -57,3 +56,4 @@
 - Markdown headers styling
 - Get permission from museums
 - Add logs
+- Rip out ananke theme remnants
