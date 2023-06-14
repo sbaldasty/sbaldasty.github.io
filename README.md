@@ -24,7 +24,6 @@
 - Learn about px versus pt, etc.
 - Home should be index.md not _index.md
 - Post index iterate over children not pages
-- Description more appropriate than summary for posts
 
 ## Done
 
@@ -57,3 +56,4 @@
 - Get permission from museums
 - Add logs
 - Rip out ananke theme remnants
+- Description more appropriate than summary for posts
