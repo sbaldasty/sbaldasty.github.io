@@ -1,4 +1,3 @@
-+++
-title = 'Posts'
-template = 'posts'
-+++
+---
+title: Posts
+---
