@@ -1,7 +1,6 @@
-+++
-title = 'Home'
-layout = 'home'
-+++
+---
+title: Home
+---
 
 Content coming soon...
 

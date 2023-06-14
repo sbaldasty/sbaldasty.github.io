@@ -22,8 +22,6 @@
 ## Backend
 
 - Learn about px versus pt, etc.
-- Home should be index.md not _index.md
-- Post index iterate over children not pages
 
 ## Done
 
@@ -57,3 +55,5 @@
 - Add logs
 - Rip out ananke theme remnants
 - Description more appropriate than summary for posts
+- Post index iterate over children not pages
+- Home should be index.md not _index.md (nope, needs to be a list page after all)
