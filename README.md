@@ -1,7 +1,7 @@
 ## Expansion
 
 - Add telephone museum
-- Write homepage, include link to logs
+- 2023-06-16 Write homepage
 - Write discussion for post index
 - Argument map layout
 - Extended bio
@@ -9,10 +9,14 @@
 
 ## Improvements
 
+- Improve layout for posts list
+- Shorten or reorganize logs description
+- Unified titles across pages
 - Site logo / favicon
 - Markdown blockquote styling
 - Rework museum pictures
-- Rethink breadcrumb / title redundancy
+- Maybe only show ancestor breadcrumbs
+- Titlebar titles are inconsistent
 
 ## Backend
 
@@ -56,3 +60,4 @@
 - 2023-06-15 Fix breadcrumbs for logs or only show parents
 - 2023-06-15 Description of log pages
 - 2023-06-15 Styling for log content
+- 2023-06-15 Link to logs from homepage
