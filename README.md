@@ -1,6 +1,5 @@
 ## Expansion
 
-- Description of log pages
 - Add telephone museum
 - Write homepage, include link to logs
 - Write discussion for post index
@@ -8,16 +7,12 @@
 - Extended bio
 - Add historical logs
 
-## Editing
-
-- Rework museum pictures
-
 ## Improvements
 
 - Site logo / favicon
 - Markdown blockquote styling
-- Fix breadcrumbs for logs or only show parents
-- Styling for log content
+- Rework museum pictures
+- 2023-06-15 Styling for log content
 
 ## Backend
 
@@ -57,3 +52,5 @@
 - Description more appropriate than summary for posts
 - Post index iterate over children not pages
 - Home should be index.md not _index.md (nope, needs to be a list page after all)
+- 2023-06-15 Fix breadcrumbs for logs or only show parents
+- 2023-06-15 Description of log pages
