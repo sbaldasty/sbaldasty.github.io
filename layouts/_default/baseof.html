@@ -18,7 +18,7 @@
         {{- range .Ancestors.Reverse }}
             <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
         {{- end }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
+        <a href="{{ .RelPermalink }}">{{ default .File.BaseFileName .Title }}</a> &raquo;
       </div>
       <main>
         {{ block "main" . }}{{ end }}
