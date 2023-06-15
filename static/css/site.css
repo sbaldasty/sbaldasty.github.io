@@ -71,10 +71,6 @@ header .title {
     margin-bottom: 10px;
 }
 
-header {
-    font-size: small;
-}
-
 .gallery {
     display: flex;
     flex-flow: wrap;
@@ -115,4 +111,10 @@ header {
 
 .log-link {
     padding-right: 10px;
+}
+
+.log {
+    background-color: #faeebe;
+    border-radius: 5px;
+    padding: 5px 15px;
 }

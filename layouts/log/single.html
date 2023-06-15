@@ -1,12 +1,12 @@
 {{ define "main" }}
-  <article class="slight-indent">
-    <header>
+  <article>
+    <header class="slight-indent">
       <div class="title">
         {{- .File.BaseFileName -}}
       </div>
+      {{- .Parent.Content -}}
     </header>
-    {{- .Parent.Content -}}
-    <div>
+    <div class="log">
       {{- .Content -}}
     </div>
   </article>

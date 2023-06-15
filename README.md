@@ -12,11 +12,12 @@
 - Site logo / favicon
 - Markdown blockquote styling
 - Rework museum pictures
-- 2023-06-15 Styling for log content
+- Rethink breadcrumb / title redundancy
 
 ## Backend
 
 - Learn about px versus pt, etc.
+- Organize css sensibly
 
 ## Done
 
@@ -54,3 +55,4 @@
 - Home should be index.md not _index.md (nope, needs to be a list page after all)
 - 2023-06-15 Fix breadcrumbs for logs or only show parents
 - 2023-06-15 Description of log pages
+- 2023-06-15 Styling for log content
