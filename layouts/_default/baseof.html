@@ -18,9 +18,9 @@
         <article>
           <div class="breadcrumb-trail">
             &nbsp;
-            {{- range .Ancestors.Reverse }}
+            {{ range .Ancestors.Reverse }}
               <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
-            {{- end }}
+            {{ end }}
           </div>
           <div class="page-title slight-indent">
             {{ if .Title }}
@@ -34,37 +34,38 @@
           {{ block "main" . }}{{ end }}
         </article>
         <div class="sidebar">
-        <div class="sidebar-header">
-          <div class="selfie">
-            <img src="/selfie.jpg" width="80px" height="80px">
-          </div>
-          <div class="my-nametag">
-            Hello, my name is
-            <div class="my-name">
-              Steven
+          <div class="sidebar-header">
+            <div class="selfie">
+              <img src="/selfie.jpg" width="80px" height="80px">
+            </div>
+            <div class="my-nametag">
+              Hello, my name is
+              <div class="my-name">
+                Steven
+              </div>
             </div>
           </div>
-        </div>
-        <div class="bio">
-          Proud father, Barefoot runner, Chocolate enthusiast, Seasoned software engineer, Starry eyed PhD student, Novice human
-        </div>
-        <hr>
-        <div class="social-media">
-          <a href="https://www.linkedin.com/in/sbaldasty/">
-            <img src="/social/linkedin.svg" alt="LinkedIn" title="Connect with me on LinkedIn" width="24px" height="24px">
-          </a>
-          <a href="https://github.com/sbaldasty">
-            <img src="/social/github.svg" alt="GitHub" title="Connect with me on GitHub" width="24px" height="24px">
-          </a>
-          <a href="https://www.instagram.com/sbaldasty/">
-            <img src="/social/instagram.svg" alt="Instagram" title="Connect with me on Instagram" width="24px" height="24px">
-          </a>
-          <a href="https://www.facebook.com/sbaldasty">
-            <img src="/social/facebook.svg" alt="Facebook" title="Connect with me on Facebook" width="24px" height="24px">
-          </a>
-          <a href="https://twitter.com/sbaldasty">
-            <img src="/social/twitter.svg" alt="Twitter" title="Connect with me on Twitter" width="24px" height="24px">
-          </a>
+          <div class="bio">
+            Proud father, Barefoot runner, Chocolate enthusiast, Seasoned software engineer, Starry eyed PhD student, Novice human
+          </div>
+          <hr>
+          <div class="social-media">
+            <a href="https://www.linkedin.com/in/sbaldasty/">
+              <img src="/social/linkedin.svg" alt="LinkedIn" title="Connect with me on LinkedIn" width="24px" height="24px">
+            </a>
+            <a href="https://github.com/sbaldasty">
+              <img src="/social/github.svg" alt="GitHub" title="Connect with me on GitHub" width="24px" height="24px">
+            </a>
+            <a href="https://www.instagram.com/sbaldasty/">
+              <img src="/social/instagram.svg" alt="Instagram" title="Connect with me on Instagram" width="24px" height="24px">
+            </a>
+            <a href="https://www.facebook.com/sbaldasty">
+              <img src="/social/facebook.svg" alt="Facebook" title="Connect with me on Facebook" width="24px" height="24px">
+            </a>
+            <a href="https://twitter.com/sbaldasty">
+              <img src="/social/twitter.svg" alt="Twitter" title="Connect with me on Twitter" width="24px" height="24px">
+            </a>
+          </div>
         </div>
       </main>
     </div>
