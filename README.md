@@ -11,11 +11,9 @@
 
 - Improve layout for posts list
 - Shorten or reorganize logs description
-- Unified titles across pages
 - Site logo / favicon
 - Markdown blockquote styling
 - Rework museum pictures
-- Maybe only show ancestor breadcrumbs
 - Titlebar titles are inconsistent
 
 ## Backend
@@ -62,3 +60,5 @@
 - 2023-06-15 Styling for log content
 - 2023-06-15 Link to logs from homepage
 - 2023-06-15 Move breadcrumbs into main section
+- 2023-06-15 Unified titles across pages
+- 2023-06-15 Maybe only show ancestor breadcrumbs
