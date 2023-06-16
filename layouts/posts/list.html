@@ -4,27 +4,31 @@
       {{- .Content -}}
     </section>
     <section>
-      {{ range .Paginator.Pages }}
-        <div class="post-listing">
-          <div class="date">
-            {{ .PublishDate.Month }}
-            {{ .Date.Day }}
-            <span class="year">
-              {{ .PublishDate.Year }}
-            </span>
-          </div>
-          <div class="post-link">
-            <h2>
-              <a href="{{ .RelPermalink }}">
-                {{ .Title }}
-              </a>
-            </h2>
-            <div>
-              {{ .Description }}
-            </div>
-          </div>
-        </div>
-      {{ end }}
+      <table class="post-listing">
+        {{ range .Paginator.Pages }}
+          <tr>
+            <td>
+              <div class="date">
+                {{ .PublishDate.Month }}
+                {{ .Date.Day }}
+                <div class="year">
+                  {{ .PublishDate.Year }}
+                </div>
+              </div>
+            </td>
+            <td>
+              <h2>
+                <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+                </a>
+              </h2>
+              <div>
+                {{ .Description }}
+              </div>
+            </td>
+          </tr>
+        {{ end }}
+      </table>
     </section>
   </article>
 {{ end }}
