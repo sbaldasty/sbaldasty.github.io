@@ -15,7 +15,6 @@
 - Markdown blockquote styling
 - Rework museum pictures
 - Titlebar titles are inconsistent
-- Style links on homepage
 - Shrink page titles / adjust margins
 
 ## Backend
@@ -65,3 +64,4 @@
 - 2023-06-15 Unified titles across pages
 - 2023-06-15 Maybe only show ancestor breadcrumbs
 - 2023-06-15 Improve layout for posts list
+- 2023-06-16 Style links on homepage

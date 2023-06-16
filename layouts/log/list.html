@@ -6,7 +6,7 @@
     <section>
       {{ range .Paginator.Pages }}
         <a href="{{ .RelPermalink }}" class="log-link">
-          {{ .File.BaseFileName }}
+          <nobr>{{ .File.BaseFileName }}</nobr>
         </a>
       {{ end }}
     </section>
