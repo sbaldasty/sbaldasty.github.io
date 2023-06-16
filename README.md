@@ -61,3 +61,4 @@
 - 2023-06-15 Description of log pages
 - 2023-06-15 Styling for log content
 - 2023-06-15 Link to logs from homepage
+- 2023-06-15 Move breadcrumbs into main section
