@@ -19,6 +19,7 @@
 
 ## Backend
 
+- Stop relying on google album archive
 - Learn about px versus pt, etc.
 - Organize css sensibly
 
