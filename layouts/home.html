@@ -3,23 +3,17 @@
     {{ .Content }}
   </article>
   {{ with .GetPage "/posts" }}
-    <a href="{{ .RelPermalink }}">
-      <div class="box-link">
-        <h2>
-          {{ .Title }}
-        </h2>
-        {{ .Content }}
-      </div>
-    </a>
+    <div class="box-link">
+      <a href="{{ .RelPermalink }}">
+        Blog posts
+      </a>
+    </div>
   {{ end }}
   {{ with .GetPage "/log" }}
-    <a href="{{ .RelPermalink }}">
-      <div class="box-link">
-        <h2>
-          {{ .Title }}
-        </h2>
-        {{ .Content }}
-      </div>
-    </a>
+    <div class="box-link">
+      <a href="{{ .RelPermalink }}">
+        Rough daily notes about everything
+      </a>
+    </div>
   {{ end }}
 {{ end }}
