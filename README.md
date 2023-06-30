@@ -16,6 +16,7 @@
 - Rework museum pictures
 - Titlebar titles are inconsistent
 - Shrink page titles / adjust margins
+- Add MathJax javascript
 
 ## Backend
 
