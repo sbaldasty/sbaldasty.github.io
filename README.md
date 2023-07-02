@@ -10,6 +10,7 @@
 
 ## Improvements
 
+- Paginator stops at 10 pages
 - Shorten or reorganize logs description
 - Site logo / favicon
 - Markdown blockquote styling
