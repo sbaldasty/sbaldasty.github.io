@@ -2,4 +2,4 @@
 title: Posts
 ---
 
-Short pieces I put some effort into and may update occasionally
+Short living documents about my thoughts and experiences in work and life.

@@ -6,11 +6,9 @@
 - Argument map layout
 - Extended bio
 - Add historical logs
-- Post about log publishing
 
 ## Improvements
 
-- Paginator stops at 10 pages
 - Shorten or reorganize logs description
 - Site logo / favicon
 - Markdown blockquote styling
@@ -68,3 +66,5 @@
 - 2023-06-15 Maybe only show ancestor breadcrumbs
 - 2023-06-15 Improve layout for posts list
 - 2023-06-16 Style links on homepage
+- 2023-07-02 Paginator stops at 10 pages
+- 2023-07-02 Post about log publishing
