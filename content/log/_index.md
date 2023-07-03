@@ -2,4 +2,4 @@
 title: Daily Notes
 ---
 
-Rough notes I take during the day with links to sources where applicable and no assurance of factual accuracy.
+Rough notes from throughout the day, with links to sources when available, some context, and no assurance of factual accuracy, etc.

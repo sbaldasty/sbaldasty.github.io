@@ -2,7 +2,6 @@
 
 - Add telephone museum
 - 2023-06-16 Write homepage
-- Write discussion for post index
 - Argument map layout
 - Extended bio
 - Add historical logs
@@ -68,3 +67,4 @@
 - 2023-06-16 Style links on homepage
 - 2023-07-02 Paginator stops at 10 pages
 - 2023-07-02 Post about log publishing
+- 2023-07-02 Write discussion for post index
