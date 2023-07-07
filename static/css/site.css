@@ -134,3 +134,14 @@ header {
     color: #472104;
     padding: 5px 15px;
 }
+
+.md table {
+    border-collapse: collapse;
+}
+
+.md table, .md th, .md td {
+    border: 1px solid;
+    padding: 3px 10px;
+    text-align: left;
+    vertical-align: top;
+}

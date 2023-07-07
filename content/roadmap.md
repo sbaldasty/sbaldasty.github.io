@@ -5,7 +5,6 @@ type: roadmap
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Style the table on the roadmap page. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write content for the homepage. |
 |            | Revisit the Museum of Printing essay. Check out its overall flow. Add a discussion of the Telephone Museum. Improve the picture captions. For the MOP pictures, use the python scripts to convert them into website-ready versions. Consider renaming the essay Information Theory. |
@@ -21,4 +20,5 @@ type: roadmap
 |            | Bring consistency to titlebar titles |
 |            | Shrink and otherwise restyle page titles, and adjust their margins. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
+| 2023-07-06 | Style the table on the roadmap page. |
 | 2023-07-06 | Add a roadmap page to track outstanding tasks for this website. |
