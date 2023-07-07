@@ -1,6 +1,5 @@
 ## Expansion
 
-- Add site roadmap page
 - Add telephone museum
 - 2023-06-16 Write homepage
 - Argument map layout
