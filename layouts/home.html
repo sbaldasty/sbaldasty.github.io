@@ -16,4 +16,11 @@
       </a>
     </div>
   {{ end }}
+  {{ with .GetPage "/roadmap" }}
+    <div class="box-link">
+      <a href="{{ .RelPermalink }}">
+        Roadmap
+      </a>
+    </div>
+  {{ end }}
 {{ end }}
