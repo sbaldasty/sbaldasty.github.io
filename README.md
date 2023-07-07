@@ -1,14 +1,16 @@
 ## Expansion
 
+- Add site roadmap page
 - Add telephone museum
 - 2023-06-16 Write homepage
 - Argument map layout
-- Extended bio
 - Add historical logs
 
 ## Improvements
 
-- Shorten or reorganize logs description
+- Profile picture attribution
+- Make journal entries look like a page
+- Reconsider images in posts
 - Site logo / favicon
 - Markdown blockquote styling
 - Rework museum pictures
@@ -19,8 +21,9 @@
 ## Backend
 
 - Stop relying on google album archive
-- Learn about px versus pt, etc.
 - Organize css sensibly
+- Let each layout define its own title
+- Learn about px versus pt, etc.
 
 ## Done
 
@@ -68,3 +71,4 @@
 - 2023-07-02 Paginator stops at 10 pages
 - 2023-07-02 Post about log publishing
 - 2023-07-02 Write discussion for post index
+- 2023-07-06 Shorten or reorganize logs description

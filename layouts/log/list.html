@@ -1,9 +1,6 @@
 {{ define "main" }}
   <article class="slight-indent">
     <section>
-      {{- .Content -}}
-    </section>
-    <section>
       {{ range .Pages }}
         <a href="{{ .RelPermalink }}" class="log-link">
           <nobr>{{ .File.BaseFileName }}</nobr>
@@ -11,4 +8,7 @@
       {{ end }}
     </section>
   </article>
+{{ end }}
+{{ define "about" }}
+  {{- .Content -}}
 {{ end }}

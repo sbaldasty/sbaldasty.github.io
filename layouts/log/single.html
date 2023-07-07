@@ -1,10 +1,10 @@
 {{ define "main" }}
   <article>
-    <header class="slight-indent">
-      {{- .Parent.Content -}}
-    </header>
     <div class="log">
       {{- .Content -}}
     </div>
   </article>
+{{ end }}
+{{ define "about" }}
+  {{- .Parent.Content -}}
 {{ end }}
