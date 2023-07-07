@@ -8,7 +8,6 @@
 
 ## Improvements
 
-- Profile picture attribution
 - Background image
 - Make journal entries look like a page
 - Reconsider images in posts
@@ -73,3 +72,4 @@
 - 2023-07-02 Post about log publishing
 - 2023-07-02 Write discussion for post index
 - 2023-07-06 Shorten or reorganize logs description
+- 2023-07-06 Profile picture attribution
