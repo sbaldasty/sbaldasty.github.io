@@ -9,6 +9,7 @@
 ## Improvements
 
 - Profile picture attribution
+- Background image
 - Make journal entries look like a page
 - Reconsider images in posts
 - Site logo / favicon

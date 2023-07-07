@@ -1,5 +1,5 @@
 ---
-title: Daily Notes
+title: Notebook
 ---
 
 **_On this page,_** minimally edited and contextualized thoughts or notes from the day; very possibly poorly written, incomplete, even factually inaccurate.
