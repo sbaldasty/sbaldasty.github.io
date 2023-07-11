@@ -1,5 +1,6 @@
 body {
-    justify-content: center;
+    margin: 8px auto;
+    max-width: 1200px;
     min-width: 280px;
     overflow-y: scroll;
 }
