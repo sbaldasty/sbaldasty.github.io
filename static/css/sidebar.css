@@ -35,12 +35,10 @@
 
 .about {
     color: #404040;
-    text-align: justify;
 }
 
 .about ul {
     padding-inline-start: 20px;
-    text-align: left;
 }
 
 .social-media {

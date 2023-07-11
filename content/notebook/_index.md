@@ -6,10 +6,10 @@ title: Notebook
 
 Why do this?
 
-- Encourage better notetaking for memory and future use
+- Encourage notetaking for memory and future use
 
 - Become comfortable sharing ideas, especially unfinished ones
 
-- Increase my sense of interest and engagement in daily life
+- Increase interest and engagement in learning
 
 - Maybe help someone
