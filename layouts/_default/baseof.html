@@ -11,16 +11,16 @@
   </head>
   <body>
     <div class="whole-page">
-      <div class="site-name">
-        Unwritten Document
-      </div>
       <div class="page-header">
+        <div class="site-name">
+          Unwritten Document
+        </div>
         <div class="breadcrumb-trail">
           {{ range .Ancestors.Reverse }}
             <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
           {{ end }}
         </div>
-        <div class="page-title slight-indent">
+        <div class="page-title">
           {{ if .Title }}
             {{ .Title }}
           {{ else }}
