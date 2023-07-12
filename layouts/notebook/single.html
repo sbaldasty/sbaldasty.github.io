@@ -1,9 +1,7 @@
 {{ define "main" }}
-  <article>
-    <div class="log">
-      {{- .Content -}}
-    </div>
-  </article>
+  <div class="log">
+    {{- .Content -}}
+  </div>
 {{ end }}
 {{ define "about" }}
   {{- .Parent.Content -}}
