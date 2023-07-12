@@ -8,6 +8,13 @@ a:visited {
     color: blue;
 }
 
+pre {
+    white-space: pre-wrap;
+}
+
+
+/* Main layout */
+
 body {
     background-color: #777777;
     overflow-y: scroll;
@@ -140,6 +147,16 @@ article {
 
 /* Notebook */
 
+article.notebook-list a {
+    padding-right: 10px;
+}
+
+article.note {
+    background-color: #faeebe;
+    color: #472104;
+    padding: 0 15px;
+}
+
 
 /* Roadmap */
 
@@ -248,14 +265,6 @@ article.roadmap th, article.roadmap td {
     padding-bottom: 20px;
     padding-right: 20px;
     vertical-align: top;
-}
-
-.log-link {
-    padding-right: 10px;
-}
-
-.log {
-    padding: 5px 15px;
 }
 
 article h1 {

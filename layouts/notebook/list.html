@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <article>
+  <article class="notebook-list">
     {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="log-link">
+      <a href="{{ .RelPermalink }}">
         <nobr>{{ .File.BaseFileName }}</nobr>
       </a>
     {{ end }}
