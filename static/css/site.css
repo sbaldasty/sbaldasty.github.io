@@ -1,3 +1,5 @@
+/* Universal layout and feel */
+
 a:link {
     text-decoration: none;
 }
@@ -20,53 +22,6 @@ body {
     min-width: 280px;
 }
 
-.page-header {
-    background-color: #ffffff;
-    border-radius: 5px;
-}
-
-.page-header div {
-    padding-left: 10px;
-}
-
-.site-name {
-    background-color: #000000;
-    border-radius: 5px 5px 0 0;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px;
-}
-
-.breadcrumb-trail {
-    background-color: #ddddff;
-    font-size: small;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-
-.page-title {
-    color: #404040;
-    font-size: 35px;
-    font-weight: normal;
-    padding-bottom: 10px;
-    padding-top: 10px;
-}
-
-.box-link {
-    margin-bottom: 40px;
-    margin-top: 40px;
-}
-
-.box-link a {
-    background-color: #e0e0ff;
-    border-color: #0000ff;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 2px;
-    font-weight: bold;
-    padding: 10px 10px 10px 10px;
-}
-
 main {
     display: flex;
     flex-flow: wrap;
@@ -83,6 +38,43 @@ article {
     padding: 15px;
 }
 
+
+/* Page header */
+
+.page-header {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.page-header div {
+    padding-left: 10px;
+}
+
+.page-header .site-name {
+    background-color: #000000;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.page-header .breadcrumb-trail {
+    background-color: #ddddff;
+    font-size: small;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.page-header .page-title {
+    color: #404040;
+    font-size: 35px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/* Sidebar */
+
 .sidebar {
     background-color: #e7e7e7;
     border-radius: 5px;
@@ -93,7 +85,111 @@ article {
     width: 250px;
 }
 
-/* TODO Maybe move this into its own file */
+.sidebar hr {
+    width: 20%;
+}
+
+.sidebar .sidebar-header {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sidebar .selfie {
+    height: 80px;
+    width: 80px;
+}
+
+.sidebar .selfie img {
+    border-radius: 5px;
+}
+
+.sidebar .my-nametag {
+    font-size: small;
+}
+
+.sidebar .my-name {
+    font-size: x-large;
+}
+
+.sidebar .bio {
+    color: #404040;
+    font-style: italic;
+    text-align: center;
+}
+
+.sidebar .about {
+    color: #404040;
+}
+
+.sidebar .about ul {
+    padding-inline-start: 20px;
+}
+
+.sidebar .social-media {
+    text-align: center;
+}
+
+.sidebar .social-media img {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+/* Notebook */
+
+
+/* Roadmap */
+
+article.roadmap {
+    padding: 0;
+}
+
+article.roadmap table {
+    border-collapse: collapse;
+}
+
+article.roadmap tr:nth-of-type(odd) {
+    background-color: #e7e7e7;
+}
+
+article.roadmap th {
+    border-bottom: 1px solid;
+}
+
+article.roadmap th:nth-of-type(1) {
+    border-top-left-radius: 5px;
+}
+
+article.roadmap th:nth-of-type(2) {
+    border-top-right-radius: 5px;
+}
+
+article.roadmap th, article.roadmap td {
+    padding: 5px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+/* Stuff that might need to disappear or be reorganized */
+
+.box-link {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.box-link a {
+    background-color: #e0e0ff;
+    border-color: #0000ff;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    font-weight: bold;
+    padding: 10px 10px 10px 10px;
+}
 
 .gallery {
     display: flex;
@@ -133,6 +229,27 @@ article {
     align-self: center;
 }
 
+.post-listing .date {
+    color: #404040;
+    margin-top: 4px;
+    min-width: 80px;
+    text-align: right;
+}
+
+.post-listing .year {
+    font-size: larger;
+}
+
+.post-listing h2 {
+    margin: 0;
+}
+
+.post-listing td {
+    padding-bottom: 20px;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
 .log-link {
     padding-right: 10px;
 }
@@ -143,37 +260,4 @@ article {
 
 article h1 {
     border-bottom: 1px solid #aaa;
-}
-
-
-/* Roadmap */
-
-article.roadmap {
-    padding: 0;
-}
-
-article.roadmap table {
-    border-collapse: collapse;
-}
-
-article.roadmap tr:nth-of-type(odd) {
-    background-color: #e7e7e7;
-}
-
-article.roadmap th {
-    border-bottom: 1px solid;
-}
-
-article.roadmap th:nth-of-type(1) {
-    border-top-left-radius: 5px;
-}
-
-article.roadmap th:nth-of-type(2) {
-    border-top-right-radius: 5px;
-}
-
-article.roadmap th, article.roadmap td {
-    padding: 5px 10px;
-    text-align: left;
-    vertical-align: top;
 }
