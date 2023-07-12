@@ -7,7 +7,7 @@ a:visited {
 }
 
 body {
-    background-image: url("/mud.png");
+    background-color: #573114;
     overflow-y: scroll;
 }
 
