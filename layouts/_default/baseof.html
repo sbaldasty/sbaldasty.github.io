@@ -19,6 +19,7 @@
           {{ range .Ancestors.Reverse }}
             <a href="{{ .RelPermalink }}">{{ .Title }}</a> &raquo;
           {{ end }}
+          &nbsp;
         </div>
         <div class="page-title">
           {{ if .Title }}

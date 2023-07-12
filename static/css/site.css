@@ -21,7 +21,7 @@ body {
 }
 
 .page-header {
-    background-color: #ffffff;
+    background-color: #faeebe;
     border-radius: 5px;
 }
 
@@ -136,14 +136,19 @@ article {
 }
 
 .log {
-    background-color: #faeebe;
-    border-radius: 5px;
-    color: #472104;
     padding: 5px 15px;
 }
 
 .md table {
     border-collapse: collapse;
+}
+
+article.roadmap {
+    padding: 0;
+}
+
+article.roadmap tr:nth-of-type(odd) {
+    background-color: #e7e7e7;
 }
 
 .md table, .md th, .md td {
