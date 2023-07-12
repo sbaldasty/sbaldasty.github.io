@@ -73,13 +73,12 @@ main {
 }
 
 article {
+    background-color: #ffffff;
+    border-radius: 5px;
     flex: 1;
     flex-basis: 600px;
     min-width: 280px;
-}
-
-.slight-indent {
-    margin-left: 5px;
+    padding: 15px;
 }
 
 .sidebar {

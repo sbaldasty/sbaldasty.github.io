@@ -1,26 +1,26 @@
 {{ define "main" }}
-  <article class="slight-indent">
+  <article>
     {{ .Content }}
+    {{ with .GetPage "/posts" }}
+      <div class="box-link">
+        <a href="{{ .RelPermalink }}">
+          Posts
+        </a>
+      </div>
+    {{ end }}
+    {{ with .GetPage "/notebook" }}
+      <div class="box-link">
+        <a href="{{ .RelPermalink }}">
+          Notebook
+        </a>
+      </div>
+    {{ end }}
+    {{ with .GetPage "/roadmap" }}
+      <div class="box-link">
+        <a href="{{ .RelPermalink }}">
+          Roadmap
+        </a>
+      </div>
+    {{ end }}
   </article>
-  {{ with .GetPage "/posts" }}
-    <div class="box-link">
-      <a href="{{ .RelPermalink }}">
-        Posts
-      </a>
-    </div>
-  {{ end }}
-  {{ with .GetPage "/notebook" }}
-    <div class="box-link">
-      <a href="{{ .RelPermalink }}">
-        Notebook
-      </a>
-    </div>
-  {{ end }}
-  {{ with .GetPage "/roadmap" }}
-    <div class="box-link">
-      <a href="{{ .RelPermalink }}">
-        Roadmap
-      </a>
-    </div>
-  {{ end }}
 {{ end }}
