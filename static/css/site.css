@@ -7,21 +7,21 @@ a:visited {
 }
 
 body {
-    background-color: #573114;
+    background-color: #777777;
     overflow-y: scroll;
 }
 
 .whole-page {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     margin: auto;
     max-width: 1200px;
     min-width: 280px;
 }
 
 .page-header {
-    background-color: #faeebe;
+    background-color: #ffffff;
     border-radius: 5px;
 }
 
@@ -38,9 +38,10 @@ body {
 }
 
 .breadcrumb-trail {
+    background-color: #ddddff;
     font-size: small;
-    padding-top: 10px;
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .page-title {
@@ -48,6 +49,7 @@ body {
     font-size: 35px;
     font-weight: normal;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .box-link {
@@ -68,7 +70,7 @@ body {
 main {
     display: flex;
     flex-flow: wrap;
-    gap: 16px;
+    gap: 8px;
     justify-content: center;
 }
 
@@ -151,8 +153,11 @@ article.roadmap tr:nth-of-type(odd) {
     background-color: #e7e7e7;
 }
 
+article.roadmap th {
+    border-bottom: 1px solid;
+}
+
 .md table, .md th, .md td {
-    border: 1px solid;
     padding: 3px 10px;
     text-align: left;
     vertical-align: top;
