@@ -2,25 +2,37 @@
   <article>
     {{ .Content }}
     {{ with .GetPage "/posts" }}
-      <div class="box-link">
-        <a href="{{ .RelPermalink }}">
-          Posts
-        </a>
-      </div>
+      <a class="box-link" href="{{ .RelPermalink }}">
+        <b>Posts</b>
+        <p>
+          asdf asdf asdf.
+        </p>
+      </a>
     {{ end }}
     {{ with .GetPage "/notebook" }}
-      <div class="box-link">
-        <a href="{{ .RelPermalink }}">
-          Notebook
-        </a>
-      </div>
+      <a class="box-link" href="{{ .RelPermalink }}">
+        <b>Notebook</b>
+        <p>
+          Minimally edited and contextualized thoughts or notes from the day; very possibly poorly written, incomplete, even factually inaccurate.
+        </p>
+      </a>
     {{ end }}
     {{ with .GetPage "/roadmap" }}
-      <div class="box-link">
-        <a href="{{ .RelPermalink }}">
-          Roadmap
-        </a>
-      </div>
+      <a class="box-link" href="{{ .RelPermalink }}">
+        <b>Roadmap</b>
+        <br>
+        <p>Mostly just for me, a prioritized list of known issues with this site, ways to improve its look and feel, backend tasks, and ideas for new content.</p>
+      </a>
     {{ end }}
   </article>
+{{ end }}
+{{ define "about" }}
+  <p>
+    <strong>
+      <em>
+        On this page,
+      </em>
+    </strong>
+    just random thoughts about personal websites, and links to some of my work.
+  </p>
 {{ end }}
