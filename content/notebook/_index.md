@@ -2,7 +2,7 @@
 title: Notebook
 ---
 
-**_On this page,_** minimally edited and contextualized thoughts or notes from the day; very possibly poorly written, incomplete, even factually inaccurate.
+**_On this page,_** minimally edited, minimally contextualized notes from throughout the day.
 
 Why do this?
 

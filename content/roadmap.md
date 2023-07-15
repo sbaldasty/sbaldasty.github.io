@@ -7,6 +7,8 @@ type: roadmap
 | ---------- | ----------- |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write content for the homepage. |
+|            | Improve the styling of the roadmap table. |
+|            | Experiment with putting homepage buttons under the whole article. |
 |            | Revisit the Museum of Printing essay. Check out its overall flow. Add a discussion of the Telephone Museum. Improve the picture captions. For the MOP pictures, use the python scripts to convert them into website-ready versions. Consider renaming the essay Information Theory. |
 |            | Experiment with layouts for argument maps. |
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
