@@ -13,7 +13,7 @@ pre {
 }
 
 a.box-link {
-    background-color: #e0e0ff;
+    background-color: #ddddff;
     border: solid 1px blue;
     border-radius: 15px;
     display: block;
@@ -50,12 +50,15 @@ main {
     justify-content: center;
 }
 
-article {
-    background-color: #ffffff;
-    border-radius: 5px;
+.left {
     flex: 1;
     flex-basis: 600px;
     min-width: 250px;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 5px;
     padding: 15px;
 }
 

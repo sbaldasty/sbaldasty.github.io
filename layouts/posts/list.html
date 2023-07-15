@@ -1,32 +1,30 @@
 {{ define "main" }}
-  <article>
-    <section>
-      <table class="post-listing">
-        {{ range .Pages }}
-          <tr>
-            <td>
-              <div class="date">
-                {{ .PublishDate.Month }}
-                {{ .Date.Day }}
-                <div class="year">
-                  {{ .PublishDate.Year }}
-                </div>
+  <article class="left">
+    <table class="post-listing">
+      {{ range .Pages }}
+        <tr>
+          <td>
+            <div class="date">
+              {{ .PublishDate.Month }}
+              {{ .Date.Day }}
+              <div class="year">
+                {{ .PublishDate.Year }}
               </div>
-            </td>
-            <td>
-              <h2>
-                <a href="{{ .RelPermalink }}">
-                  {{ .Title }}
-                </a>
-              </h2>
-              <div>
-                {{ .Description }}
-              </div>
-            </td>
-          </tr>
-        {{ end }}
-      </table>
-    </section>
+            </div>
+          </td>
+          <td>
+            <h2>
+              <a href="{{ .RelPermalink }}">
+                {{ .Title }}
+              </a>
+            </h2>
+            <div>
+              {{ .Description }}
+            </div>
+          </td>
+        </tr>
+      {{ end }}
+    </table>
   </article>
 {{ end }}
 {{ define "about" }}

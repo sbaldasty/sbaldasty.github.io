@@ -1,6 +1,8 @@
 {{ define "main" }}
-  <article>
-    {{ .Content }}
+  <div class="left">
+    <article>
+      {{ .Content }}
+    </article>
     {{ with .GetPage "/posts" }}
       <a class="box-link" href="{{ .RelPermalink }}">
         <b>Posts</b>
@@ -24,7 +26,7 @@
         <p>Prioritized list of outstanding tasks related this site.</p>
       </a>
     {{ end }}
-  </article>
+  </div>
 {{ end }}
 {{ define "about" }}
   <p>
