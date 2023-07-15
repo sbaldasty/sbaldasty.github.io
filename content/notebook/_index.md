@@ -1,5 +1,6 @@
 ---
 title: Notebook
+description: Minimally edited, minimally contextualized notes from throughout the day.
 ---
 
 **_On this page,_** minimally edited, minimally contextualized notes from throughout the day.

@@ -3,27 +3,14 @@
     <article>
       {{ .Content }}
     </article>
-    {{ with .GetPage "/posts" }}
+    {{ range .Pages }}
       <a class="box-link" href="{{ .RelPermalink }}">
-        <b>Posts</b>
+        <b>
+          {{ .Title }}
+        </b>
         <p>
-          Living documents about exploration, experiences, ideas, or lessons learned.
+          {{ .Description }}
         </p>
-      </a>
-    {{ end }}
-    {{ with .GetPage "/notebook" }}
-      <a class="box-link" href="{{ .RelPermalink }}">
-        <b>Notebook</b>
-        <p>
-          Minimally edited, minimally contextualized notes from throughout the day.
-        </p>
-      </a>
-    {{ end }}
-    {{ with .GetPage "/roadmap" }}
-      <a class="box-link" href="{{ .RelPermalink }}">
-        <b>Roadmap</b>
-        <br>
-        <p>Prioritized list of outstanding tasks related this site.</p>
       </a>
     {{ end }}
   </div>
