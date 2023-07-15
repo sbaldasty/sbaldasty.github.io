@@ -2,4 +2,4 @@
 title: Posts
 ---
 
-Short living documents about my thoughts and experiences in work and life.
+**_On this page,_** living documents about exploration, experiences, ideas, and lessons learned.

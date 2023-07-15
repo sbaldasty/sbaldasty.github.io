@@ -1,9 +1,6 @@
 {{ define "main" }}
   <article>
     <section>
-      {{- .Content -}}
-    </section>
-    <section>
       <table class="post-listing">
         {{ range .Pages }}
           <tr>
@@ -31,4 +28,7 @@
       </table>
     </section>
   </article>
+{{ end }}
+{{ define "about" }}
+  {{- .Content -}}
 {{ end }}
