@@ -3,16 +3,18 @@
     <article>
       {{ .Content }}
     </article>
-    {{ range .Pages }}
-      <a class="box-link" href="{{ .RelPermalink }}">
-        <b>
-          {{ .Title }}
-        </b>
-        <p>
-          {{ .Description }}
-        </p>
-      </a>
-    {{ end }}
+    <div class="gallery">
+      {{ range .Pages }}
+        <a class="box-link" href="{{ .RelPermalink }}">
+          <b>
+            {{ .Title }}
+          </b>
+          <p>
+            {{ .Description }}
+          </p>
+        </a>
+      {{ end }}
+    </div>
   </div>
 {{ end }}
 {{ define "about" }}
