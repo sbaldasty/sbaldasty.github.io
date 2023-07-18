@@ -1,5 +1,5 @@
 ---
-title: Information Theory, Telephones, Museum of Printing
+title: Information Theory
 date: 2023-01-19
 description: Our evolving relationship with information as described in The Information by James Gleick and seen at the Museum of Printing and the New Hampshire Telephone Museum
 ---

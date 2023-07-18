@@ -1,5 +1,5 @@
 ---
-title: Responsible Chocolate Eating
+title: Time release lock
 date: 2023-01-16
 description: Limiting daily junkfood intake with a time release lock
 ---
