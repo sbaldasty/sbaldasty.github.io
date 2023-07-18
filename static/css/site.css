@@ -43,7 +43,6 @@ main {
 }
 
 article {
-    background-color: #ffffff;
     border-radius: 5px;
     padding: 15px;
 }
@@ -150,6 +149,10 @@ article {
 
 /* Home */
 
+article.home {
+    background-color: #ffffff;
+}
+
 .box-link {
     display: flex;
     flex-flow: wrap;
@@ -174,6 +177,10 @@ article {
 
 
 /* Notebook */
+
+article.notebook-list {
+    background-color: #ffffff;
+}
 
 article.notebook-list a {
     padding-right: 10px;
@@ -200,6 +207,10 @@ article.roadmap tr:nth-of-type(odd) {
     background-color: #e7e7e7;
 }
 
+article.roadmap tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
 article.roadmap th {
     border-bottom: 1px solid;
 }
@@ -218,6 +229,16 @@ article.roadmap th, article.roadmap td {
     vertical-align: top;
 }
 
+
+/* Posts */
+
+article.post-listing {
+    background-color: #ffffff;
+}
+
+article.post section {
+    background-color: #ffffff;
+}
 
 /* Stuff that might need to disappear or be reorganized */
 
@@ -239,24 +260,6 @@ article.roadmap th, article.roadmap td {
     font-size: small;
     text-align: center;
     width: 280px;
-}
-
-.flexzone {
-    display: flex;
-    flex-flow: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.flexzone .flextext {
-    align-self: center;
-    flex: 1;
-    flex-basis: 300px;
-    min-width: 200px;
-}
-
-.flexzone .gallery {
-    align-self: center;
 }
 
 .post-listing .date {

@@ -8,14 +8,14 @@ In my personal experience, eating junkfood in moderation feels good but eating t
 
 # Setup
 
-{{< flexzone >}}
-  {{< flextext >}}
+<section>
 
 You will need a **container** to store your junkfood in. Any container with a hole you can slip the shackle of a lock through will do, but you might consider a large container because then you can save money by taking advantage of bulk deals on your favorite junkfood and still have adequate space for it all. I use a repurposed toolbox.
 
 You will need a special kind of lock called a **time release lock**. A time release lock requires no key or combination; instead it has a timer you can set. When you close the lock and start the timer, the lock opens when the timer reaches zero.
 
-  {{< /flextext >}}
+</section>
+
   {{< gallery >}}
     {{< image src="box.jpg" alt="Junk food" >}}
       Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
@@ -24,7 +24,7 @@ You will need a special kind of lock called a **time release lock**. A time rele
       Example of a suitable time release lock by iayokocc that I use, available on Amazon 
     {{< /image >}}
   {{< /gallery >}}
-{{< /flexzone >}}
+
 
 # Process
 
