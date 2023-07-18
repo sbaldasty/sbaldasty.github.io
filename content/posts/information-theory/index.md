@@ -4,17 +4,23 @@ date: 2023-01-19
 description: Our evolving relationship with information as described in The Information by James Gleick and seen at the Museum of Printing and the New Hampshire Telephone Museum
 ---
 
+{{< section >}}
+
 Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
 
 > The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
 
 You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
 
+{{< /section >}}
+
 {{< gallery >}}
   {{< image src="typewriters.jpg" alt="Typewriter exhibit" x="1000" y="1000" width="500" angle="0" >}}
     My parents pose in front of a wall of typewriters. I used to write school papers on something very similar to these when I was a kid.
   {{< /image >}}
 {{< /gallery >}}
+
+{{< section >}}
 
 I had a special reason to look forward to exploring this particular museum. I recently took a super interesting [class about information theory](https://www.uvm.edu/courses/ee_272) at the University of Vermont. Information theory considers (in the absense of any meaning that information may have) how we might measure it's quantity, store or trasmit it efficiently, and do so in a way that protects it from corruption.
 
@@ -38,6 +44,8 @@ Among the final ideas in the book is, when information is scarce and difficult t
 
 # Museum of Printing
 
+{{< /section >}}
+
 {{< gallery >}}
   {{< image src="old-bibles.jpg" alt="Bible illustration" x="1000" y="1000" width="500" angle="0" >}}
     The museum has a whole room for Bibles. There was also a picture of the Serpent tempting Eve, in the process of swallowing a fruit far bigger than its mouth, as if it were a large tranquillized rodent. Was it just trying to demonstrate that the fruit was safe, or did it actually enjoy eating it?
@@ -56,9 +64,13 @@ Among the final ideas in the book is, when information is scarce and difficult t
   {{< /image >}}
 {{< /gallery >}}
 
+{{< section >}}
+
 # Telephone Museum
 
 _**Update:** We later visited the New Hampshire Telephone Museum._ More on this coming soon, but for now here is [the link to their site](https://www.nhtelephonemuseum.org/)
+
+{{< /section >}}
 
 {{< gallery >}}
   {{< image src="telephone-cable-cross-section.jpg" alt="Telephone cable" >}}
@@ -80,7 +92,3 @@ _**Update:** We later visited the New Hampshire Telephone Museum._ More on this 
     Telephone
   {{< /image >}}
 {{< /gallery >}}
-
-# References
-
-- Coming soon
