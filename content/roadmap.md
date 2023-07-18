@@ -18,7 +18,8 @@ description: Prioritized list of tasks related to this website
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Bring consistency to titlebar titles |
 |            | Add writeups about the summer research project. |
-|            | Detect invalid or potentially "bad" HTML automatically.
+|            | Detect invalid or potentially "bad" HTML automatically. |
+|            | Clean up images a bit more by vertically aligning text and playing with the margins. |
 | 2023-07-18 | Experiment with displaying accompanying images outside the article panel. |
 | 2023-07-17 | Experiment with putting homepage buttons under the whole article. |
 | 2023-07-13 | Consider going back to including brief descriptions on links on the homepage, it's unclear what the links actually lead to. |
