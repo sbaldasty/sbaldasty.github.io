@@ -9,7 +9,6 @@ description: Prioritized list of tasks related to this website
 |            | Write content for the homepage. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Improve the styling of the roadmap table. |
-|            | Experiment with displaying accompanying images outside the article panel. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Revisit the Museum of Printing essay. Check out its overall flow. Add a discussion of the Telephone Museum. Improve the picture captions. For the MOP pictures, use the python scripts to convert them into website-ready versions. Consider renaming the essay Information Theory. |
 |            | Experiment with layouts for argument maps. |
@@ -20,6 +19,7 @@ description: Prioritized list of tasks related to this website
 |            | Bring consistency to titlebar titles |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically.
+| 2023-07-18 | Experiment with displaying accompanying images outside the article panel. |
 | 2023-07-17 | Experiment with putting homepage buttons under the whole article. |
 | 2023-07-13 | Consider going back to including brief descriptions on links on the homepage, it's unclear what the links actually lead to. |
 | 2023-07-12 | The styling of blockquotes, code, and possibly other markdown could use some attention. |
