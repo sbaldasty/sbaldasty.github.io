@@ -3,9 +3,9 @@
     <article>
       {{ .Content }}
     </article>
-    <div class="gallery">
+    <div class="box-link">
       {{ range .Pages }}
-        <a class="box-link" href="{{ .RelPermalink }}">
+        <a href="{{ .RelPermalink }}">
           <b>
             {{ .Title }}
           </b>

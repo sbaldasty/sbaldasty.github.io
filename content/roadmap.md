@@ -1,7 +1,7 @@
 ---
 title: Roadmap
 type: roadmap
-description: Prioritized list of tasks related to this site
+description: Prioritized list of tasks related to this website
 ---
 
 | Completed  | Description |

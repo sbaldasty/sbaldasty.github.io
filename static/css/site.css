@@ -150,7 +150,16 @@ article {
 
 /* Home */
 
-a.box-link {
+.box-link {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+}
+
+.box-link a {
     background-color: #ddddff;
     border: solid 1px blue;
     border-radius: 15px;
@@ -159,8 +168,8 @@ a.box-link {
     padding: 10px;
 }
 
-a.box-link p {
-    margin: 8px 0 0 0;
+.box-link p {
+    margin: 4px 0 0 0;
 }
 
 
