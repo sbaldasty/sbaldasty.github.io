@@ -23,16 +23,16 @@ body {
 .whole-page {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     margin: auto;
-    max-width: 1200px;
+    max-width: 1190px;
     min-width: 280px;
 }
 
 main {
     display: flex;
     flex-flow: wrap;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -251,7 +251,12 @@ article.post section {
     flex-flow: wrap;
     gap: 20px;
     justify-content: center;
-    margin: 20px;
+    margin-top: 20px;
+}
+
+.gallery .image {
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery .image img {
@@ -263,14 +268,17 @@ article.post section {
     background-color: #e7e7e7;
     border-radius: 0 0 5px 5px;
     color: #404040;
+    display: flex;
     font-size: small;
-    margin-top: -4px;
     min-height: 70px;
-    padding: 5px;
-    text-align: center;
+    padding: 0 5px 0 5px;
     width: 270px;
 }
 
+.gallery .image .caption p {
+    margin: auto;
+    text-align: center;
+}
 
 /* Stuff that might need to disappear or be reorganized */
 
@@ -293,8 +301,4 @@ article.post section {
     padding-bottom: 20px;
     padding-right: 20px;
     vertical-align: top;
-}
-
-article h1 {
-    border-bottom: 1px solid #aaa;
 }
