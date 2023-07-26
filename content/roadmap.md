@@ -6,6 +6,10 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Add description and date to posts header. |
+|            | Modify date format in posts list. |
+|            | Revisit color scheme, especially pure black text. |
+|            | Keep last row of images in galleries from centering. |
 |            | Rewrite junkfood post. |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
@@ -20,10 +24,10 @@ description: Prioritized list of tasks related to this website
 |            | Let each layout define its own title, instead of using conditional logic. |
 |            | Learn the differences between units of measurement in modern css and determine if they matter. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
-|            | Bring consistency to titlebar titles |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
-|            | Clean up images a bit more by vertically aligning text and playing with the margins. |
+| 2023-07-26 | Bring consistency to titlebar titles |
+| 2023-07-26 | Clean up images a bit more by vertically aligning text and playing with the margins. |
 | 2023-07-26 | Delete the gallery shortcodes. |
 | 2023-07-26 | Split out pictures from the information theory post into three posts: Information theory, Museum of Printing, NH Telephone Museum. |
 | 2023-07-26 | Find a better way to manage image gallery images in posts. |
