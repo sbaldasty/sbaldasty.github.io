@@ -239,28 +239,19 @@ article.post-listing {
     background-color: #ffffff;
 }
 
-article.post {
+.post article {
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
+    color: #404040;
     padding: 5px 15px 5px 15px;
 }
 
-.post-subheader {
-    border-radius: 5px;
-}
-
-.post-subheader .description {
-    background-color: #ffffff;
-    border-radius: 5px 5px 0 0;
-    font-style: italic;
-    padding: 10px;
-}
-
-.post-subheader .by {
+.post .subheader {
     background-color: #e7e7e7;
-    border-radius: 0 0 5px 5px;
-    font-size: x-small;
+    border-radius: 5px 5px 0 0;
+    font-size: small;
     padding: 5px 5px 5px 10px;
+    text-align: right;
 }
 
 .gallery {
@@ -268,7 +259,7 @@ article.post {
     flex-flow: wrap;
     gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .gallery .image {
