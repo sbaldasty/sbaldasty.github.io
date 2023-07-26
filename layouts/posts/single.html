@@ -1,5 +1,13 @@
 {{ define "main" }}
   <div class="left">
+    <div class="post-subheader">
+      <div class="description">
+        {{ .Description }}
+      </div>
+      <div class="by">
+        {{ dateFormat "2006-01-02" .Date }} &middot; Steven Baldasty
+      </div>
+    </div>
     <article class="post">
       {{ .Content }}
     </article>

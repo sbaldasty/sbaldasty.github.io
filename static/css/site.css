@@ -37,8 +37,11 @@ main {
 }
 
 .left {
+    display: flex;
     flex: 1;
     flex-basis: 600px;
+    flex-direction: column;
+    gap: 10px;
     min-width: 250px;
 }
 
@@ -240,6 +243,24 @@ article.post {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 5px 15px 5px 15px;
+}
+
+.post-subheader {
+    border-radius: 5px;
+}
+
+.post-subheader .description {
+    background-color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    font-style: italic;
+    padding: 10px;
+}
+
+.post-subheader .by {
+    background-color: #e7e7e7;
+    border-radius: 0 0 5px 5px;
+    font-size: x-small;
+    padding: 5px 5px 5px 10px;
 }
 
 .gallery {
