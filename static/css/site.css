@@ -237,10 +237,6 @@ article.post-listing {
 }
 
 article.post {
-    padding: 0
-}
-
-article.post section {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 5px 15px 5px 15px;
@@ -260,6 +256,7 @@ article.post section {
 }
 
 .gallery .image img {
+    background-color: #ffffff;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -274,7 +271,7 @@ article.post section {
     padding: 0 5px 0 5px;
     width: 270px;
 }
-
+ 
 .gallery .image .caption p {
     margin: auto;
     text-align: center;

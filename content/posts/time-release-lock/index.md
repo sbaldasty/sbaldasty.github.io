@@ -2,9 +2,24 @@
 title: Time release lock
 date: 2023-01-16
 description: Limiting daily junkfood intake with a time release lock
+resources:
+- src: box.jpg
+  params:
+    title: Junkfood
+    caption: Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
+- src: closed.jpg
+  params:
+    title: Closed time release lock
+    caption: Setting the timer for 20 hours causes the lock to open overnight, leaving some wiggle room in my morning schedule
+- src: open.jpg
+  params:
+    title: Open time release lock
+    caption: Example of a suitable time release lock by iayokocc that I use, available on Amazon
+- src: usb.jpg
+  params:
+    title: USB-B port
+    caption: Type-B Micro USB port on the bottom of the lock for charging every couple months (but if the charge runs out the lock will not release)
 ---
-
-{{< section >}}
 
 In my personal experience, eating junkfood in moderation feels good but eating too much junkfood does not. Too much junkfood negatively affects my mood and weight - yet my cravings often overpower my resolve to prioritize my health. This solution uses a **commitment device** (a choice one makes in the present to limit what choices one can make in the future). It works exceptionally well for me.
 
@@ -28,20 +43,3 @@ The chocolate I choose from my container usually disappears long before lunch. C
 
 - [Time release lock product page](https://www.amazon.com/Display-Multi-Function-Electronic-Rechargeable-Padlock/dp/B09D7RC5WX)
 - [Commitment device article](https://medium.com/behavior-design-hub/your-commitment-devices-database-35a54df3a64f)
-
-{{< /section >}}
-
-{{< gallery >}}
-  {{< image src="box.jpg" alt="Junk food" >}}
-    Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, and Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
-  {{< /image >}}
-  {{< image src="open.jpg" alt="Time release lock" >}}
-    Example of a suitable time release lock by iayokocc that I use, available on Amazon 
-  {{< /image >}}
-  {{< image src="closed.jpg" alt="Closed time release lock" >}}
-    Setting the timer for 20 hours causes the lock to open overnight, leaving some wiggle room in my morning schedule
-  {{< /image >}}
-  {{< image src="usb.jpg" alt="USB-B port" >}}
-    Type-B Micro USB port on the bottom of the lock for charging every couple months (but if the charge runs out the lock will not release)
-  {{< /image >}}
-{{< /gallery >}}

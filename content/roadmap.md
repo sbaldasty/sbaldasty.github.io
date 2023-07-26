@@ -6,11 +6,17 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Split out pictures from the information theory post into three posts: Information theory, Museum of Printing, NH Telephone Museum. |
+|            | Delete the gallery shortcodes. |
+|            | Rewrite junkfood post. |
+|            | Write post on information theory. |
+|            | Write post on Museum of Printing. |
+|            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
+|            | Write post on handling Google Photos images with Hugo. |
 |            | Improve the styling of the roadmap table. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
-|            | Revisit the Museum of Printing essay. Check out its overall flow. Add a discussion of the Telephone Museum. Improve the picture captions. For the MOP pictures, use the python scripts to convert them into website-ready versions. Consider renaming the essay Information Theory. |
 |            | Experiment with layouts for argument maps. |
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
 |            | Let each layout define its own title, instead of using conditional logic. |
@@ -20,6 +26,7 @@ description: Prioritized list of tasks related to this website
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
 |            | Clean up images a bit more by vertically aligning text and playing with the margins. |
+| 2023-07-26 | Find a better way to manage image gallery images in posts. |
 | 2023-07-18 | Experiment with displaying accompanying images outside the article panel. |
 | 2023-07-17 | Experiment with putting homepage buttons under the whole article. |
 | 2023-07-13 | Consider going back to including brief descriptions on links on the homepage, it's unclear what the links actually lead to. |

@@ -1,7 +1,21 @@
 {{ define "main" }}
-  <article class="left post">
-    {{- .Content -}}
-  </article>
+  <div class="left">
+    <article class="post">
+      {{ .Content }}
+    </article>
+    <div class="gallery">
+      {{ range .Resources.ByType "image" }}
+        <div class="image">
+          <img src="{{ .RelPermalink }}" alt="{{ .Params.title }}" title="{{ .Params.title }}" width="280px" height="210px">
+          <div class="caption">
+            <p>
+              {{ .Params.caption }}
+            </p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
 {{ end }}
 {{ define "about" }}
   <p>
