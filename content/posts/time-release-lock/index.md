@@ -6,19 +6,19 @@ resources:
 - src: box.jpg
   params:
     title: Junkfood
-    caption: Toolbox overflowing with Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, Ghirardelli 72% Cacao Dark Chocolate Premium Baking Chips
+    caption: Ferrero Rocher, Sanders Dark Chocolate Sea Salt Caramels, Ghirardelli 72% Cacao Dark Chocolate Baking Chips
 - src: closed.jpg
   params:
     title: Closed time release lock
-    caption: Setting the timer for 20 hours causes the lock to open overnight, leaving some wiggle room in my morning schedule
+    caption: Choosing 20 hours causes the lock to open overnight, leaving some wiggle room in the morning
 - src: open.jpg
   params:
     title: Open time release lock
-    caption: Example of a suitable time release lock by iayokocc that I use, available on Amazon
+    caption: The time release lock by iayokocc that I use
 - src: usb.jpg
   params:
     title: USB-B port
-    caption: Type-B Micro USB port on the bottom of the lock for charging every couple months (but if the charge runs out the lock will not release)
+    caption: The lock requires charging through a Type-B Micro USB port every couple months
 ---
 
 In my personal experience, eating junkfood in moderation feels good but eating too much junkfood does not. Too much junkfood negatively affects my mood and weight - yet my cravings often overpower my resolve to prioritize my health. This solution uses a **commitment device** (a choice one makes in the present to limit what choices one can make in the future). It works exceptionally well for me.

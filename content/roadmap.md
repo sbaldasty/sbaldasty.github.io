@@ -6,8 +6,6 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Split out pictures from the information theory post into three posts: Information theory, Museum of Printing, NH Telephone Museum. |
-|            | Delete the gallery shortcodes. |
 |            | Rewrite junkfood post. |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
@@ -26,6 +24,8 @@ description: Prioritized list of tasks related to this website
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
 |            | Clean up images a bit more by vertically aligning text and playing with the margins. |
+| 2023-07-26 | Delete the gallery shortcodes. |
+| 2023-07-26 | Split out pictures from the information theory post into three posts: Information theory, Museum of Printing, NH Telephone Museum. |
 | 2023-07-26 | Find a better way to manage image gallery images in posts. |
 | 2023-07-18 | Experiment with displaying accompanying images outside the article panel. |
 | 2023-07-17 | Experiment with putting homepage buttons under the whole article. |

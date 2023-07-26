@@ -1,26 +1,14 @@
 ---
 title: Information Theory
 date: 2023-01-19
-description: Our evolving relationship with information as described in The Information by James Gleick and seen at the Museum of Printing and the New Hampshire Telephone Museum
+description: Humanity's evolving relationship with information as described in James Gleick's book "The Information - a history, a theory, a flood"
 ---
-
-{{< section >}}
 
 Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
 
 > The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
 
 You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
-
-{{< /section >}}
-
-{{< gallery >}}
-  {{< image src="typewriters.jpg" alt="Typewriter exhibit" x="1000" y="1000" width="500" angle="0" >}}
-    My parents pose in front of a wall of typewriters. I used to write school papers on something very similar to these when I was a kid.
-  {{< /image >}}
-{{< /gallery >}}
-
-{{< section >}}
 
 I had a special reason to look forward to exploring this particular museum. I recently took a super interesting [class about information theory](https://www.uvm.edu/courses/ee_272) at the University of Vermont. Information theory considers (in the absense of any meaning that information may have) how we might measure it's quantity, store or trasmit it efficiently, and do so in a way that protects it from corruption.
 
@@ -42,53 +30,6 @@ The book tells the story of humanity's evolving dance with information and its t
 
 Among the final ideas in the book is, when information is scarce and difficult to access it is expensive; but when information is plentiful and easy to access then attention is expensive.
 
-# Museum of Printing
-
-{{< /section >}}
-
-{{< gallery >}}
-  {{< image src="old-bibles.jpg" alt="Bible illustration" x="1000" y="1000" width="500" angle="0" >}}
-    The museum has a whole room for Bibles. There was also a picture of the Serpent tempting Eve, in the process of swallowing a fruit far bigger than its mouth, as if it were a large tranquillized rodent. Was it just trying to demonstrate that the fruit was safe, or did it actually enjoy eating it?
-  {{< /image >}}
-  {{< image src="printing-presses.jpg" alt="Printing presses" x="1000" y="1000" width="500" angle="0" >}}
-    The museum has mechanical printing presses from many eras. The basic idea was to cover raised writing in ink and press it onto a page. OSHA would likely take issue with most of these designs, if we still used them today.
-  {{< /image >}}
-  {{< image src="printing-my-name.jpg" alt="Printing my name" x="1000" y="1000" width="500" angle="0" >}}
-    One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
-  {{< /image >}}
-  {{< image src="color-printer.jpg" alt="Color printer" x="1000" y="1000" width="500" angle="0" >}}
-    An early electronic device for doing color printing at scale. More modern devicecs are shown nearby to illustrate miniaturization.
-  {{< /image >}}
-  {{< image src="old-computers.jpg" alt="Old computers" x="1000" y="1000" width="500" angle="0" >}}
-    These bring back memories, they are artifacts from my living past. Machines like these taught me the love of programming and inspired me down the path I took in life.
-  {{< /image >}}
-{{< /gallery >}}
-
-{{< section >}}
-
 # Telephone Museum
 
 _**Update:** We later visited the New Hampshire Telephone Museum._ More on this coming soon, but for now here is [the link to their site](https://www.nhtelephonemuseum.org/)
-
-{{< /section >}}
-
-{{< gallery >}}
-  {{< image src="telephone-cable-cross-section.jpg" alt="Telephone cable" >}}
-    Cross section of a large telephone cable
-  {{< /image >}}
-  {{< image src="telegraph.jpg" alt="Telegraph" >}}
-    Telegraph
-  {{< /image >}}
-  {{< image src="automated-switchboard.jpg" alt="Automated mechanical switchboard" >}}
-    Automated mechanical switchboard
-  {{< /image >}}
-  {{< image src="undersea-telephone-cable.jpg" alt="Undersea telephone cable" >}}
-    Undersea telephone cable
-  {{< /image >}}
-  {{< image src="manual-switchboard.jpg" alt="Manual switchboard" >}}
-    Manual switchboard
-  {{< /image >}}
-  {{< image src="telephone.jpg" alt="Telephone" >}}
-    Telephone
-  {{< /image >}}
-{{< /gallery >}}
