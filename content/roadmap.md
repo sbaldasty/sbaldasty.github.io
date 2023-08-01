@@ -14,6 +14,7 @@ description: Prioritized list of tasks related to this website
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
+|            | Fix notebook list centering issue. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write post on handling Google Photos images with Hugo. |
 |            | Improve the styling of the roadmap table. |

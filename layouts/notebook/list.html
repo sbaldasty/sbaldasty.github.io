@@ -2,7 +2,7 @@
   <article class="left notebook-list">
     {{ range .Pages }}
       <a href="{{ .RelPermalink }}">
-        <nobr>{{ .File.BaseFileName }}</nobr>
+        <nobr>{{ path.Base .File.Dir }}</nobr>
       </a>
     {{ end }}
   </article>

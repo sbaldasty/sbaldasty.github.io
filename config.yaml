@@ -1,3 +1,6 @@
+title: Unwritten Document
 baseURL: https://unwrittendocument.com/
 languageCode: en-us
-title: Unwritten Document
+taxonomies:
+  daily-note: Daily Notes
+  topical-note: Topical Notes

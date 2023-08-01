@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="left note">
-    {{ range .Resources.ByType "page" }}
+    {{ range (.Site.GetPage "/notebook/2023-07-31").Resources.ByType "page" }}
       <div class="post">
         <div class="subheader">
           {{ .Title }}
@@ -8,7 +8,7 @@
         <article class="post">
           {{ .Content }}
         </article>
-        </div>
+      </div>
     {{ end }}
   </div>
 {{ end }}

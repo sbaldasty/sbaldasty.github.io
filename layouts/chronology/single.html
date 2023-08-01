@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+<h2>By Date</h2>
+<ul class="archives-list">
+	{{ range $name, $taxonomy := .Site.Taxonomies.date }}
+	  {{- with $.Site.GetPage (printf "%s" $name) -}}
+          <li><a href="{{ .RelPermalink }}" title="All posts from {{ .Title }}">{{ .Title }}</a>
+	  {{ end }}
+	{{ end }}
+</ul>
+{{ end }}
