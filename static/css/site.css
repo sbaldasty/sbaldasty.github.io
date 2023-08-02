@@ -201,6 +201,36 @@ article.note {
     gap: 10px;
 }
 
+.journal-entry {
+    background-color: #fff8d1;
+    border: 1px solid #410c0c;
+    border-radius: 5px;
+    color: #410c0c;
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.mini-post {
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.mini-post .header {
+    background-color: #e7e7e7;
+    border-radius: 5px 5px 0 0;
+    color: #404040;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.mini-post .content {
+    border-radius: 0 0 5px 5px;
+    color: #404040;
+    margin: 0 10px;
+}
+
 /* Roadmap */
 
 article.roadmap {
