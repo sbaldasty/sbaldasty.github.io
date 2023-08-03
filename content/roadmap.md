@@ -9,7 +9,6 @@ description: Prioritized list of tasks related to this website
 |            | Do not center images on the last row of galleries. |
 |            | Do not center buttons on the last row of buttons on the homepage. |
 |            | Revisit css to simplify it. |
-|            | Go through old notebook pages. Either split them into mini-posts or delete them. |
 |            | Modify date format in posts list. |
 |            | Rewrite junkfood post. |
 |            | Write post on information theory. |
@@ -25,6 +24,7 @@ description: Prioritized list of tasks related to this website
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
+| 2023-08-03 | Go through old notebook pages. Either split them into mini-posts or delete them. |
 | 2023-08-03 | Figure out what to do about the notebook About in the sidebars versus content on the page. |
 | 2023-08-03 | Stub out a Topics section. |
 | 2023-08-03 | Add day descriptions to old notebook pages. |

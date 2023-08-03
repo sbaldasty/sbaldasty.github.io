@@ -1,12 +1,6 @@
-## Coding session
-
-Nice function for calculating [gini impurity](https://stackoverflow.com/questions/45079601/how-can-i-get-gini-coefficient-in-sklearn), it seems sklearn does not expose one.
-
-Python equivalent of Java's `toString()` method is `__str__(self)`.
-
-Python supports customization of non-boolean [truthy and falsy](https://www.freecodecamp.org/news/truthy-and-falsy-values-in-python/) objects.
-
-## Geometric series
+---
+title: Geometric series
+---
 
 Useful infinite geometric series identity for this [online course on probability theory](https://www.probabilitycourse.com/), taken from [Wolfram MathWorld](https://mathworld.wolfram.com/GeometricSeries.html).
 

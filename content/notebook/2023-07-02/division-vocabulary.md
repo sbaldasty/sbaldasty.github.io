@@ -1,13 +1,5 @@
-## Personal website
-
-Using the `.Pages` variable in the context of a [hugo page](https://gohugo.io/variables/page/) gives back all the child pages, versus going through `.Paginator` whose pages are limited.
-
-## Coding session
+---
+title: Division vocabulary
+---
 
 As a [refresher](https://www.hmhco.com/blog/teaching-dividend-divisor-and-quotient-in-division) in `a / b = c`, `a` is the **dividend**, `b` is the **divisor**, and `c` is the **quotient**. In secure integer division in mpyc, the divisor has to be public. Probably not a theoretical limitation? The mpyc [documentation](https://mpyc.readthedocs.io/en/latest/mpyc.html#module-mpyc.runtime) claims to support divison of two secure floats. And while undocumented, division with a secure integer divisor appears to work, but only when the dividend splits evenly.
-
-The result of mpyc comparison operators is {0, 1}, instead of boolean values.
-
-## Proof assistants
-
-I have an interest in proof assistants in the vein of [metamath](https://us.metamath.org/), I spent some time compiling notes but they are not ready to post.
