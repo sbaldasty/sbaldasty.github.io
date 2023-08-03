@@ -23,6 +23,7 @@ description: Prioritized list of tasks related to this website
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
+| 2023-08-03 | Stub out a Topics section. |
 | 2023-08-03 | Add day descriptions to old notebook pages. |
 | 2023-08-03 | Fix notebook list centering issue. |
 | 2023-08-03 | Let each layout define its own title, instead of using conditional logic. |
