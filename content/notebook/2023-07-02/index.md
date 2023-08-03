@@ -2,3 +2,5 @@
 title: 2023-07-02
 date: 2023-07-02
 ---
+
+Anything special about today...

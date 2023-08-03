@@ -8,7 +8,6 @@ description: Prioritized list of tasks related to this website
 | ---------- | ----------- |
 |            | Figure out what to do about the notebook About in the sidebars versus content on the page. |
 |            | Go through old notebook pages. Either split them into mini-posts or delete them. |
-|            | Add day descriptions to old notebook pages. |
 |            | Modify date format in posts list. |
 |            | Rewrite junkfood post. |
 |            | Write post on information theory. |
@@ -24,6 +23,7 @@ description: Prioritized list of tasks related to this website
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
+| 2023-08-03 | Add day descriptions to old notebook pages. |
 | 2023-08-03 | Fix notebook list centering issue. |
 | 2023-08-03 | Let each layout define its own title, instead of using conditional logic. |
 | 2023-08-03 | Improve the styling of the roadmap table. |
