@@ -1,8 +1,8 @@
 {{ define "main" }}
   <div class="left">
-    <article class="home">
+    <div class="content-panel">
       {{ .Content }}
-    </article>
+    </div>
     <div class="box-link">
       {{ range .Pages }}
         <a href="{{ .RelPermalink }}">

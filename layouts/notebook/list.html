@@ -1,11 +1,16 @@
 {{ define "main" }}
-  <article class="left notebook-list">
-    {{ range .Pages }}
-      <a href="{{ .RelPermalink }}">
-        <nobr>{{ path.Base .File.Dir }}</nobr>
-      </a>
-    {{ end }}
-  </article>
+  <div class="content-panel">
+    {{ .Content }}
+    <div class="asdf">
+    <div class="notebook-date-list">
+      {{ range .Pages }}
+        <a href="{{ .RelPermalink }}">
+          <nobr>{{ .Title }}</nobr>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  </div>
 {{ end }}
 {{ define "about" }}
   {{- .Content -}}

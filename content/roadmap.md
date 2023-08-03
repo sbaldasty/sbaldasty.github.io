@@ -6,26 +6,29 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Figure out what to do about the notebook About in the sidebars versus content on the page. |
+|            | Go through old notebook pages. Either split them into mini-posts or delete them. |
+|            | Add day descriptions to old notebook pages. |
 |            | Modify date format in posts list. |
-|            | Revisit color scheme, especially pure black text. |
-|            | Keep last row of images in galleries from centering. |
 |            | Rewrite junkfood post. |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
-|            | Fix notebook list centering issue. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write post on handling Google Photos images with Hugo. |
-|            | Improve the styling of the roadmap table. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Experiment with layouts for argument maps. |
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
-|            | Let each layout define its own title, instead of using conditional logic. |
 |            | Learn the differences between units of measurement in modern css and determine if they matter. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
+| 2023-08-03 | Fix notebook list centering issue. |
+| 2023-08-03 | Let each layout define its own title, instead of using conditional logic. |
+| 2023-08-03 | Improve the styling of the roadmap table. |
+| 2023-08-03 | Revisit color scheme, especially pure black text. |
+| 2023-08-03 | Add an archetype for notebook pages. |
 | 2023-07-26 | Add description and date to posts header. |
 | 2023-07-26 | Bring consistency to titlebar titles |
 | 2023-07-26 | Clean up images a bit more by vertically aligning text and playing with the margins. |

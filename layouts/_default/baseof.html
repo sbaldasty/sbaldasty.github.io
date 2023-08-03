@@ -20,17 +20,13 @@
           &nbsp;
         </div>
         <div class="page-title">
-          {{ if .Title }}
-            {{ .Title }}
-          {{ else }}
-            {{ with .File }}
-              {{ .BaseFileName }}
-            {{ end }}
-          {{ end }}
+          {{ .Title }}
         </div>
       </div>
       <main>
-        {{ block "main" . }}{{ end }}
+        <div class="page-specific-content">
+          {{ block "main" . }}{{ end }}
+        </div>
         <div class="sidebar">
           <div class="sidebar-header">
             <div class="selfie">

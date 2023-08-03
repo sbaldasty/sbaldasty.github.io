@@ -36,14 +36,14 @@ main {
     justify-content: center;
 }
 
-.left {
+.page-specific-content {
     flex: 1;
     flex-basis: 600px;
     gap: 10px;
     min-width: 250px;
 }
 
-article {
+.content-panel {
     border-radius: 5px;
     flex: 1;
     padding: 5px 15px 5px 15px;
@@ -183,12 +183,15 @@ article.home {
 
 /* Notebook */
 
-article.notebook-list {
-    background-color: #ffffff;
+.notebook-date-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 90px);
+    justify-content: center;
+    padding-bottom: 5px;
 }
 
-article.notebook-list a {
-    padding-right: 10px;
+.notebook-date-list a {
+    display: block;
 }
 
 article.note {
@@ -241,12 +244,16 @@ article.roadmap table {
     border-collapse: collapse;
 }
 
-article.roadmap tr:nth-of-type(odd) {
+article.roadmap thead tr {
     background-color: #e7e7e7;
 }
 
-article.roadmap tr:nth-of-type(even) {
+article.roadmap tbody tr:nth-of-type(odd) {
     background-color: #ffffff;
+}
+
+article.roadmap tbody tr:nth-of-type(even) {
+    background-color: #fff8d1;
 }
 
 article.roadmap th {
@@ -290,6 +297,7 @@ article.post-listing {
 }
 
 .gallery {
+    align-items: center;
     display: flex;
     flex-flow: wrap;
     gap: 20px;
