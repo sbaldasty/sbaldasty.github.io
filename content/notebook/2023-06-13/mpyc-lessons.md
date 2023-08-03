@@ -1,4 +1,6 @@
-## Hard learned lessons from mpyc today:
+---
+title: Lessons learned about mpyc
+---
 
 `mpyc.argmax` returns both the index of the highest argument (in position 0) and the value of the highest argument (in position 1).
 

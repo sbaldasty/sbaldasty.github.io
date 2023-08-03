@@ -1,14 +1,8 @@
-## Hugo learnings
-- Subdirectories under _layouts_ let you control which _list.html_ and _single.html_ templates get applied, if the subdirectories have the same names as those under _posts_.
-- It's more appropriate to use _description_ than _summary_ for hand-crafted TLDR's
-- The paginator apparently has no limit by default if you just ask for its pages
+---
+title: Lessons learned about mpyc
+---
 
-## Links
-
-- [How hugo decides what layout html file to use](https://gohugo.io/templates/lookup-order/)
-
-## mpyc learnings
-- You can't do arithmatic on two SecInts of different sizes, the program hangs. Is that something that could be improved upon? I'll likely know more when I take Secure Multi-Party Computation in the fall...
+I can't do arithmatic on two SecInts of different sizes, the program hangs. Is that something that could be improved upon? I'll likely know more when I take Secure Multi-Party Computation in the fall...
 
 Some code for running a secure multi-party vote, there aren't a whole lot of mpyc examples out on the internet right now.
 

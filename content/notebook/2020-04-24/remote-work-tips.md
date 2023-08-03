@@ -2,8 +2,6 @@
 title: Remote work training takeaways
 ---
 
-_I took notes from an online class I took about remote work. I think the class was on LinkedIn._
-
 Identify which tasks absolutely have to be done today. What remains is discretionary time. Have a space dedicated to work. Consider natural light, sound, and temperatures.
 
 Do not let non-work activities be an option during work time:
