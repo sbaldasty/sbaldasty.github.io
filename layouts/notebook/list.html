@@ -1,6 +1,5 @@
 {{ define "main" }}
   <div class="content-panel">
-    {{ .Content }}
     <div class="asdf">
     <div class="notebook-date-list">
       {{ range .Pages }}
@@ -13,5 +12,40 @@
   </div>
 {{ end }}
 {{ define "about" }}
-  {{- .Content -}}
+  <p>
+    <strong>
+      <em>
+        On this page,
+      </em>
+    </strong>
+    a chronological index of the minimally edited, minimally contextualized notes I've taken grouped by day.
+  </p>
+  <p>
+    Many of the same notes are also available grouped topically instead, see the <a href="/topics">Topics</a> section of this website.
+  </p>
+  <p>
+    Why do this?
+  </p>
+  <ul>
+    <li>
+      <p>
+        Encourage notetaking for memory and future use
+      </p>
+    </li>
+    <li>
+      <p>
+        Become comfortable sharing ideas, especially unfinished ones
+      </p>
+    </li>
+    <li>
+      <p>
+        Increase interest and engagement in learning
+      </p>
+    </li>
+    <li>
+      <p>
+        Maybe help someone
+      </p>
+    </li>
+  </ul>
 {{ end }}

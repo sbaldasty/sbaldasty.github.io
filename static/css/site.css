@@ -187,7 +187,8 @@ article.home {
     display: grid;
     grid-template-columns: repeat(auto-fill, 90px);
     justify-content: center;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .notebook-date-list a {
