@@ -8,15 +8,16 @@ description: Prioritized list of tasks related to this website
 | ---------- | ----------- |
 |            | Do not center images on the last row of galleries. |
 |            | Do not center buttons on the last row of buttons on the homepage. |
-|            | Revisit css to simplify it. |
 |            | Modify date format in posts list. |
-|            | Rewrite junkfood post. |
+|            | Revisit css to simplify it. |
+|            | Write junkfood post. |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write post on handling Google Photos images with Hugo. |
+|            | Add thumbnail images to posts. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Experiment with layouts for argument maps. |
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
