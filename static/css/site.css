@@ -171,8 +171,9 @@ main {
 }
 
 .box-link {
-    display: flex;
-    flex-flow: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 220px);
+    justify-content: center;
     gap: 20px;
     justify-content: center;
     margin: 20px;
@@ -304,9 +305,9 @@ main {
 }
 
 .gallery {
-    align-items: center;
-    display: flex;
-    flex-flow: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 280px);
+    justify-content: center;
     gap: 20px;
     justify-content: center;
     margin-top: 20px;

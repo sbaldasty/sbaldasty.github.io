@@ -6,22 +6,23 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Do not center images on the last row of galleries. |
-|            | Do not center buttons on the last row of buttons on the homepage. |
+|            | Figure out why markdown paragraphs have margins outside their bounding boxes. |
+|            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Write junkfood post. |
 |            | Create personal website topic. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
+|            | Add thumbnail images to posts. |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
-|            | Write post on handling Google Photos images with Hugo. |
-|            | Add thumbnail images to posts. |
-|            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
-|            | Experiment with layouts for argument maps. |
-|            | Trawl through old logs and notes for material that could go in the Notebook section. |
-|            | Learn the differences between units of measurement in modern css and determine if they matter. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+|            | Show linkable topics of mini-posts in the Notebook. |
+|            | Add direct navigation between posts and notebook pages. |
+|            | Write post on handling Google Photos images with Hugo. |
+|            | Experiment with layouts for argument maps. |
+| 2023-08-05 | Do not center images on the last row of galleries. |
+| 2023-08-05 | Do not center buttons on the last row of buttons on the homepage. |
 | 2023-08-04 | Modify date format in posts list. |
 | 2023-08-04 | Revisit css to simplify it. |
 | 2023-08-03 | Go through old notebook pages. Either split them into mini-posts or delete them. |
