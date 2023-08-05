@@ -48,12 +48,12 @@ main {
     flex: 1;
     background-color: #ffffff;
     border-radius: 5px;
-    color: #404040;
 }
 
 .content-panel .header {
     background-color: #e7e7e7;
     border-radius: 5px 5px 0 0;
+    color: #404040;
     padding: 10px;
     font-weight: bold;
 }

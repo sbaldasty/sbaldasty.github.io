@@ -8,8 +8,6 @@ description: Prioritized list of tasks related to this website
 | ---------- | ----------- |
 |            | Do not center images on the last row of galleries. |
 |            | Do not center buttons on the last row of buttons on the homepage. |
-|            | Modify date format in posts list. |
-|            | Revisit css to simplify it. |
 |            | Write junkfood post. |
 |            | Create personal website topic. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
@@ -24,7 +22,8 @@ description: Prioritized list of tasks related to this website
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
 |            | Learn the differences between units of measurement in modern css and determine if they matter. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
-|            | Detect invalid or potentially "bad" HTML automatically. |
+| 2023-08-04 | Modify date format in posts list. |
+| 2023-08-04 | Revisit css to simplify it. |
 | 2023-08-03 | Go through old notebook pages. Either split them into mini-posts or delete them. |
 | 2023-08-03 | Figure out what to do about the notebook About in the sidebars versus content on the page. |
 | 2023-08-03 | Stub out a Topics section. |
