@@ -44,10 +44,9 @@ main {
 }
 
 .content-panel {
-    border-radius: 5px;
-    flex: 1;
     background-color: #ffffff;
     border-radius: 5px;
+    flex: 1;
 }
 
 .content-panel .header {
@@ -58,11 +57,8 @@ main {
     font-weight: bold;
 }
 
-.content-panel .content {
-    padding: 0 10px 0 10px;
-}
-
 .md {
+    display: inline-block;
     padding: 0 10px 0 10px;
 }
 
@@ -165,10 +161,6 @@ main {
 
 
 /* Home */
-
-.home {
-    padding: 10px;
-}
 
 .box-link {
     display: grid;

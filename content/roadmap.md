@@ -6,7 +6,6 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Figure out why markdown paragraphs have margins outside their bounding boxes. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Write junkfood post. |
 |            | Create personal website topic. |
@@ -21,6 +20,7 @@ description: Prioritized list of tasks related to this website
 |            | Add direct navigation between posts and notebook pages. |
 |            | Write post on handling Google Photos images with Hugo. |
 |            | Experiment with layouts for argument maps. |
+| 2023-08-05 | Figure out why markdown paragraphs have margins outside their bounding boxes. |
 | 2023-08-05 | Do not center images on the last row of galleries. |
 | 2023-08-05 | Do not center buttons on the last row of buttons on the homepage. |
 | 2023-08-04 | Modify date format in posts list. |
