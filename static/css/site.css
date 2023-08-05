@@ -294,12 +294,9 @@ main {
 }
 
 .post-listing .date {
+    color: #404040;
     font-size: small;
     margin-bottom: 2px;
-}
-
-.post-listing .description {
-    color: #000000;
 }
 
 .post .header {
