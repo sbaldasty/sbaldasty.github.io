@@ -6,7 +6,6 @@ description: Prioritized list of tasks related to this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 |            | Write junkfood post. |
 |            | Create personal website topic. |
 |            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
@@ -19,7 +18,9 @@ description: Prioritized list of tasks related to this website
 |            | Show linkable topics of mini-posts in the Notebook. |
 |            | Add direct navigation between posts and notebook pages. |
 |            | Write post on handling Google Photos images with Hugo. |
+|            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
+| 2023-08-05 | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 | 2023-08-05 | Figure out why markdown paragraphs have margins outside their bounding boxes. |
 | 2023-08-05 | Do not center images on the last row of galleries. |
 | 2023-08-05 | Do not center buttons on the last row of buttons on the homepage. |
