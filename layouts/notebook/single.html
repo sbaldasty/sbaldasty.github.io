@@ -1,14 +1,14 @@
 {{ define "main" }}
-  <div class="left note">
+  <div class="note">
     <div class="journal-entry">
       {{ .Content }}
     </div>
     {{ range .Resources.ByType "page" }}
-      <div class="mini-post">
+      <div class="content-panel mini-post">
         <div class="header">
           {{ .Title }}
         </div>
-        <div class="content">
+        <div class="content md">
           {{ .Content }}
         </div>
         </div>

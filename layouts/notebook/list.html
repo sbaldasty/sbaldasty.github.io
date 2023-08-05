@@ -1,14 +1,12 @@
 {{ define "main" }}
   <div class="content-panel">
-    <div class="asdf">
     <div class="notebook-date-list">
       {{ range .Pages }}
         <a href="{{ .RelPermalink }}">
-          <nobr>{{ .Title }}</nobr>
+          {{ .Title }}
         </a>
       {{ end }}
     </div>
-  </div>
   </div>
 {{ end }}
 {{ define "about" }}

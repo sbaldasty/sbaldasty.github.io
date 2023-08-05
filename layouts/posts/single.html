@@ -1,25 +1,23 @@
 {{ define "main" }}
-  <div class="left">
-    <div class="post">
-      <div class="subheader">
-        {{ dateFormat "2006-01-02" .Date }}
-      </div>
-      <article class="post">
-        {{ .Content }}
-      </article>
+  <div class="content-panel post">
+    <div class="header">
+      {{ dateFormat "2006-01-02" .Date }}
     </div>
-    <div class="gallery">
-      {{ range .Resources.ByType "image" }}
-        <div class="image">
-          <img src="{{ .RelPermalink }}" alt="{{ .Params.title }}" title="{{ .Params.title }}" width="280px" height="210px">
-          <div class="caption">
-            <p>
-              {{ .Params.caption }}
-            </p>
-          </div>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </div>
+  <div class="gallery">
+    {{ range .Resources.ByType "image" }}
+      <div class="image">
+        <img src="{{ .RelPermalink }}" alt="{{ .Params.title }}" title="{{ .Params.title }}" width="280px" height="210px">
+        <div class="caption">
+          <p>
+            {{ .Params.caption }}
+          </p>
         </div>
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
   </div>
 {{ end }}
 {{ define "about" }}

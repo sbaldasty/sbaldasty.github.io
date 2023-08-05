@@ -11,11 +11,12 @@ description: Prioritized list of tasks related to this website
 |            | Modify date format in posts list. |
 |            | Revisit css to simplify it. |
 |            | Write junkfood post. |
+|            | Create personal website topic. |
+|            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
 |            | Write content for the homepage. |
-|            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 |            | Write post on handling Google Photos images with Hugo. |
 |            | Add thumbnail images to posts. |
 |            | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
@@ -23,7 +24,6 @@ description: Prioritized list of tasks related to this website
 |            | Trawl through old logs and notes for material that could go in the Notebook section. |
 |            | Learn the differences between units of measurement in modern css and determine if they matter. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
-|            | Add writeups about the summer research project. |
 |            | Detect invalid or potentially "bad" HTML automatically. |
 | 2023-08-03 | Go through old notebook pages. Either split them into mini-posts or delete them. |
 | 2023-08-03 | Figure out what to do about the notebook About in the sidebars versus content on the page. |

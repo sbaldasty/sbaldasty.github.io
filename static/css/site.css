@@ -46,12 +46,25 @@ main {
 .content-panel {
     border-radius: 5px;
     flex: 1;
-    padding: 5px 15px 5px 15px;
     background-color: #ffffff;
     border-radius: 5px;
     color: #404040;
 }
 
+.content-panel .header {
+    background-color: #e7e7e7;
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.content-panel .content {
+    padding: 0 10px 0 10px;
+}
+
+.md {
+    padding: 0 10px 0 10px;
+}
 
 /* Page header */
 
@@ -154,8 +167,8 @@ main {
 
 /* Home */
 
-article.home {
-    background-color: #ffffff;
+.home {
+    padding: 10px;
 }
 
 .box-link {
@@ -193,10 +206,8 @@ article.home {
 
 .notebook-date-list a {
     display: block;
-}
-
-article.note {
-    padding: 0 15px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .note {
@@ -221,55 +232,49 @@ article.note {
     border-radius: 5px;
 }
 
-.mini-post .header {
-    background-color: #e7e7e7;
-    border-radius: 5px 5px 0 0;
-    color: #404040;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.mini-post .content {
-    border-radius: 0 0 5px 5px;
-    color: #404040;
-    margin: 0 10px;
-}
-
 /* Roadmap */
 
-article.roadmap {
+.roadmap {
     padding: 0;
 }
 
-article.roadmap table {
+.roadmap table {
     border-collapse: collapse;
 }
 
-article.roadmap thead tr {
+.roadmap thead tr {
     background-color: #e7e7e7;
 }
 
-article.roadmap tbody tr:nth-of-type(odd) {
+.roadmap tbody tr:nth-of-type(odd) {
     background-color: #ffffff;
 }
 
-article.roadmap tbody tr:nth-of-type(even) {
+.roadmap tbody tr:nth-of-type(even) {
     background-color: #fff8d1;
 }
 
-article.roadmap th {
+.roadmap th {
     border-bottom: 1px solid;
 }
 
-article.roadmap th:nth-of-type(1) {
+.roadmap th:nth-of-type(1) {
     border-top-left-radius: 5px;
 }
 
-article.roadmap th:nth-of-type(2) {
+.roadmap th:nth-of-type(2) {
     border-top-right-radius: 5px;
 }
 
-article.roadmap th, article.roadmap td {
+.roadmap tr:last-of-type td:nth-of-type(1) {
+    border-bottom-left-radius: 5px;
+}
+
+.roadmap tr:last-of-type td:nth-of-type(2) {
+    border-bottom-right-radius: 5px;
+}
+
+.roadmap th, .roadmap td {
     padding: 5px 10px;
     text-align: left;
     vertical-align: top;
@@ -278,22 +283,11 @@ article.roadmap th, article.roadmap td {
 
 /* Posts */
 
-article.post-listing {
+.post-listing {
     background-color: #ffffff;
 }
 
-.post article {
-    background-color: #ffffff;
-    border-radius: 0 0 5px 5px;
-    color: #404040;
-    padding: 5px 15px 5px 15px;
-}
-
-.post .subheader {
-    background-color: #e7e7e7;
-    border-radius: 5px 5px 0 0;
-    font-size: small;
-    padding: 5px 5px 5px 10px;
+.post .header {
     text-align: right;
 }
 

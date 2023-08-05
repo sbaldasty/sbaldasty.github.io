@@ -1,20 +1,20 @@
 {{ define "main" }}
-  <div class="left">
-    <div class="content-panel">
+  <div class="content-panel">
+    <div class="md home">
       {{ .Content }}
     </div>
-    <div class="box-link">
-      {{ range .Pages }}
-        <a href="{{ .RelPermalink }}">
-          <b>
-            {{ .Title }}
-          </b>
-          <p>
-            {{ .Description }}
-          </p>
-        </a>
-      {{ end }}
-    </div>
+  </div>
+  <div class="box-link">
+    {{ range .Pages }}
+      <a href="{{ .RelPermalink }}">
+        <b>
+          {{ .Title }}
+        </b>
+        <p>
+          {{ .Description }}
+        </p>
+      </a>
+    {{ end }}
   </div>
 {{ end }}
 {{ define "about" }}
