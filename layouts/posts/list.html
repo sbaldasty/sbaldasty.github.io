@@ -1,32 +1,21 @@
 {{ define "main" }}
-  <article class="left post-listing">
+  <div class="content-panel post-listing">
     {{ range .Pages }}
-      <tr>
-        <td>
-          <div class="date">
-            {{ .PublishDate.Month }}
-            {{ .Date.Day }}
-            <div class="year">
-              {{ .PublishDate.Year }}
-            </div>
-          </div>
-        </td>
-        <td>
-          <h2>
-            <a href="{{ .RelPermalink }}">
-              {{ .Title }}
-            </a>
-          </h2>
-          <div class="date">
-            {{ .PublishDate }}
-          </div>
-          <div>
-            {{ .Description }}
-          </div>
-        </td>
-      </tr>
+      <div>
+        <h2>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </h2>
+        <div class="date">
+          {{ dateFormat "2006-01-02" .PublishDate }}
+        </div>
+        <div class="description">
+          {{ .Description }}
+        </div>
+      </div>
     {{ end }}
-  </article>
+  </div>
 {{ end }}
 {{ define "about" }}
   {{- .Content -}}

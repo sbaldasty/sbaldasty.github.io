@@ -93,7 +93,6 @@ main {
 }
 
 .page-header .page-title {
-    color: #404040;
     font-size: 35px;
     font-weight: normal;
     padding-bottom: 10px;
@@ -284,7 +283,23 @@ main {
 /* Posts */
 
 .post-listing {
-    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.post-listing h2 {
+    margin: 0;
+}
+
+.post-listing .date {
+    font-size: small;
+    margin-bottom: 2px;
+}
+
+.post-listing .description {
+    color: #000000;
 }
 
 .post .header {
@@ -325,27 +340,4 @@ main {
 .gallery .image .caption p {
     margin: auto;
     text-align: center;
-}
-
-/* Stuff that might need to disappear or be reorganized */
-
-.post-listing .date {
-    color: #404040;
-    margin-top: 4px;
-    min-width: 80px;
-    text-align: right;
-}
-
-.post-listing .year {
-    font-size: larger;
-}
-
-.post-listing h2 {
-    margin: 0;
-}
-
-.post-listing td {
-    padding-bottom: 20px;
-    padding-right: 20px;
-    vertical-align: top;
 }
