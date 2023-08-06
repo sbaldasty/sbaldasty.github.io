@@ -12,7 +12,6 @@ description: Prioritized list of outstanding tasks for this website
 |            | Write post on information theory. |
 |            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
-|            | Write content for the homepage. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
 |            | Show linkable topics of mini-posts in the Notebook. |
 |            | Add direct navigation between posts and notebook pages. |
