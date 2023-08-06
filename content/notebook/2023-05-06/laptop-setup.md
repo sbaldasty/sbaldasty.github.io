@@ -1,5 +1,6 @@
 ---
 title: Laptop setup
+topics: []
 ---
 
 I took notes about the things I need remember to do after reinstalling Ubuntu on my laptop.

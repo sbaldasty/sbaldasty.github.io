@@ -7,8 +7,8 @@ FILE=content/notebook/$DATE/$1.md
 touch $FILE
 echo "---" >> $FILE
 echo "title: $TITLE" >> $FILE
+echo "topics: []" >> $FILE
 echo "---" >> $FILE
 echo >> $FILE
 echo >> $FILE
-vim +5 $FILE
-
+vim +6 $FILE

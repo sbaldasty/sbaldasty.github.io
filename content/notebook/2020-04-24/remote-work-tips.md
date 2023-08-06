@@ -1,5 +1,6 @@
 ---
 title: Remote work training takeaways
+topics: []
 ---
 
 Identify which tasks absolutely have to be done today. What remains is discretionary time. Have a space dedicated to work. Consider natural light, sound, and temperatures.

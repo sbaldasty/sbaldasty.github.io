@@ -1,5 +1,6 @@
 ---
 title: Floating point division in mpyc
+topics: []
 ---
 
 The most straightforward way around not being able to divide by a secure integer was to use floating point division, since the documentation explicitly claimed support for secure divisors. However the documentation also warned that floating point arithmetic operations could be prohibitively slow, and this proved to be the case.

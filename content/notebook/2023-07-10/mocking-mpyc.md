@@ -1,5 +1,6 @@
 ---
 title: Mocking mpyc for fast local testing
+topics: []
 ---
 
 I am considering making a "mock" mpyc for quickly testing large jobs locally. Tentative goals and design decisions:
