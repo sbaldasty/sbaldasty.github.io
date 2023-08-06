@@ -1,4 +1,4 @@
 ---
 title: Notebook
-description: Random minimally edited or contextualized notes
+description: Rough barely contextualized mini-posts by date
 ---
