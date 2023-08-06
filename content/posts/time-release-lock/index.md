@@ -1,6 +1,6 @@
 ---
-title: Time release lock
-date: 2023-01-16
+title: Time Release Lock
+date: 2023-08-05
 description: Limiting daily junkfood intake with a time release lock
 resources:
 - src: box.jpg
