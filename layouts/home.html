@@ -1,9 +1,4 @@
 {{ define "main" }}
-  <div class="content-panel">
-    <div class="md home">
-      {{ .Content }}
-    </div>
-  </div>
   <div class="box-link">
     {{ range .Pages }}
       <a href="{{ .RelPermalink }}">
@@ -15,6 +10,11 @@
         </p>
       </a>
     {{ end }}
+  </div>
+  <div class="content-panel">
+    <div class="md home">
+      {{ .Content }}
+    </div>
   </div>
 {{ end }}
 {{ define "about" }}
