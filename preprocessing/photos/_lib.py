@@ -10,13 +10,8 @@ def _process_photo(path, id, x, y, width, angle, target_width, target_height):
     image = image.resize((target_width, target_height))
     image.save(output_file, quality=75)
 
-def selfie(path, id, x, y, width, angle=0):
-    # TODO Add selfie support when it's time
-    pass
-
 def gallery(path, id, x, y, width, angle=0):
     _process_photo(path, id, x, y, width, angle, 280, 210)
 
 def thumbnail(path, id, x, y, width, angle=0):
-    # TODO Add thumbnail support when it's time
-    pass
+    _process_photo(f'{path}thumbnail', id, x, y, width, angle, 60, 50)

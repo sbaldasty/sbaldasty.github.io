@@ -6,18 +6,17 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Create personal website topic. |
-|            | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
-|            | Add thumbnail images to posts. |
 |            | Write post on information theory. |
-|            | Write post on Museum of Printing. |
 |            | Write post on NH Telephone Museum. |
-|            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+|            | Write post on Museum of Printing. |
+|            | Create personal website topic. |
 |            | Show linkable topics of mini-posts in the Notebook. |
 |            | Add direct navigation between posts and notebook pages. |
-|            | Write post on handling Google Photos images with Hugo. |
 |            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
+|            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+| 2023-08-09 | Add thumbnail images to posts. |
+| 2023-08-09 | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 | 2023-08-05 | Write junkfood post. |
 | 2023-08-05 | Find a way to render math, whether that means including MathJax javascript or somehow rendering it as svg. |
 | 2023-08-05 | Figure out why markdown paragraphs have margins outside their bounding boxes. |

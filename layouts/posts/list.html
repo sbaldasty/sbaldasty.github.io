@@ -1,17 +1,22 @@
 {{ define "main" }}
-  <div class="content-panel post-listing">
+  <div class="content-panel post-list">
     {{ range .Pages }}
-      <div>
-        <h2>
-          <a href="{{ .RelPermalink }}">
-            {{ .Title }}
-          </a>
-        </h2>
-        <div class="date">
-          {{ dateFormat "2006-01-02" .PublishDate }}
-        </div>
-        <div class="description">
-          {{ .Description }}
+      <div class="post-entry">
+        {{ with .Resources.GetMatch "thumbnail.jpg" }}
+          <img src="{{ .RelPermalink }}" alt="{{ .Params.Title }}" title="{{ .Params.Title }}" width="60px" height="50px">
+        {{ end }}
+        <div>
+          <h2>
+            <a href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a>
+          </h2>
+          <div class="date">
+            {{ dateFormat "2006-01-02" .PublishDate }}
+          </div>
+          <div class="description">
+            {{ .Description }}
+          </div>
         </div>
       </div>
     {{ end }}
