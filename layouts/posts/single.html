@@ -9,14 +9,16 @@
   </div>
   <div class="gallery">
     {{ range .Resources.ByType "image" }}
-      <div class="image">
-        <img src="{{ .RelPermalink }}" alt="{{ .Params.title }}" title="{{ .Params.title }}" width="280px" height="210px">
-        <div class="caption">
-          <p>
-            {{ .Params.caption }}
-          </p>
+      {{ if ne .Name "thumbnail.jpg" }}
+        <div class="image">
+          <img src="{{ .RelPermalink }}" alt="{{ .Params.title }}" title="{{ .Params.title }}" width="280px" height="210px">
+          <div class="caption">
+            <p>
+              {{ .Params.caption }}
+            </p>
+          </div>
         </div>
-      </div>
+      {{ end }}
     {{ end }}
   </div>
 {{ end }}
