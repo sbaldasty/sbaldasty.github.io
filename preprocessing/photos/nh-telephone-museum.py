@@ -5,6 +5,12 @@ path = 'posts/nh-telephone-museum/'
 thumbnail(path, 'PXL_20230318_160357197',
     x=100, y=0, width=3700, angle=0)
 
+gallery(f'{path}newer-telephone', 'PXL_20230318_145158331',
+    x=500, y=1450, width=2400, angle=0)
+
+gallery(f'{path}exterior', 'PXL_20230318_160357197',
+    x=100, y=0, width=3700, angle=0)
+
 gallery(f'{path}telephone-cable-cross-section', 'PXL_20230318_145708328',
     x=400, y=800, width=2100, angle=0)
 
