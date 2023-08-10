@@ -1,5 +1,6 @@
 ---
 title: Museum of Printing
+draft: True
 date: 2023-07-26
 description: Visiting the Museum of Printing, with ties to information theory
 resources:

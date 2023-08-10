@@ -1,5 +1,6 @@
 ---
 title: New Hampshire Telephone Museum
+draft: True
 date: 2023-07-26
 description: Visiting the New Hampshire Telephone Museum, with ties to information theory
 resources:

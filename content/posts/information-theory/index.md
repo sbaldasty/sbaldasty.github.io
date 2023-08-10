@@ -1,5 +1,6 @@
 ---
 title: Information Theory
+draft: True
 date: 2023-01-19
 description: Humanity's evolving relationship with information as described in James Gleick's book "The Information - a history, a theory, a flood"
 ---
