@@ -1,6 +1,9 @@
-from _lib import gallery
+from _lib import gallery, thumbnail
 
 path = 'posts/nh-telephone-museum/'
+
+thumbnail(path, 'PXL_20230318_160357197',
+    x=100, y=0, width=3700, angle=0)
 
 gallery(f'{path}telephone-cable-cross-section', 'PXL_20230318_145708328',
     x=400, y=800, width=2100, angle=0)

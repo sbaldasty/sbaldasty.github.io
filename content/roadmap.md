@@ -6,7 +6,6 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Write post on information theory. |
 |            | Write post on NH Telephone Museum. |
 |            | Write post on Museum of Printing. |
 |            | Create personal website topic. |
@@ -15,6 +14,7 @@ description: Prioritized list of outstanding tasks for this website
 |            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+| 2023-08-10 | Write post on information theory. |
 | 2023-08-09 | Add thumbnail images to posts. |
 | 2023-08-09 | Stop relying on Google Album Archive for hosting original images (it will disappear soon). |
 | 2023-08-05 | Write junkfood post. |
