@@ -31,3 +31,5 @@ resources:
 ---
 
 Content coming soon...
+
+_**Update:** We later visited the New Hampshire Telephone Museum._ More on this coming soon, but for now here is [the link to their site](https://www.nhtelephonemuseum.org/)

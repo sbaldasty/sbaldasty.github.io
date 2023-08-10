@@ -31,3 +31,13 @@ resources:
 ---
 
 Content coming soon...
+
+Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
+
+> The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
+
+You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
+
+I had a special reason to look forward to exploring this particular museum.
+
+Well naturally the printing technologies and  artifacts on display at the Museum of Printing bring to life a large important swath of that story!
