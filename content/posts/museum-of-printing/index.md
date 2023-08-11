@@ -1,34 +1,50 @@
 ---
 title: Museum of Printing
-draft: True
-date: 2023-07-26
-description: Visiting the Museum of Printing, with ties to information theory
+date: 2023-08-11
+description: Visiting the Museum of Printing with my parents
 resources:
-- src: bibles.jpg
+- src: thumbnail.jpg
   params:
-    title: Bible illustration
-    caption: Color illustration in a room full of many Bibles
-- src: color-printer.jpg
+    title: Printing press
+- src: newer-printing-press.jpg
   params:
-    title: Color printer
-    caption: An early electronic device for doing color printing at scale. More modern devicecs are shown nearby to illustrate miniaturization.
-- src: old-computers.jpg
-  params:
-    title: Old computers
-    caption: These bring back memories, they are artifacts from my living past. Machines like these taught me the love of programming and inspired me down the path I took in life.
-- src: printing-my-name.jpg
-  params:
-    title: Printing my name
-    caption: One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
-- src: printing-presses.jpg
-  params:
-    title: Printing presses
-    caption: The museum has mechanical printing presses from many eras. The basic idea was to cover raised writing in ink and press it onto a page. OSHA would likely take issue with most of these designs, if we still used them today.
+    title: A B Dick printing press
+    caption: One of the more modern printing presses on display, with the various controls clearly labeled
 - src: typewriters.jpg
   params:
     title: Typewriter exhibit
-    caption: Parents posing near a wall of typewriters similar to the one I used in childhood
+    caption: My parents posing near a wall of typewriters similar to the one I used in childhood
+- src: old-computers.jpg
+  params:
+    title: Old computers
+    caption: Memorable artifacts from my living past, and the beginning of an era of alternatives to printing text
+- src: color-printer.jpg
+  params:
+    title: Color printer
+    caption: Early device for color printing at scale. More modern devices displayed nearby illustrate miniaturization
+- src: printing-my-name.jpg
+  params:
+    title: Printing my name
+    caption: Mold for making a stamp of my name from molten metal in a hands-on demo
+- src: ancient-chinese-printing.jpg
+  params:
+    title: Wheel of Chinese characters
+    caption: Chinese printing technology predating the European printing press, but tightly controlled by the government
+- src: ornate-printing-press.jpg
+  params:
+    title: Ornate printing press
+    caption: Massive ornate printing press near the entryway with a golden American Eagle at the top
+- src: bible-page.jpg
+  params:
+    title: Bible page from 1830
+    caption: Bibles were an early and ongoing priority for the printing press, and this page was printed in 1830
+- src: colored-bible-illustration.jpg
+  params:
+    title: Colored Bible illustration
+    caption: Painstakingly colored illustration from a very old Bible, one of many on display
 ---
+
+to add: linotype, old press, bibles
 
 Content coming soon...
 
@@ -41,3 +57,5 @@ You can visit the Museum of Printing in the town of Haverhill, Massachusetts - w
 I had a special reason to look forward to exploring this particular museum.
 
 Well naturally the printing technologies and  artifacts on display at the Museum of Printing bring to life a large important swath of that story!
+
+One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
