@@ -1,4 +1,4 @@
 ---
 title: Posts
-description: Writings and pictures about my life and thoughts
+description: Photos and writing about my life and thoughts
 ---
