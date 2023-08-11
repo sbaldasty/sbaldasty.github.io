@@ -44,18 +44,8 @@ resources:
     caption: Painstakingly colored illustration from a very old Bible, one of many on display
 ---
 
-to add: linotype, old press, bibles
-
-Content coming soon...
-
-Good museums invite curiosity, wonder, and inspiration. They recall to memory long forgotten stories we may otherwise never share with our touring companions. The reactions, thoughts, and connections they invoke bring us closer together. For these reasons I highly recommend the Museum of Printing. From its [About Page](https://museumofprinting.org/about-mop),
+On another visit with my parents, we visited the [Museum of Printing](https://museumofprinting.org/). Like the New Hampshire Telephone Museum I [described earlier](/posts/nh-telephone-museum/), the exhibits dovetailed very nicely with the book _The Information: A History, A Theory, A Flood_. From its About Page,
 
 > The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
 
-You can visit the Museum of Printing in the town of Haverhill, Massachusetts - which is exactly what I did with my parents when I saw them over Thanksgiving break! I highly recommend this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours.
-
-I had a special reason to look forward to exploring this particular museum.
-
-Well naturally the printing technologies and  artifacts on display at the Museum of Printing bring to life a large important swath of that story!
-
-One of my favorite parts was a hands-on activity where I got to make a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
+I highly recommend visiting this museum for its fascinating hands-on exhibits and the friendly knowledgeable staff who gladly answer questions and offer guided tours. The kinds of artifacts on display and the explanations accompanying them run both broad and deep. Someone even walked me through the process of making a cast of my name from molten metal in the same way an operator would prepare a page for mass production. Afterward they could melt it down again and repeat, but I got to keep mine!
