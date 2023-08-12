@@ -1,14 +1,23 @@
 {{ define "main" }}
-  <div class="left note">
-    {{ range (.Site.GetPage "/notebook/2023-07-31").Resources.ByType "page" }}
-      <div class="post">
-        <div class="subheader">
-          {{ .Title }}
-        </div>
-        <article class="post">
-          {{ .Content }}
-        </article>
-      </div>
+  <div class="note">
+    <div class="journal-entry">
+      {{ .Content }}
+    </div>
+    {{ with .Site.GetPage "/notebook" }}
+      {{ range .Pages }}
+        {{ range .Resources.ByType "page" }}
+          {{ if in .Params.topics "abstract-algebra" }}
+            <div class="content-panel mini-post">
+              <div class="header">
+                {{ .Title }}
+              </div>
+              <div class="content md">
+                {{ .Content }}
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      {{ end }}
     {{ end }}
   </div>
 {{ end }}
