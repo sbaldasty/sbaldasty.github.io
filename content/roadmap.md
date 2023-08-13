@@ -6,6 +6,8 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Add a second topic. |
+|            | Add styling to topic list page. |
 |            | Add direct navigation between adjacent notebook date pages. |
 |            | Write content for abstract algebra topic. |
 |            | Write "on this page" blurbs for topics lists and singles. |
