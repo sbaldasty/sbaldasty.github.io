@@ -63,6 +63,12 @@ main {
     font-weight: bold;
 }
 
+.content-panel .header a {
+    display: block;
+    font-size: x-small;
+    font-weight: normal;
+}
+
 .md {
     display: inline-block;
     padding: 0 10px 0 10px;
@@ -192,7 +198,7 @@ main {
 }
 
 
-/* Notebook */
+/* Notebook & Topics */
 
 .notebook-date-list {
     display: grid;
@@ -208,13 +214,13 @@ main {
     white-space: nowrap;
 }
 
-.note {
+.multi-note-panel {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.journal-entry {
+.exposition-box {
     background-color: #fff8d1;
     border: 1px solid #410c0c;
     border-radius: 5px;

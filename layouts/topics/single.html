@@ -1,15 +1,20 @@
 {{ define "main" }}
-  <div class="note">
-    <div class="journal-entry">
+  {{ $topic := .File.BaseFileName }}
+  <div class="multi-note-panel">
+    <div class="exposition-box">
       {{ .Content }}
     </div>
     {{ with .Site.GetPage "/notebook" }}
       {{ range .Pages }}
+        {{ $date := .Title }}
         {{ range .Resources.ByType "page" }}
-          {{ if in .Params.topics "abstract-algebra" }}
-            <div class="content-panel mini-post">
+          {{ if in .Params.topics $topic }}
+            <div id="{{ .File.BaseFileName }}" class="content-panel mini-post">
               <div class="header">
                 {{ .Title }}
+                <a href="/notebook/{{ $date }}/#{{ .File.BaseFileName }}">
+                  {{ $date }}
+                </a>
               </div>
               <div class="content md">
                 {{ .Content }}

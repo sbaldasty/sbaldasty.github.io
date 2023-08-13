@@ -6,12 +6,16 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Create topic section. |
-|            | Show linkable topics of mini-posts in the Notebook. |
-|            | Add direct navigation between posts and notebook pages. |
+|            | Add linkable topics of mini-posts in the notebook. |
+|            | Add dates of the mini-posts in the topics section. |
+|            | Add direct navigation between adjacent notebook date pages. |
+|            | Write content for abstract algebra topic. |
+|            | Write "on this page" blurbs for topics lists and singles. |
 |            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+|            | Change my selfie to something more recent. |
+| 2023-08-12 | Create topic section. |
 | 2023-08-11 | Add nicer styling for blockquotes
 | 2023-08-11 | Write post on Museum of Printing. |
 | 2023-08-10 | Write post on NH Telephone Museum. |

@@ -1,10 +1,10 @@
 {{ define "main" }}
-  <div class="note">
-    <div class="journal-entry">
+  <div class="multi-note-panel">
+    <div class="exposition-box">
       {{ .Content }}
     </div>
     {{ range .Resources.ByType "page" }}
-      <div class="content-panel mini-post">
+      <div id="{{ .File.BaseFileName }}" class="content-panel mini-post">
         <div class="header">
           {{ .Title }}
         </div>
