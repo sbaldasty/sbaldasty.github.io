@@ -12,6 +12,7 @@ description: Prioritized list of outstanding tasks for this website
 |            | Build out mpyc topic. |
 |            | Build out differential privacy topic. |
 |            | Build out secure distributed computation topic. |
+|            | Assign mini-posts to topics
 |            | Learn about RSS and add support for it. |
 |            | Change my selfie to something more recent. |
 |            | Experiment with layouts for argument maps. |
