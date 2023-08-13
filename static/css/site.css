@@ -214,12 +214,16 @@ main {
 }
 
 .topic-list {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px;
 }
 
-.topic-list ul {
-    list-style-type: circle;
+.topic-list h3 {
+    margin: 0;
+}
+
+.topic-list p {
+    font-size: small;
+    margin-top: 3px;
 }
 
 .multi-note-panel {
