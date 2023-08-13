@@ -6,15 +6,18 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Add a second topic. |
 |            | Add styling to topic list page. |
-|            | Add direct navigation between adjacent notebook date pages. |
-|            | Write content for abstract algebra topic. |
 |            | Write "on this page" blurbs for topics lists and singles. |
+|            | Build out abstract algebra topic. |
+|            | Build out css topic. |
+|            | Build out hugo topic. |
+|            | Build out python topic. |
 |            | Learn about RSS and add support for it. |
+|            | Change my selfie to something more recent. |
+|            | Add direct navigation between adjacent notebook date pages. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
-|            | Change my selfie to something more recent. |
+| 2023-08-13 | Add a second topic. |
 | 2023-08-12 | Add linkable topics of mini-posts in the notebook. |
 | 2023-08-12 | Add dates of the mini-posts in the topics section. |
 | 2023-08-12 | Create topic section. |
