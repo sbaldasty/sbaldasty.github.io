@@ -12,9 +12,11 @@
             <div id="{{ .File.BaseFileName }}" class="content-panel mini-post">
               <div class="header">
                 {{ .Title }}
-                <a href="/notebook/{{ $date }}/#{{ .File.BaseFileName }}">
-                  {{ $date }}
-                </a>
+                <div class="links">
+                  <a href="/notebook/{{ $date }}/#{{ .File.BaseFileName }}">
+                    {{ $date }}
+                  </a>
+                </div>
               </div>
               <div class="content md">
                 {{ .Content }}

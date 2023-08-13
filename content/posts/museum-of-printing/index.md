@@ -44,7 +44,7 @@ resources:
     caption: Painstakingly colored illustration from a very old Bible, one of many on display
 ---
 
-On another visit with my parents, we visited the [Museum of Printing](https://museumofprinting.org/). Like the New Hampshire Telephone Museum I [described earlier](/posts/nh-telephone-museum/), the exhibits dovetailed very nicely with the book _The Information: A History, A Theory, A Flood_. From its About Page,
+On a recent visit with my parents, we visited the [Museum of Printing](https://museumofprinting.org/). Like the New Hampshire Telephone Museum I [described earlier](/posts/nh-telephone-museum/), the exhibits dovetailed very nicely with the book _The Information: A History, A Theory, A Flood_. From its About Page,
 
 > The Museum of Printing is dedicated to preserving the rich history of the graphic arts, printing and typesetting technology, and printing craftsmanship. In addition to many special collections and small exhibits, the Museum contains hundreds of antique printing, typesetting, and bindery machines, as well as a library of books and printing-related documents.
 

@@ -63,8 +63,7 @@ main {
     font-weight: bold;
 }
 
-.content-panel .header a {
-    display: block;
+.content-panel .header .links {
     font-size: x-small;
     font-weight: normal;
 }

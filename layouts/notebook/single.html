@@ -4,9 +4,17 @@
       {{ .Content }}
     </div>
     {{ range .Resources.ByType "page" }}
-      <div id="{{ .File.BaseFileName }}" class="content-panel mini-post">
+      {{ $id := .File.BaseFileName }}
+      <div id="{{ $id }}" class="content-panel mini-post">
         <div class="header">
           {{ .Title }}
+          <div class="links">
+            {{ range .Params.topics }}
+              <a href="/topics/{{ . }}/#{{ $id }}">
+                {{ . }}
+              </a>
+            {{ end }}
+          </div>
         </div>
         <div class="content md">
           {{ .Content }}
