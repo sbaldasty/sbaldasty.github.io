@@ -8,11 +8,11 @@ description: Prioritized list of outstanding tasks for this website
 | ---------- | ----------- |
 |            | Assign mini-posts to topics
 |            | Make sure mini-posts still look good in the context of their topics. |
-|            | Maybe add topic descriptions to list. |
 |            | Learn about RSS and add support for it. |
 |            | Change my selfie to something more recent. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+| 2023-08-13 | Maybe add topic descriptions to list. |
 | 2023-08-13 | Build out hugo topic. |
 | 2023-08-13 | Build out python topic. |
 | 2023-08-13 | Build out mpyc topic. |
