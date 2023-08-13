@@ -6,6 +6,7 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Customize styling of code blocks. |
 |            | Make sure mini-posts still look good in the context of their topics. |
 |            | Learn about RSS and add support for it. |
 |            | Change my selfie to something more recent. |
