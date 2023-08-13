@@ -1,6 +1,6 @@
 ---
 title: Python dataclass inheritance
-topics: []
+topics: [python]
 ---
 
 Python dataclasses [support inheritance](https://medium.com/@aniscampos/python-dataclass-inheritance-finally-686eaf60fbb5) now.

@@ -1,6 +1,6 @@
 ---
 title: Random forest classifier
-topics: []
+topics: [machine-learning, python]
 ---
 
 I'm in search of a random forest classifier implementation in python that

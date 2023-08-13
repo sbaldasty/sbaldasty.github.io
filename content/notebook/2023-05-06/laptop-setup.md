@@ -1,6 +1,6 @@
 ---
 title: Laptop setup
-topics: []
+topics: [linux]
 ---
 
 I took notes about the things I need remember to do after reinstalling Ubuntu on my laptop.
@@ -17,6 +17,6 @@ I took notes about the things I need remember to do after reinstalling Ubuntu on
 
 6. Install the [DisplayLink](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu) driver for my extra monitor. This always crashes on upgrades, it might be available through an APT repo.
 
-7. Connect and test my blutooth headphones
+7. Connect and test my bluetooth headphones
 
 8. Port over my [GitHub](https://github.com/) SSH key from my old install

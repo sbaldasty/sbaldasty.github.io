@@ -1,9 +1,9 @@
 ---
 title: Lessons learned about mpyc
-topics: []
+topics: [mpyc]
 ---
 
-I can't do arithmatic on two SecInts of different sizes, the program hangs. Is that something that could be improved upon? I'll likely know more when I take Secure Multi-Party Computation in the fall...
+I can't do arithmetic on two SecInts of different sizes, the program hangs. Is that something that could be improved upon? I'll likely know more when I take Secure Multi-Party Computation in the fall...
 
 Some code for running a secure multi-party vote, there aren't a whole lot of mpyc examples out on the internet right now.
 

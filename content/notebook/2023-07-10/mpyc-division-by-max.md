@@ -1,6 +1,6 @@
 ---
 title: Composing maximum and division in mpyc
-topics: []
+topics: [mpyc]
 ---
 
 Integer division `c = a // mpc.max(x, y)` ran into problems. It worked fine when the federation contained just one party. What I appeared to see initially was success when `a` was evenly divisible and wildly outlandish `c` (including negative numbers) when it was not. That might have been an overflow issue. Subsequently what I see is
