@@ -1,6 +1,5 @@
 ---
-title: Hugo static site generator
-description: asdf
+title: Hugo Static Site Generator
 ---
 
 asdf some content

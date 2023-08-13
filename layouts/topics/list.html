@@ -1,18 +1,15 @@
 {{ define "main" }}
-  <div class="content-panel post-list">
-    {{ range .Pages }}
-      <div>
-        <div>
+  <div class="content-panel topic-list">
+    <ul>
+      {{ range .Pages }}
+        <li>
           <a href="{{ .RelPermalink }}">
             {{ .Title }}
           </a>
-          <div>
-            {{ .Description }}
-          </div>
-        </div>
-      </div>
-    {{ end }}
-  </div>
+        </li>
+      {{ end }}
+  </ul>
+</div>
 {{ end }}
 {{ define "about" }}
   <p>
@@ -21,6 +18,32 @@
         On this page,
       </em>
     </strong>
-    asdf.
+    links to my minimally edited or contextualized notes topic; the same notes are also available grouped by date.
+  </p>
+  <p>
+    Why do this?
+  </p>
+  <ul>
+    <li>
+      <p>
+        Encourage notetaking for memory and future use
+      </p>
+    </li>
+    <li>
+      <p>
+        Become comfortable sharing ideas, especially unfinished ones
+      </p>
+    </li>
+    <li>
+      <p>
+        Increase interest and engagement in learning
+      </p>
+    </li>
+    <li>
+      <p>
+        Maybe help someone
+      </p>
+    </li>
+  </ul>
   </p>
 {{ end }}

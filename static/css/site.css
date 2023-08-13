@@ -213,6 +213,15 @@ main {
     white-space: nowrap;
 }
 
+.topic-list {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.topic-list ul {
+    list-style-type: circle;
+}
+
 .multi-note-panel {
     display: flex;
     flex-direction: column;

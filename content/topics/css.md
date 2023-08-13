@@ -1,6 +1,5 @@
 ---
-title: Cascading stylesheets
-description: asdf
+title: CSS
 ---
 
 asdf some content
