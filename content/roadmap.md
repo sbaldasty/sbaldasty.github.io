@@ -6,6 +6,7 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
+|            | Bring page titles back. |
 |            | If possible, reduce vertical padding around markdown in mini-posts. |
 |            | Customize styling of inline code tags and code blocks. |
 |            | Make sure mini-posts still look good in the context of their topics. |

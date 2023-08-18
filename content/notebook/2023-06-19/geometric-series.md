@@ -1,6 +1,6 @@
 ---
 title: Geometric series
-topics: [trivia]
+topics: [math]
 ---
 
 Useful infinite geometric series identity for this [online course on probability theory](https://www.probabilitycourse.com/), taken from [Wolfram MathWorld](https://mathworld.wolfram.com/GeometricSeries.html).
