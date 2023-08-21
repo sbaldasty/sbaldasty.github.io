@@ -6,7 +6,6 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | Bring page titles back. |
 |            | If possible, reduce vertical padding around markdown in mini-posts. |
 |            | Customize styling of inline code tags and code blocks. |
 |            | Write mountain climbing post. |
@@ -14,6 +13,7 @@ description: Prioritized list of outstanding tasks for this website
 |            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+| 2023-08-21 | Bring page titles back. |
 | 2023-08-21 | Change my selfie to something more recent. |
 | 2023-08-13 | Assign mini-posts to topics
 | 2023-08-13 | Maybe add topic descriptions to list. |
