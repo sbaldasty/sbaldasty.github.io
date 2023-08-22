@@ -12,6 +12,10 @@ pre {
     white-space: pre-wrap;
 }
 
+code {
+    color: #410c0c;
+}
+
 blockquote {
   border-left: 10px solid #e7e7e7;
   color: #404040;
