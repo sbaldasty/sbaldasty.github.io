@@ -6,12 +6,12 @@ description: Prioritized list of outstanding tasks for this website
 
 | Completed  | Description |
 | ---------- | ----------- |
-|            | If possible, reduce vertical padding around markdown in mini-posts. |
 |            | Write mountain climbing post. |
 |            | Make sure mini-posts still look good in the context of their topics. |
 |            | Learn about RSS and add support for it. |
 |            | Experiment with layouts for argument maps. |
 |            | Some browsers complain about the lack of a logo / favicon. Make one with svg and include it. |
+| 2023-08-21 | If possible, reduce vertical padding around markdown in mini-posts. |
 | 2023-08-21 | Customize styling of inline code tags and code blocks. |
 | 2023-08-21 | Bring page titles back. |
 | 2023-08-21 | Change my selfie to something more recent. |

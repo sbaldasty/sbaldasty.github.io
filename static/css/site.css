@@ -252,6 +252,10 @@ main {
     border-radius: 5px;
 }
 
+.mini-post p {
+    margin: 8px 0 8px 0;
+}
+
 /* Roadmap */
 
 .roadmap {
