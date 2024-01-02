@@ -1,0 +1,56 @@
+body {
+    overflow-y: scroll;
+}
+
+header {
+    align-items: center;
+    column-gap: 16px;
+    display: grid;
+    grid-template-areas: 'site-logo site-header';
+    grid-template-columns: 86px auto;
+    margin-bottom: 26px;
+}
+
+main {
+    display: grid;
+    grid-template-areas: 'page-content bio-bar';
+    grid-template-columns: auto 220px;
+}
+
+.bio-bar {
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    display: grid;
+    gap: 20px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.bio-bar .author {
+    font-size: 18px;
+}
+
+.bio-bar .author img {
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+
+.bio-bar .social-media {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 36px 36px 36px 36px 36px;
+}
+
+.site-title {
+    font-family: monospace;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.light {
+    color: #505050;
+}
