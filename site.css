@@ -8,26 +8,25 @@ header {
     display: grid;
     grid-template-areas: 'site-logo site-header';
     grid-template-columns: 86px auto;
-    margin-bottom: 26px;
+    margin-bottom: 32px;
 }
 
 main {
     display: grid;
+    gap: 16px;
     grid-template-areas: 'page-content bio-bar';
     grid-template-columns: auto 220px;
 }
 
 .bio-bar {
+    align-items: center;
     background-color: #e7e7e7;
     border-radius: 5px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 30px 10px;
     text-align: center;
-}
-
-.bio-bar .author {
-    font-size: 18px;
 }
 
 .bio-bar .author img {
@@ -41,10 +40,59 @@ main {
     grid-template-columns: 36px 36px 36px 36px 36px;
 }
 
+.page-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.page-link {
+    display: flex;
+    gap: 10px;
+}
+
+.page-link h3 {
+    margin: 0;
+}
+
+.page-link img {
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
 .site-title {
     font-family: monospace;
     font-size: 26px;
     font-weight: bold;
+}
+
+.article-header {
+    font-size: 46px;
+    text-align: center;
+}
+
+.captioned-picture {
+    background-color: #e5caed;
+    color: #390347;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.captioned-picture img {
+    border: 1px solid #390347;
+}
+
+.bigger {
+    font-size: 18px;
+}
+
+.smaller {
+    font-size: small;
 }
 
 .italic {
