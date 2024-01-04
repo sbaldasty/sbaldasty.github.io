@@ -68,8 +68,16 @@ main {
 }
 
 .article-header {
-    font-size: 46px;
+    margin: 20px 20px 40px 20px;
     text-align: center;
+}
+
+.article-header .title {
+    font-size: 46px;
+}
+
+.article-header .summary {
+    margin-top: 20px;
 }
 
 .captioned-picture {
@@ -85,6 +93,14 @@ main {
 
 .captioned-picture img {
     border: 1px solid #390347;
+}
+
+.captioned-picture h3 {
+    margin: 0;
+}
+
+.captioned-picture p {
+    margin: 6px 0;
 }
 
 .bigger {
