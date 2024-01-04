@@ -118,3 +118,30 @@ main {
 .light {
     color: #505050;
 }
+
+.advisory {
+    border: 1px solid red;
+    color: red;
+    background-color: #f7b5b0;
+    margin: 80px 20px 80px 20px;
+    padding: 10px;
+}
+
+.trivia-entry {
+    border-left: 6px solid #e5caed;
+    padding-left: 10px;
+}
+.trivia-entry h3 {
+    color: #390347;
+    margin: 0
+}
+
+.trivia-entry p {
+    margin-bottom: 20px;
+    margin-top: 4px;
+}
+
+.trivia-entry .date {
+    color: #505050;
+    font-size: small;
+}
