@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Differentially Private Range Queries | bitflippin.com</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Steven Baldasty">
+        <link rel="stylesheet" href="/site.css">
+        <link rel="icon" type="image/x-icon" href="/logo.png">
+    </head>
+    <body>
+        <header>
+            <a href="/"><img alt="Site logo" class="site-logo" src="/logo.png" title="Site logo" width="86px"></a>
+            <div class="site-header">
+                <div class="site-title">bitflippin.com</div>
+                <hr color="#000000" size="1">
+                <div class="light">Personal website</div>
+            </div>
+        </header>
+        <main>
+            <div class="page-content">
+                <div class="article-header">
+    <div class="title">Differentially Private Range Queries</div>
+    <div class="smaller">2024-01-06</div>
+    <div class="summary light italic">Takeaways from a group project in a course on differential privacy</div>
+</div><p>I had a lot of fun working with my friends <b>Omar Awajan</b> and <b>Rachael Chertok</b> on a small group project last semester at UVM. This notebook is based on the work we did together.</p>
+<div class="ipynb"><div class="download">&#x1F5CE; <a href="dp-range-query.ipynb" download>dp-range-query.ipynb</a></div><div class="code-cell">import matplotlib.pyplot as plt
+import numpy as np
+import portion as P
+
+from dataclasses import dataclass
+from portion import Interval</div><div class="markdown-cell"><h1>Problem statement</h1></div><div class="markdown-cell"><p>We have a variable <strong>X</strong> over a group of people. Any distribution or population size will do, but let's just assume it's a normal variable over a population of 800.</p></div><div class="code-cell">data = np.random.normal(loc=40, scale=10, size=800)
+plt.hist(data)
+plt.title(&#x27;Histogram of population variable X&#x27;)
+plt.show()</div><div class="png-output"><img height="435px" src="/dp-range-query/dp-range-query-cell3-out0.png" width="552px"></div><div class="markdown-cell"><p>A <em>range query</em> is a question of the form "For how many people is <strong>X</strong> between <em>a</em> and <em>b</em>?" We can answer a range query by counting the number of people whose <strong>X</strong> is in that range.</p></div><div class="code-cell">def query_v1(data: list[float], interval: Interval) -&gt; int:
+    return sum(interval.contains(d) for d in data)
+
+i1 = P.closedopen(0, 10)
+i2 = P.closedopen(30, 50)
+print(f&#x27;{query_v1(data, i1)} people in [{i1.lower}, {i1.upper})&#x27;)
+print(f&#x27;{query_v1(data, i2)} people in [{i2.lower}, {i2.upper})&#x27;)</div><div class="text-output">2 people in [0, 10)
+523 people in [30, 50)
+</div><div class="markdown-cell"><h1>Applying differential privacy</h1></div><div class="markdown-cell"><p>However, let's assume we should consider the data to be <em>private</em>. Then an attacker could use <code>query_v1</code> to zero in on actual values of <strong>X</strong> for individuals in our population, so we can't expose <code>query_v1</code>. But we could apply differential privacy, and declare that it is okay to release counts, provided we add some noise to them. We decide on a <em>privacy budget</em> epsilon, which acts as a limited allowance of truth we can safely release.</p></div><div class="code-cell">def make_noise(epsilon: float) -&gt; float:
+    return np.random.laplace(scale=1 / epsilon)
+
+def query_v2(data: list[float], interval: Interval, epsilon: float) -&gt; int:
+    return int(query_v1(data, interval) + make_noise(epsilon))
+
+epsilon = 1.0 # To see a bigger difference, try something smaller
+
+print(f&#x27;About {query_v2(data, i1, epsilon)} people in [{i1.lower}, {i1.upper})&#x27;)
+print(f&#x27;About {query_v2(data, i2, epsilon)} people in [{i2.lower}, {i2.upper})&#x27;)</div><div class="text-output">About 1 people in [0, 10)
+About 522 people in [30, 50)
+</div><div class="markdown-cell"><p>But <code>query_v2</code> has problems of its own: namely, the privacy impact of whatever information we release through it has to be considered in aggregate. In other words, if we run <code>query_v2</code> twice then we exceed our allotted privacy budget of epsilon. If we wanted to run <code>n</code> queries, we could work around this by running <code>query_v2</code> with <code>epsilon / n</code>, but this comes with the disadvantages that the accuracy could be lower for large <code>n</code>, and afterwards we can no longer answer more queries safely.</p></div><div class="markdown-cell"><h1>Scaling to large numbers of queries</h1></div><div class="markdown-cell"><p>A better way is to construct pre-noised <em>segments</em> of data. Each segment tells us the count of people whose <strong>X</strong> falls within a certain interval. It also importantly includes noise, which we must add to the count before reporting it. By intelligently combining segments together, we can approximate the answer to any range query; and by effectively introducing all the necessary noise up-front when we create our segments, we avoid making additional revelations about our underlying data every time we answer another query.</p></div><div class="code-cell">@dataclass
+class Segment:
+    interval: Interval
+    people: int = 0
+    noise: float = 0.0</div><div class="markdown-cell"><p>We create the segments in a series of <em>levels</em>. The first level is just one segment, and it has the widest interval for <strong>X</strong> that we choose to support, in its entirety. The second level has two segments, the interval from the first level being split in half. The third level has four segments, and so forth. We stop creating levels when the intervals reach the minimum level of <em>granularity</em> that we choose to support.</p>
+<p><strong>Future enhancement:</strong> We may find advantage in splitting the intervals into more than two parts. However the number of segments on one level must always be a multiple of the number of segments on the level above.</p></div><div class="code-cell">def make_segments(interval: Interval, granularity: float) -&gt; list[Segment]:
+    result = []
+    segments = 1
+    length = np.abs(interval.upper - interval.lower)
+
+    while length &gt;= granularity:
+        lower = interval.lower
+        upper = lower + length
+
+        while upper &lt;= interval.upper:
+            result.append(Segment(P.closedopen(lower, upper)))
+            lower += length
+            upper += length
+
+        segments *= 2
+        length /= 2
+
+    return result</div><div class="markdown-cell"><p>We next put the people from our data set into their appropriate segments based on their <strong>X</strong> values. If we set our intervals correctly, each person should fit in exactly one segment on each level - a property that will help us stretch epsilon as far as possible.</p></div><div class="code-cell">def apply_segment_people(segments: list[Segment], data: list[float]):
+    for d in data:
+        for s in segments:
+            if s.interval.contains(d):
+                s.people += 1</div><div class="markdown-cell"><p>We next set the noise for the segments, based on an epsilon of our choosing. Because each individual appears in exactly one segment per level, we do not need to divide epsilon by the number of segments we have created: rather we need only divide epsilon by the number of levels we have created. In the language of differential privacy, we have <em>sequential composition</em> between levels (each level requires a dedicated piece of our epsilon), but <em>parallel composition</em> within a level (each segment can share the same piece of epsilon).</p>
+<p><strong>Future enhancement:</strong> We assume here that the number of segments on each level consistently doubles. If we were to break apart the segments into smaller pieces differently, this logic would break.</p></div><div class="code-cell">def apply_segment_noise(segments: list[Segment], epsilon: float):
+    epsilon_share = epsilon / np.log2(len(segments))
+    for s in segments:
+        s.noise = make_noise(epsilon_share)</div><div class="markdown-cell"><h1>Range query algorithms</h1></div><div class="markdown-cell"><p>Our data appears to range from about 0 to 80. We will be satisfied to discard any data outside that range; but better would be to <em>clip</em> the data, bringing every <strong>X</strong> &lt; 0 up to 0, and every <strong>X</strong> &gt; 80 down to 80. We choose a granularity of 1, for demonstration purposes. Putting it all together, we have a nice list of segments to work with.</p></div><div class="code-cell">segments = make_segments(P.closedopen(0, 80), 1.0)
+apply_segment_people(segments, data)
+apply_segment_noise(segments, epsilon)
+
+segments[0:4]</div><div class="text-output">[Segment(interval=[0,80), people=800, noise=-3.5035200243516647),
+ Segment(interval=[0,40.0), people=414, noise=-0.808097436150928),
+ Segment(interval=[40.0,80.0), people=386, noise=3.7506932930889083),
+ Segment(interval=[0,20.0), people=23, noise=-4.378914071382114)]</div><div class="markdown-cell"><p>Now the goal is to take a range query, and figure out what segments we can combine together to answer it. The fewer segments we use, the less noisy our answer will usually be. We test two query algorithms. The algorithm finds segments that cover the desired range with as little underextension at the endpoints as possible.</p>
+<p><strong>Future enhancement:</strong> The algorithms rely on the segments being ordered by level, from largest to smallest. We may wish to use a richer data structure than a list of segments. Further, we may wish to add customization around whether the algorithms overextend or underextend.</p>
+<p><strong>Future enhancement:</strong> A better algorithm might consider that overextending and then <em>subtracting off</em> people can sometimes answer the query using fewer segments.</p></div><div class="code-cell">def query_v3(segments: list[Segment], interval: Interval):
+    result = []
+    for s in segments:
+        if s.interval in interval:
+            result.append(s)
+            for leftover in interval - s.interval:
+                result += query_v3(segments, leftover)
+            break
+
+    return result
+
+answer = query_v3(segments, i2)
+answer</div><div class="text-output">[Segment(interval=[30.0,40.0), people=287, noise=4.5427128112444946),
+ Segment(interval=[40.0,50.0), people=236, noise=-3.512041693482979)]</div><div class="code-cell">def combine_segments(segments: list[Segment]) -&gt; int:
+    return int(sum([s.people + s.noise for s in segments]))
+
+combine_segments(answer)</div><div class="text-output">524</div></div>
+            </div>
+            <div class="bio-bar">
+                <div class="author">
+                    <img alt="Picture of me" src="/headshot.jpg" title="Picture of me" width="80px">
+                    <div class="bigger">Steven Baldasty</div>
+                </div>
+                <hr size="2" width="25%">
+                <div class="light italic">Proud father, Barefoot runner, Chocolate enthusiast, Seasoned software engineer, Starry eyed PhD student, Novice human</div>
+                <hr size="2" width="25%">
+                <div>Connect with me</div>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/sbaldasty/"><img alt="LinkedIn" height="24px" src="/linkedin.svg" title="LinkedIn" width="24px"></a>
+                    <a href="https://github.com/sbaldasty"><img alt="GitHub" height="24px" src="/github.svg" title="GitHub" width="24px"></a>
+                    <a href="https://www.instagram.com/sbaldasty/"><img alt="Instagram" height="24px" src="/instagram.svg" title="Instagram" width="24px"></a>
+                    <a href="https://www.facebook.com/sbaldasty"><img alt="Facebook" height="24px" src="/facebook.svg" title="Facebook" width="24px"></a>
+                    <a href="https://twitter.com/sbaldasty"><img alt="Twitter" height="24px" src="/twitter.svg" title="Twitter" width="24px"></a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
