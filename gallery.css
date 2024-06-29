@@ -1,0 +1,30 @@
+main .gallery {
+    background-color: #e5caed;
+    color: #390347;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 -8px 0 -8px;
+    padding: 16px;
+}
+
+main .gallery .expo {
+    flex: 1 1 280px;
+    margin-right: -8px;
+}
+
+main .gallery .title {
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+main .gallery img {
+    border: 1px solid #390347;
+    border-radius: 4px;
+}
+
+main .gap {
+    margin-bottom: 32px;
+}
