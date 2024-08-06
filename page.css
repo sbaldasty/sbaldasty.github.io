@@ -1,0 +1,107 @@
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+}
+
+a:visited {
+    color: blue;
+}
+
+header, footer {
+    align-items: center;
+    display: flex;
+    padding: 16px;
+}
+
+header {
+    border-bottom: 1px solid #808080;
+    color: #505050;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+header .expo {
+    flex: 1 1 0;
+}
+
+header .title {
+    color: #000000;
+    font: bold 20px monospace;
+}
+
+main {
+    background-color: white;
+    padding: 8px 8px 32px 8px;
+}
+
+footer {
+    border-top: 1px solid #808080;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+    text-align: center;
+}
+
+footer .author {
+    font-size: large;
+    font-weight: bold;
+}
+
+footer .author img {
+    border-radius: 20px;
+}
+
+footer .biography {
+    color: #505050;
+    font-style: italic;
+    max-width: 480px;
+}
+
+footer .social-media {
+    column-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* TODO Remove to a code style sheet */
+.highlight {
+    border: 1px solid #808080;
+    border-radius: 2px;
+    padding: 8px;
+}
+
+/* TODO Remove to a code style sheet */
+.highlight pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+blockquote {
+    border: solid #e7e7e7;
+    border-left-width: 16px;
+    color: #505050;
+    margin: auto;
+    padding: 8px;
+}
+
+pre {
+    line-height: 125%;
+    margin: 8px;
+    white-space: pre-wrap;
+}
+
+code, kbd {
+    color: green;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.advisory {
+    color: red;
+    font-weight: bold;
+}
