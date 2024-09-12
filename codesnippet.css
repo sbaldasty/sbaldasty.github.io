@@ -1,0 +1,16 @@
+.codesnippet {
+    background-color: #f8f8f8;
+    color: #505050;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.codesnippet .header {
+    text-align: right;
+    background-color: #e0e0e0;
+    color: #505050;
+    font-family: monospace;
+    font-size: smaller;
+    padding: 4px;
+    margin: 0;
+}
