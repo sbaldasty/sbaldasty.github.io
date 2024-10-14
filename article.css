@@ -1,0 +1,11 @@
+main .article-date {
+    display: flex;
+    justify-content: right;
+}
+
+main .article-date div {
+    color: purple;
+    font-family: monospace;
+    margin: 8px;
+    padding: 3px;
+}
