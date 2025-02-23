@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>My document title</TITLE>
+</HEAD>
+<BODY LINK="BLUE" VLINK="BLUE">
+<HR>
+<TABLE CELLSPACING="0">
+ <TR>
+  <TD COLSPAN="2" HEIGHT="12">
+ <TR>
+  <TD ROWSPAN="3" WIDTH="12">
+  <TD ROWSPAN="3" VALIGN="MIDDLE">
+   <IMG SRC="../../logo.png">
+  <TD ROWSPAN="3" WIDTH="12">
+  <TD VALIGN="BOTTOM">
+   <DIV>
+    <FONT SIZE="5">
+     Bit flipping laboratory &amp; Peronal website
+    </FONT>
+   </DIV>
+ <TR>
+  <TD HEIGHT="6">
+ <TR>
+  <TD VALIGN="TOP">
+   <DIV>
+    <FONT COLOR="GRAY">
+     No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.
+    </FONT>
+   </DIV>
+  <TD ROWSPAN="3" WIDTH="12">
+ <TR>
+  <TD COLSPAN="2" HEIGHT="12">
+</TABLE>
+<TABLE ALIGN="CENTER">
+ <TR>
+  <TD>
+   <A HREF="../../index.html">Home</A>
+  <TD WIDTH="2">
+  <TD>
+   <A HREF="../../article-list/index.html">Articles</A>
+  <TD WIDTH="2">
+  <TD>
+   <A HREF="../../media/index.html">Media</A>
+ <TR>
+  <TD COLSPAN="3" HEIGHT="6">
+</TABLE>
+<HR>
+
+    <div class="article-date">
+        <div>2024-07-24</div>
+    </div>
+    <h1>Github clone script</h1>
+    <p>
+        
+    After configuring <code>git</code> I wrote a short bash script called <code>ghclone</code> that accepts a github <i>user</i> and <i>repo</i>. It clones the github repository following a particular directory structure.
+
+    </p>
+    
+    <h2>Workflow</h2>
+    <p>Bob the developer has already installed and configured <code>git</code>. He has already added a <code>ssh</code> key to his github account. Bob needs to download source code from multiple online services. He wants to organize the source code by service, and whatever directory structure makes sense under that depending on the service. For instance github repositories should live in this directory structure: <code>~/Code/github/<i>user</i>/<i>repo</i></code>. To clone my <i>Hunt the Wumpus</i> java applet Bob runs</p>
+    
+    
+    <div class="codesnippet">
+        <pre class="lang-bash">ghclone sbaldasty wumpus-applet</pre>
+    </div>
+
+    <h2>Script</h2>
+    <p>Here is the full <code>ghclone</code> script in its current form. As always please exercise caution with code that interacts with third party systems, and with code that can potentially modify or delete data.</p>
+    
+    
+    <div class="codesnippet">
+            <div class="header">ghclone</div>
+        <pre class="lang-bash">#!/bin/bash
+set -e
+
+if ! [ $# -eq 2 ]; then
+   echo &#34;Requires 2 parameters.&#34;
+   exit 1
+fi
+
+d=$HOME/Code/github/$1
+mkdir -p $d
+git clone git@github.com:$1/$2.git $d/$2</pre>
+    </div>
+
+
+    <h2>Shortcomings</h2>
+    <p>The script does not clean up any files or directories it created if cloning the repository fails.</p>
+
+    <h2>References</h2>
+    <ul>
+        
+    
+    <li>
+    <div><b><a href="https://bitflippin.com/article/arch-google-chrome/">My notes on git configuration</a></b></div>
+    <div>Installation instructions and setting some basic properties. Lumped together with notes on installing other packages on Arch Linux.</div>
+
+    
+    <li>
+    <div><b><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Github on adding ssh keys</a></b></div>
+    <div>Explanation of how github uses ssh keys. Detailed instructions on how to create them and add them to a github account.</div>
+
+
+    </ul>
+
+</BODY>
+</HTML>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>My document title</TITLE>
+</HEAD>
+<BODY LINK="BLUE" VLINK="BLUE">
+<HR>
+<TABLE CELLSPACING="0">
+ <TR>
+  <TD COLSPAN="2" HEIGHT="12">
+ <TR>
+  <TD ROWSPAN="3" WIDTH="12">
+  <TD ROWSPAN="3" VALIGN="MIDDLE">
+   <IMG SRC="../../logo.png">
+  <TD ROWSPAN="3" WIDTH="12">
+  <TD VALIGN="BOTTOM">
+   <DIV>
+    <FONT SIZE="5">
+     Bit flipping laboratory &amp; Peronal website
+    </FONT>
+   </DIV>
+ <TR>
+  <TD HEIGHT="6">
+ <TR>
+  <TD VALIGN="TOP">
+   <DIV>
+    <FONT COLOR="GRAY">
+     No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.
+    </FONT>
+   </DIV>
+  <TD ROWSPAN="3" WIDTH="12">
+ <TR>
+  <TD COLSPAN="2" HEIGHT="12">
+</TABLE>
+<TABLE ALIGN="CENTER">
+ <TR>
+  <TD>
+   <A HREF="../../index.html">Home</A>
+  <TD WIDTH="2">
+  <TD>
+   <A HREF="../../article-list/index.html">Articles</A>
+  <TD WIDTH="2">
+  <TD>
+   <A HREF="../../media/index.html">Media</A>
+ <TR>
+  <TD COLSPAN="3" HEIGHT="6">
+</TABLE>
+<HR>
+
+    <div class="article-date">
+        <div>2024-07-11</div>
+    </div>
+    <h1>Wifi on Arch Linux</h1>
+    <p>
+        
+    After installing Arch Linux and the <code>iwd</code> and <code>openresolv</code> packages, I set up wireless internet access on a Lenovo Thinkpad P52s.
+
+    </p>
+    
+    <p>These instructions configure and enable two services. The <code>iwd</code> service provides wireless internet access. The <code>systemd-resolved</code> service provides domain name resolution. These instructions also cover network configuration steps leftover from the minimal Arch installation.</p>
+
+    <h2>Networking</h2>
+    <p>On a single line in <code>/etc/hostname</code> assign the machine a hostname. For example the entire contents of the file could be <kbd>MyHostname</kbd>. Local applications can use the hostname to reference the machine.</p>
+    
+    
+    <div class="codesnippet">
+        <pre class="lang-bash">vim /etc/hostname</pre>
+    </div>
+
+
+    <h2>Name resolution service</h2>
+    <p>I tried extensively to get <code>systemd-resolved</code> working but could not get past an issue where many names resolved but some did not, including the name of this site for instance. I switched to <code>resolvconf</code>.</p>
+    <p>Per the Arch wiki, create the <code>resolv.conf</code> configuration file.</p>
+    
+    
+    <div class="codesnippet">
+        <pre class="lang-bash">resolvconf -u</pre>
+    </div>
+
+
+    <h2>Wireless service</h2>
+    <p>There is no <code>iwd</code> configuration file by default. Paste in this minimal configuration file when the time comes.</p>
+    
+    
+    <div class="codesnippet">
+            <div class="header">/etc/iwd/main.conf</div>
+        <pre class="lang-linuxconfig">[General]
+EnableNetworkConfiguration=true
+
+[Network]
+NameResolvingService=resolvconf</pre>
+    </div>
+
+    <p>Start and enable the <code>iwd</code> service. Starting the service launches it immediately. Enabling the servicec causes it to start automatically on boot. Connect to the internet wirelessly, replacing <kbd>MyNetwork</kbd> and <kbd>MyPassphrase</kbd> appropriately.</p>
+    
+    
+    <div class="codesnippet">
+        <pre class="lang-bash"># Create the iwd config file
+vim /etc/iwd/main.conf
+
+# Start and enable iwd
+systemctl enable iwd
+systemctl start iwd
+
+# Connect to a wireless network
+iwctl --passphrase MyPassphrase station wlan0 connect MyNetwork
+
+# Optionally view the network file that was created
+cat /var/lib/iwd/MyNetwork.psk</pre>
+    </div>
+
+    <p>Further wireless refinements are possible and likely desirable. The installation guides consulted contain additional network configuration recommendations I do not yet understand. Meanwhile these steps suffice to make the Arch installation usable.</p>
+
+    <h2>References</h2>
+    <ul>
+        
+    
+    <li>
+    <div><b><a href="https://bitflippin.com/article/arch-p52s/">Installation guide references</a></b></div>
+    <div>The installation guides referenced in the initial Arch installation article all include wireless internet setup instructions rather than treating them as a separate process.</div>
+
+    
+    <li>
+    <div><b><a href="https://wiki.archlinux.org/title/Iwd">Arch wiki on wireless service</a></b></div>
+    <div>How to connect to a wireless network with &lt;code&gt;iwd&lt;/code&gt;. Background about how &lt;code&gt;iwd&lt;/code&gt; works and how to configure it.</div>
+
+    
+    <li>
+    <div><b><a href="https://unix.stackexchange.com/questions/186859/understand-hostname-and-etc-hosts">Hostname resolution</a></b></div>
+    <div>Informative discussion about local name resolution including explanations of &lt;code&gt;/etc/hostname&lt;/code&gt; and &lt;code&gt;/etc/hosts&lt;/code&gt;.</div>
+
+
+    </ul>
+
+</BODY>
+</HTML>
