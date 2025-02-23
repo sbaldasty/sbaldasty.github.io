@@ -1,54 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
-<HEAD>
-<TITLE>My document title</TITLE>
-</HEAD>
-<BODY LINK="BLUE" VLINK="BLUE">
-<HR>
-<TABLE CELLSPACING="0">
- <TR>
-  <TD COLSPAN="2" HEIGHT="12">
- <TR>
-  <TD ROWSPAN="3" WIDTH="12">
-  <TD ROWSPAN="3" VALIGN="MIDDLE">
-   <IMG SRC="/logo.png">
-  <TD ROWSPAN="3" WIDTH="12">
-  <TD VALIGN="BOTTOM">
-   <DIV>
-    <FONT SIZE="5">
-     Bit flipping laboratory &amp; Peronal website
-    </FONT>
-   </DIV>
- <TR>
-  <TD HEIGHT="6">
- <TR>
-  <TD VALIGN="TOP">
-   <DIV>
-    <FONT COLOR="GRAY">
-     No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.
-    </FONT>
-   </DIV>
-  <TD ROWSPAN="3" WIDTH="12">
- <TR>
-  <TD COLSPAN="2" HEIGHT="12">
-</TABLE>
-<TABLE ALIGN="CENTER">
- <TR>
-  <TD>
-   <A HREF="/">Home</A>
-  <TD WIDTH="2">
-  <TD>
-   <A HREF="/article-list/">Articles</A>
-  <TD WIDTH="2">
-  <TD>
-   <A HREF="/media/">Media</A>
- <TR>
-  <TD COLSPAN="3" HEIGHT="6">
-</TABLE>
-<HR>
-
-<H1>The Multimedia Mingle</H1>
-<P>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My document title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <hr>
+  <div class="brand">
+    <img src="/logo.png" alt="Logo">
+    <div>
+      <div class="title">Bit flipping laboratory &amp; Personal website</div>
+      <div class="caption">No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div>
+    </div>
+  </div>
+  <div class="nav">
+    <a href="/">Home</a>
+    <a href="/article-list/">Articles</a>
+    <a href="/media/">Media</a>
+  </div>
+  <hr>
+  
+<h1>The Multimedia Mingle</h1>
+<p>
 Humans and machines create far more content than anyone can consume.
 Some opens hearts and minds.
 Some promotes creativity.
@@ -56,79 +31,49 @@ Some leads down dark paths.
 What have I read lately that interested me?
 What have I heard that inspired me?
 What have I watched that touched me?
+</p>
 
 
 
-<TABLE CELLSPACING="0">
- <TR>
-  <TD HEIGHT="24">
- <TR>
-  <TD COLSPAN="3">
-   <FONT SIZE="4">
-    <B>
-     <A href="https://www.cambridge.org/core/books/introduction-to-choreographies/65D3DA3CFF11AB835452CBC97FAE4830">Introduction to choreographies</A>
-    </B>
-   </FONT>
- <TR>
-  <TD HEIGHT="4">
- <TR>
-  <TD VALIGN="MIDDLE">
-   <TABLE>
-    <TR>
-     <TD ALIGN="CENTER">
-      <IMG SRC="/media/text.png"/>
-    <TR>
-     <TD NOWRAP>
-      <FONT COLOR="GREEN" HEIGHT="100%" SIZE="1" VALIGN="TOP">2025-02-22</FONT>
-    <TR>
-     <TD HEIGHT="2">
-   </TABLE>
-  <TD WIDTH="6">
-  <TD>
+<div class="title-link">
+  <a class="title-link" href="https://www.cambridge.org/core/books/introduction-to-choreographies/65D3DA3CFF11AB835452CBC97FAE4830">Introduction to choreographies</a>
+</div>
+<div class="media">
+  <div>
+    <div>
+      <img src="/media/text.png" alt="Introduction to choreographies"/>
+    </div>
+    <div class="date">2025-02-22</div>
+  </div>
+  <div>
 Choreographies describe interactions between processes in distributed systems.
-Inference rules model the many possible traces that arise from concurrency in the system.
-Specialized programming languages promote <I>compliance</I> and <I>conformance</I> in processes.
-They help avoid <I>process starvation</I>.
+Inference rules translate a choreography into the many possible traces (message passing sequences) that arise from concurrency.
+Choreographic programming language constructs help avoid <i>starvation</i> and promote <i>compliance</i> and <i>conformance</i> in processes.
 Some languages even produce independent executable build artifacts per process.
-
-</TABLE>
-
-
-
-
-<TABLE CELLSPACING="0">
- <TR>
-  <TD HEIGHT="24">
- <TR>
-  <TD COLSPAN="3">
-   <FONT SIZE="4">
-    <B>
-     <A href="https://pdos.csail.mit.edu/papers/vuvuzela:sosp15.pdf">Vuvuzela: Scalable private messaging resistant to traffic analysis</A>
-    </B>
-   </FONT>
- <TR>
-  <TD HEIGHT="4">
- <TR>
-  <TD VALIGN="MIDDLE">
-   <TABLE>
-    <TR>
-     <TD ALIGN="CENTER">
-      <IMG SRC="/media/text.png"/>
-    <TR>
-     <TD NOWRAP>
-      <FONT COLOR="GREEN" HEIGHT="100%" SIZE="1" VALIGN="TOP">2025-02-11</FONT>
-    <TR>
-     <TD HEIGHT="2">
-   </TABLE>
-  <TD WIDTH="6">
-  <TD>
-Differential privacy usually balances the <I>utility of a dataset</I> with the privacy of the individuals in it.
-In the secure messaging system Vuvuzela, differential privacy balances the privacy of the users with the <I>efficiency of the system</I> in terms of compute, latency, and network traffic.
-Privacy parameters translate nicely into the percent confidence a powerful adversary can gain over many rounds that Alice and Bob ever communicated.
-
-</TABLE>
+</div>
+</div>
 
 
 
-</BODY>
-</HTML>
+
+<div class="title-link">
+  <a class="title-link" href="https://pdos.csail.mit.edu/papers/vuvuzela:sosp15.pdf">Vuvuzela: Scalable private messaging resistant to traffic analysis</a>
+</div>
+<div class="media">
+  <div>
+    <div>
+      <img src="/media/text.png" alt="Vuvuzela: Scalable private messaging resistant to traffic analysis"/>
+    </div>
+    <div class="date">2025-02-11</div>
+  </div>
+  <div>
+Differential privacy usually balances the <i>utility of a dataset</i> with the privacy of the individuals in it.
+In the secure messaging system Vuvuzela, differential privacy balances the privacy of the users with the <i>efficiency of the system</i> in terms of compute, latency, and network traffic.
+The percent confidence a powerful adversary can gain over many rounds that Alice and Bob ever communicated translates nicely into the privacy parameter &epsilon;.
+</div>
+</div>
+
+
+
+</body>
+</html>

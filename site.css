@@ -1,0 +1,49 @@
+a:visited {
+    color: blue;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.brand .title {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+.brand .caption {
+    color: gray;
+}
+
+.nav {
+    display: flex;
+    gap: 0.8em;
+    justify-content: center;
+    margin: 1em;
+}
+
+.title-link {
+    font-size: 1.06em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+  }
+
+  .media {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1.3em;
+  }
+
+  .media > div:first-child {
+    align-items: center;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.6em;
+    gap: 0.5em;
+    justify-content: center;
+    white-space: nowrap;
+  }
