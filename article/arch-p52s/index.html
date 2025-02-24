@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-10</div>
-    </div>
-    <h1>Arch Linux on a Lenovo Thinkpad P52s</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-10</div>
+</div>
+<h1>Arch Linux on a Lenovo Thinkpad P52s</h1>
+<p>
+    
     I installed Arch Linux on a Lenovo Thinkpad P52s using <code>btrfs</code> for the filesystem and <code>grub</code> for the bootloader. I recorded my process, beginning in a fresh installation image environment and ending with the root user booting into the new system.
 
-    </p>
-    
+</p>
+
     <p>I drew from several sources. The sources all have slightly different goals and focus areas. Most offer a useful generality this document may lack.</p>
 
     <h2>Partitions</h2>
@@ -157,9 +160,9 @@ reboot</pre>
 
     <p>Remove the installation media and restart the laptop. If all goes well log in as <kbd>root</kbd>.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://wiki.archlinux.org/title/Installation_guide">Official installation guide</a></b></div>
@@ -191,7 +194,7 @@ reboot</pre>
     <div>Flow of control passes through a &lt;i&gt;bootloader&lt;/i&gt; and an &lt;i&gt;initial ramdisk&lt;/i&gt; before reaching the Linux kernel. Contributors discuss and critique why these components exist and what they do.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>

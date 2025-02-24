@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-31</div>
-    </div>
-    <h1>Starting a python project</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-31</div>
+</div>
+<h1>Starting a python project</h1>
+<p>
+    
     Unable to find a suitable alternative ecosystem despite searching very hard, I started a new python project. I navigated choices around package management, directory structure, and unit testing.
 
-    </p>
-    
+</p>
+
     <p>I documented my process setting up the project <code>myproject</code> as a sequence of instructions. Note though that many different or better choices may exist at each step.</p>
 
     <h2>Installation and virtual environment</h2>
@@ -160,9 +163,9 @@ deactivate</pre>
     <h2>Linter</h2>
     <p>I abandoned the idea of integrating a linter into the build process. It adds complication, and I expect only minimal participation by others. VSCode offers practical on-the-fly linter options intead.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://python.plainenglish.io/a-practical-guide-to-python-project-structure-and-packaging-90c7f7a04f95">Joshua Phuong Le&#39;s guide to python project structure</a></b></div>
@@ -184,7 +187,7 @@ deactivate</pre>
     <div>Explains how python linters work in VSCode. Lists several Microsoft provided linters and several community provided linters to try.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>

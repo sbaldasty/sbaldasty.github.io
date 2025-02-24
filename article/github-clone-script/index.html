@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-24</div>
-    </div>
-    <h1>Github clone script</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-24</div>
+</div>
+<h1>Github clone script</h1>
+<p>
+    
     After configuring <code>git</code> I wrote a short bash script called <code>ghclone</code> that accepts a github <i>user</i> and <i>repo</i>. It clones the github repository following a particular directory structure.
 
-    </p>
-    
+</p>
+
     <h2>Workflow</h2>
     <p>Bob the developer has already installed and configured <code>git</code>. He has already added a <code>ssh</code> key to his github account. Bob needs to download source code from multiple online services. He wants to organize the source code by service, and whatever directory structure makes sense under that depending on the service. For instance github repositories should live in this directory structure: <code>~/Code/github/<i>user</i>/<i>repo</i></code>. To clone my <i>Hunt the Wumpus</i> java applet Bob runs</p>
     
@@ -63,9 +66,9 @@ git clone git@github.com:$1/$2.git $d/$2</pre>
     <h2>Shortcomings</h2>
     <p>The script does not clean up any files or directories it created if cloning the repository fails.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://bitflippin.com/article/arch-google-chrome/">My notes on git configuration</a></b></div>
@@ -77,7 +80,7 @@ git clone git@github.com:$1/$2.git $d/$2</pre>
     <div>Explanation of how github uses ssh keys. Detailed instructions on how to create them and add them to a github account.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>

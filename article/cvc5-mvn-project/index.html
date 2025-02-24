@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-22</div>
-    </div>
-    <h1>Maven project with cvc5 dependency</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-22</div>
+</div>
+<h1>Maven project with cvc5 dependency</h1>
+<p>
+    
     I built the latest stable <code>cvc5</code> from source on Ubuntu and added the Java API jar from that build to a maven project using a local maven repository.
 
-    </p>
-    
+</p>
+
     <p>Ideally, one would install the latest <code>cvc5</code> libraries and binaries using their operating system's package manager. They would then add the latest <code>cvc5</code> Java API maven artifact from Maven Central as a dependency in their <code>pom.xml</code>. However the latest Linux packages and the latest maven artifact currently lag significantly behind. A less ideal manual process can bridge the gap.</p>
 
     <h2>Building the cvc5 libraries and Java API</h2>
@@ -135,9 +138,9 @@ java -Djava.library.path=&#34;/home/bob/src/cvc5/build/install/lib&#34; -jar tar
 
     <p>Be sure to replace the path to the project jar appropriately. The <code>java.library.path</code> must be an absolute path.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://github.com/cvc5/cvc5">Github repository for cvc5</a></b></div>
@@ -169,7 +172,7 @@ java -Djava.library.path=&#34;/home/bob/src/cvc5/build/install/lib&#34; -jar tar
     <div>Members of stackoverflow discuss how to override locations that Java checks for the libraries that bytecode needs to link to at runtime.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>

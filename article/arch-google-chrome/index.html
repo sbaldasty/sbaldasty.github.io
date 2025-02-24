@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-21</div>
-    </div>
-    <h1>Google Chrome on Arch Linux</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-21</div>
+</div>
+<h1>Google Chrome on Arch Linux</h1>
+<p>
+    
     After installing Arch Linux, I got <code>google-chrome</code> from the AUR running by way of installing <code>sway</code>, <code>git</code>, and <code>yay</code>. I configured these packages only minimally for getting started purposes.
 
-    </p>
-    
+</p>
+
     <h2>Installing sway</h2>
     <p>Chrome needs a graphical environment to run in, such as a wayland compositor like <code>sway</code>. Install <code>sway</code> and choose <code>gnu-free-fonts</code> when the installation process asks about a font. Other choices probably work fine. Also install <code>alacritty</code> which is a terminal for <code>sway</code>. Copy the default <code>sway</code> configuration file to the user home directory. Edit the configuration file to set <code>alacritty</code> as the default terminal. Launch sway. Open a terminal by pressing the <i>Win+Enter</i> keys together. Continue to the remaining steps in the <code>alacritty</code> terminal.</p>
     
@@ -91,9 +94,9 @@ google-chrome-stable --ozone-platform=wayland</pre>
 
     <p>Small usability gaps like having <code>sway</code> start on login, having <code>google-chrome-stable</code> launch without a terminal, and further customizations of <code>sway</code> still remain; however these steps are sufficient to get started.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://itsfoss.com/install-yay-arch-linux/">Abhishek Prakash&#39;s tutorial on installing yay</a></b></div>
@@ -120,7 +123,7 @@ google-chrome-stable --ozone-platform=wayland</pre>
     <div>Redditors discuss additional configuration needed in some cases to start Chrome successully on wayland. Amalgamation of many little problems and solutions per usual.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>

@@ -1,3 +1,7 @@
+body {
+    overflow-y: scroll;
+}
+
 a:visited {
     color: blue;
 }
@@ -31,13 +35,13 @@ a:visited {
     margin-bottom: 0.2em;
   }
 
-  .media {
+.media {
     display: flex;
     gap: 1em;
     margin-bottom: 1.3em;
-  }
+}
 
-  .media > div:first-child {
+.media > div:first-child {
     align-items: center;
     color: green;
     display: flex;
@@ -46,4 +50,4 @@ a:visited {
     gap: 0.5em;
     justify-content: center;
     white-space: nowrap;
-  }
+}

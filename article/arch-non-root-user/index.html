@@ -3,7 +3,10 @@
 <head>
   <title>My document title</title>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Steven Baldasty">
+  <link rel="icon" type="image/x-icon" href="/logo.png">
   <link rel="stylesheet" href="/site.css">
 </head>
 <body>
@@ -17,21 +20,21 @@
   </div>
   <div class="nav">
     <a href="/">Home</a>
-    <a href="/article-list/">Articles</a>
+    <a href="/article/">Articles</a>
     <a href="/media/">Media</a>
   </div>
   <hr>
   
-    <div class="article-date">
-        <div>2024-07-13</div>
-    </div>
-    <h1>Non-root user on Arch Linux</h1>
-    <p>
-        
+<div class="article-date">
+    <div>2024-07-13</div>
+</div>
+<h1>Non-root user on Arch Linux</h1>
+<p>
+    
     After installing Arch Linux, I added a non-root user with <code>sudo</code> privileges and with privileges to shutdown and restart the machine.
 
-    </p>
-    
+</p>
+
     <p>Traditionally in Linux systems one creates a non-root user for regular operations. Even in cases where only one person uses the system, having a safeguard against accidentally running dangerous commands as root is nice.</p>
 
     <h2>Adding the user</h2>
@@ -72,9 +75,9 @@ usermod -a -G wheel MyUsername</pre>
 
     <p>Surprisingly without enabling any service the non-root user now has the ability to use the <code>shutdown</code> and <code>reboot</code> commands. Perhaps they can now run other commands as well. There are certainly many things I still do not understand about <code>polkit</code>.</p>
 
-    <h2>References</h2>
-    <ul>
-        
+<h2>References</h2>
+<ul>
+    
     
     <li>
     <div><b><a href="https://bitflippin.com/article/arch-p52s/">Installation guide references</a></b></div>
@@ -96,7 +99,7 @@ usermod -a -G wheel MyUsername</pre>
     <div>How to install and configure &lt;code&gt;polkit&lt;/code&gt;. Of only tangential interest to this task.</div>
 
 
-    </ul>
+</ul>
 
 </body>
 </html>
