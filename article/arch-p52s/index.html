@@ -1,66 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Arch Linux on a Lenovo Thinkpad P52s</title>
-  <meta charset="UTF-8">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Steven Baldasty">
-  <link rel="icon" type="image/x-icon" href="/logo.png">
-  <link rel="stylesheet" href="/site.css">
-</head>
-<body>
-  <hr>
-  <div class="brand">
-    <img src="/logo.png" title="Website logo" alt="Three stacked blue boxes with binary digits on them" width="86px" height="86px">
-    <div>
-      <div class="title">Bit flipping laboratory &amp; Personal website</div>
-      <div class="caption">No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div>
-    </div>
-  </div>
-  <div class="nav">
-    <a href="/">Home</a>
-    <a href="/article/">Articles</a>
-    <a href="/media/">Media</a>
-  </div>
-  <hr>
-  
-<div class="article-date">
-    <div>2024-07-10</div>
-</div>
-<h1>Arch Linux on a Lenovo Thinkpad P52s</h1>
-<p>
-    
-    I installed Arch Linux on a Lenovo Thinkpad P52s using <code>btrfs</code> for the filesystem and <code>grub</code> for the bootloader. I recorded my process, beginning in a fresh installation image environment and ending with the root user booting into the new system.
-
-</p>
-
-    <p>I drew from several sources. The sources all have slightly different goals and focus areas. Most offer a useful generality this document may lack.</p>
-
-    <h2>Partitions</h2>
-    <p>Hopefully already well understood, but always worth mentioning, these instructions delete all data on the disk. Device names may vary by system.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">fdisk /dev/nvme0n1</pre>
-    </div>
-
-    <p>The <code>fdisk</code> utility launches. It presents an interactive prompt.</p> 
-    <ul>
-    <li><p><b>Delete any existing partitions.</b> Enter <kbd>d</kbd> and accept the default partition repeatedly until no partitions remain.</p>
-    <li><p><b>Create EFI partition.</b> Enter <kbd>n</kbd> to create a new partition. Enter <kbd>1</kbd> for the <i>partition number</i>. Accept the default <i>first sector</i>. Enter <kbd>+4G</kbd> for the <i>size</i>. Then <code>fdisk</code> returns to its top-level prompt. Enter <kbd>t</kbd> to set the partition type. Enter <kbd>1</kbd> for the <i>partition number</i>. Enter <kbd>uefi</kbd> for the <i>partition type</i>.</p>
-    <li><p><b>Create root partition.</b> Enter <kbd>n</kbd> to create a new partition. Enter <kbd>2</kbd> for the <i>partition number</i>. Accept the default <i>first sector</i>. Accept the default <i>size</i> to use all remaining disk space.</p>
-    <li><p><b>Write changes.</b> Optionally enter <kbd>p</kbd> to display the changes. Enter <kbd>w</kbd> to write the changes to disk. Then <code>fdisk</code> exits automatically.</p>
-    </ul>
-    <p>Two new devices <code>/dev/nvme0np1</code> and <code>/dev/nvme0np1</code> exist now, and correspond to the two new partitions.</p>
-
-    <h2>Filesystems</h2>
-    <p>Format the root partition with a <code>btrfs</code> filesystem to support snapshots. Ultimately only the subvolumes of this partition will be mounted, but for now temporarily mount it for the purpose of creating the subvolumes. Good candidates are parts of the filesystem that contain large or rapidly changing data unimportant for system restoration purposes. Create the subvolumes. The subvolumes appear under the partition's mount point as directories. Unmount the partition. Mount each of the subvolumes in its proper place. The <code>noatime</code> option improves performance by not tracking access times on files.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash"># Format the root partition
+<!DOCTYPE html><html><head><title>Arch Linux on a Lenovo Thinkpad P52s</title><meta charset=UTF-8><meta name=robots content="index, follow"><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=author content="Steven Baldasty"><link rel=icon type=image/x-icon href=/logo.png><link rel=stylesheet href=/site.css></head><body><hr><div class=brand><img src=/logo.png title="Website logo" alt="Three stacked blue boxes with binary digits on them" width=86px height=86px><div><div class=title>Bit flipping laboratory &amp; Personal website</div><div class=caption>No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div></div></div><div class=nav><a href=/ >Home</a><a href=/article/ >Articles</a><a href=/media/ >Media</a></div><hr><div class=article-date><div>2024-07-10</div></div><h1>Arch Linux on a Lenovo Thinkpad P52s</h1><p> I installed Arch Linux on a Lenovo Thinkpad P52s using <code>btrfs</code> for the filesystem and <code>grub</code> for the bootloader. I recorded my process, beginning in a fresh installation image environment and ending with the root user booting into the new system. </p><p>I drew from several sources. The sources all have slightly different goals and focus areas. Most offer a useful generality this document may lack.</p><h2>Partitions</h2><p>Hopefully already well understood, but always worth mentioning, these instructions delete all data on the disk. Device names may vary by system.</p><div class=codesnippet><pre class=lang-bash>fdisk /dev/nvme0n1</pre></div><p>The <code>fdisk</code> utility launches. It presents an interactive prompt.</p><ul><li><p><b>Delete any existing partitions.</b> Enter <kbd>d</kbd> and accept the default partition repeatedly until no partitions remain.</p><li><p><b>Create EFI partition.</b> Enter <kbd>n</kbd> to create a new partition. Enter <kbd>1</kbd> for the <i>partition number</i>. Accept the default <i>first sector</i>. Enter <kbd>+4G</kbd> for the <i>size</i>. Then <code>fdisk</code> returns to its top-level prompt. Enter <kbd>t</kbd> to set the partition type. Enter <kbd>1</kbd> for the <i>partition number</i>. Enter <kbd>uefi</kbd> for the <i>partition type</i>.</p><li><p><b>Create root partition.</b> Enter <kbd>n</kbd> to create a new partition. Enter <kbd>2</kbd> for the <i>partition number</i>. Accept the default <i>first sector</i>. Accept the default <i>size</i> to use all remaining disk space.</p><li><p><b>Write changes.</b> Optionally enter <kbd>p</kbd> to display the changes. Enter <kbd>w</kbd> to write the changes to disk. Then <code>fdisk</code> exits automatically.</p></ul><p>Two new devices <code>/dev/nvme0np1</code> and <code>/dev/nvme0np1</code> exist now, and correspond to the two new partitions.</p><h2>Filesystems</h2><p>Format the root partition with a <code>btrfs</code> filesystem to support snapshots. Ultimately only the subvolumes of this partition will be mounted, but for now temporarily mount it for the purpose of creating the subvolumes. Good candidates are parts of the filesystem that contain large or rapidly changing data unimportant for system restoration purposes. Create the subvolumes. The subvolumes appear under the partition's mount point as directories. Unmount the partition. Mount each of the subvolumes in its proper place. The <code>noatime</code> option improves performance by not tracking access times on files.</p><div class=codesnippet><pre class=lang-bash># Format the root partition
 mkfs.btrfs /dev/nvme0n1p2
 
 # Mount the partition temporarily
@@ -85,39 +23,13 @@ mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@root_btrsnap /dev/
 mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@tmp /dev/nvme0n1p2 /mnt/tmp
 mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@var_cache /dev/nvme0n1p2 /mnt/var/cache
 mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@var_log /dev/nvme0n1p2 /mnt/var/log
-mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@var_tmp /dev/nvme0n1p2 /mnt/var/tmp</pre>
-    </div>
-
-    <p>Format the EFI parition with a FAT32 filesystem for compatibility with the firmware that will need to interact with it, and then mount the partition. The <code>fmask</code> and <code>dmask</code> options may help prevent certain nondescript boot issues I encountered.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">mkfs.vfat -F32 /dev/nvme0n1p1
-mount --mkdir -o fmask=0077,dmask=0077 /dev/nvme0n1p1 /mnt/efi</pre>
-    </div>
-
-
-    <h2>Installation</h2>
-    <p>Connect to the internet wirelessly, replacing <kbd>MyNetwork</kbd> and <kbd>MyPassphrase</kbd> appropriately. Install the minimum necessary packages. Generate the <code>fstab</code> file. This file remembers where we mounted everything.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">iwctl --passphrase MyPassphrase station wlan0 connect MyNetwork
+mount --mkdir -o noatime,compress=lzo,space_cache=v2,subvol=/@var_tmp /dev/nvme0n1p2 /mnt/var/tmp</pre></div><p>Format the EFI parition with a FAT32 filesystem for compatibility with the firmware that will need to interact with it, and then mount the partition. The <code>fmask</code> and <code>dmask</code> options may help prevent certain nondescript boot issues I encountered.</p><div class=codesnippet><pre class=lang-bash>mkfs.vfat -F32 /dev/nvme0n1p1
+mount --mkdir -o fmask=0077,dmask=0077 /dev/nvme0n1p1 /mnt/efi</pre></div><h2>Installation</h2><p>Connect to the internet wirelessly, replacing <kbd>MyNetwork</kbd> and <kbd>MyPassphrase</kbd> appropriately. Install the minimum necessary packages. Generate the <code>fstab</code> file. This file remembers where we mounted everything.</p><div class=codesnippet><pre class=lang-bash>iwctl --passphrase MyPassphrase station wlan0 connect MyNetwork
 pacstrap -K /mnt base linux linux-firmware
 genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
 
 # Optionally take a snapshot
-btrfs su snapshot /mnt /mnt/root/btrsnap/0000.base</pre>
-    </div>
-
-
-
-    <h2>Configuration</h2>
-    <p>Enter into the new installation. Install <code>iwd</code> and <code>openresolv</code> for internet access without help from the installation image, the text editor <code>vim</code> for editing configuration files, and <code>btrfs-progs</code> for taking system snapshots. Go through a number of mundane steps per the installation guide.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">arch-chroot /mnt
+btrfs su snapshot /mnt /mnt/root/btrsnap/0000.base</pre></div><h2>Configuration</h2><p>Enter into the new installation. Install <code>iwd</code> and <code>openresolv</code> for internet access without help from the installation image, the text editor <code>vim</code> for editing configuration files, and <code>btrfs-progs</code> for taking system snapshots. Go through a number of mundane steps per the installation guide.</p><div class=codesnippet><pre class=lang-bash>arch-chroot /mnt
 pacman -S iwd openresolv vim btrfs-progs
 
 # Set root password
@@ -131,71 +43,11 @@ hwclock --systohc
 
 # Uncomment the appropriate UTF-8 line, generate locale(s)
 vim /etc/locale.gen
-locale-gen</pre>
-    </div>
-
-
-    <h2>Bootloader</h2>
-    <p>Install the necessary packages to make a <code>grub</code> bootloader. Then install the bootloader and set up its configuration. Consider saving the bootloader installation and configuration lines as a script for later use.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">pacman -S grub efibootmgr
+locale-gen</pre></div><h2>Bootloader</h2><p>Install the necessary packages to make a <code>grub</code> bootloader. Then install the bootloader and set up its configuration. Consider saving the bootloader installation and configuration lines as a script for later use.</p><div class=codesnippet><pre class=lang-bash>pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=arch_grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Optionally take a snapshot
-btrfs su snapshot / /root/snapshots/0001.configure</pre>
-    </div>
-
-
-    <h2>Reboot</h2>
-    <p>Exit out of the <code>chroot</code>, unmount all the filesystems, and restart the system.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash"># Back in the installation image environment
+btrfs su snapshot / /root/snapshots/0001.configure</pre></div><h2>Reboot</h2><p>Exit out of the <code>chroot</code>, unmount all the filesystems, and restart the system.</p><div class=codesnippet><pre class=lang-bash># Back in the installation image environment
 umount -R /mnt
-reboot</pre>
-    </div>
-
-    <p>Remove the installation media and restart the laptop. If all goes well log in as <kbd>root</kbd>.</p>
-
-<h2>References</h2>
-<ul>
-    
-    
-    <li>
-    <div><b><a href="https://wiki.archlinux.org/title/Installation_guide">Official installation guide</a></b></div>
-    <div>Authoritative and comprehensive, but also branches off in many directions. Complimentary resources demonstrating specific paths through the installation process can help.</div>
-
-    
-    <li>
-    <div><b><a href="https://gist.github.com/mjkstra/96ce7a5689d753e7a6bdd92cdc169bae">Michele Gementi&#39;s installation guide</a></b></div>
-    <div>Primary resource after exploring many avenues because it treats an unencrypted &lt;code&gt;btrfs&lt;/code&gt; filesystem. Concludes with a discussion of video drivers and preparation for playing games.</div>
-
-    
-    <li>
-    <div><b><a href="https://tforgione.fr/posts/arch-linux-encrypted/">Thomas Forgione&#39;s installation guide</a></b></div>
-    <div>Uses &lt;code&gt;ext4&lt;/code&gt; filesystems, but features an encrypted &lt;code&gt;/home&lt;/code&gt; partition. Discusses &lt;code&gt;docker&lt;/code&gt; configuration, and measures to ensure the compatibility of the installation with wake-on-lan.</div>
-
-    
-    <li>
-    <div><b><a href="https://gist.github.com/myyc/9595b520a4c564bef8143a86582f1ea1">Myyc&#39;s installation guide</a></b></div>
-    <div>Single encrypted &lt;code&gt;btrfs&lt;/code&gt; filesystem. Built in &lt;code&gt;systemd&lt;/code&gt; bootloader instead of &lt;code&gt;grub&lt;/code&gt;. Splash screen on startup and shutdown using &lt;code&gt;plymouth&lt;/code&gt;. Covers setting up secure boot and hibernate.</div>
-
-    
-    <li>
-    <div><b><a href="https://phoenixnap.com/kb/linux-commands-check-memory-usage">Vladimir Kaplarevic&#39;s swap post</a></b></div>
-    <div>Discusses swap partitions and the practices surrounding them that several major Linux distributions have landed on. Also contains useful information about memory usage and monitoring.</div>
-
-    
-    <li>
-    <div><b><a href="https://forum.osdev.org/viewtopic.php?t=33029">Brendan and others on the initial ramdisk</a></b></div>
-    <div>Flow of control passes through a &lt;i&gt;bootloader&lt;/i&gt; and an &lt;i&gt;initial ramdisk&lt;/i&gt; before reaching the Linux kernel. Contributors discuss and critique why these components exist and what they do.</div>
-
-
-</ul>
-
-</body>
-</html>
+reboot</pre></div><p>Remove the installation media and restart the laptop. If all goes well log in as <kbd>root</kbd>.</p><h2>References</h2><ul><li><div><b><a href=https://wiki.archlinux.org/title/Installation_guide>Official installation guide</a></b></div><div>Authoritative and comprehensive, but also branches off in many directions. Complimentary resources demonstrating specific paths through the installation process can help.</div><li><div><b><a href=https://gist.github.com/mjkstra/96ce7a5689d753e7a6bdd92cdc169bae>Michele Gementi&#39;s installation guide</a></b></div><div>Primary resource after exploring many avenues because it treats an unencrypted &lt;code&gt;btrfs&lt;/code&gt; filesystem. Concludes with a discussion of video drivers and preparation for playing games.</div><li><div><b><a href=https://tforgione.fr/posts/arch-linux-encrypted/ >Thomas Forgione&#39;s installation guide</a></b></div><div>Uses &lt;code&gt;ext4&lt;/code&gt; filesystems, but features an encrypted &lt;code&gt;/home&lt;/code&gt; partition. Discusses &lt;code&gt;docker&lt;/code&gt; configuration, and measures to ensure the compatibility of the installation with wake-on-lan.</div><li><div><b><a href=https://gist.github.com/myyc/9595b520a4c564bef8143a86582f1ea1>Myyc&#39;s installation guide</a></b></div><div>Single encrypted &lt;code&gt;btrfs&lt;/code&gt; filesystem. Built in &lt;code&gt;systemd&lt;/code&gt; bootloader instead of &lt;code&gt;grub&lt;/code&gt;. Splash screen on startup and shutdown using &lt;code&gt;plymouth&lt;/code&gt;. Covers setting up secure boot and hibernate.</div><li><div><b><a href=https://phoenixnap.com/kb/linux-commands-check-memory-usage>Vladimir Kaplarevic&#39;s swap post</a></b></div><div>Discusses swap partitions and the practices surrounding them that several major Linux distributions have landed on. Also contains useful information about memory usage and monitoring.</div><li><div><b><a href="https://forum.osdev.org/viewtopic.php?t=33029">Brendan and others on the initial ramdisk</a></b></div><div>Flow of control passes through a &lt;i&gt;bootloader&lt;/i&gt; and an &lt;i&gt;initial ramdisk&lt;/i&gt; before reaching the Linux kernel. Contributors discuss and critique why these components exist and what they do.</div></ul></body></html>

@@ -1,48 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Automation script for VACC jobs</title>
-  <meta charset="UTF-8">
-  <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Steven Baldasty">
-  <link rel="icon" type="image/x-icon" href="/logo.png">
-  <link rel="stylesheet" href="/site.css">
-</head>
-<body>
-  <hr>
-  <div class="brand">
-    <img src="/logo.png" title="Website logo" alt="Three stacked blue boxes with binary digits on them" width="86px" height="86px">
-    <div>
-      <div class="title">Bit flipping laboratory &amp; Personal website</div>
-      <div class="caption">No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div>
-    </div>
-  </div>
-  <div class="nav">
-    <a href="/">Home</a>
-    <a href="/article/">Articles</a>
-    <a href="/media/">Media</a>
-  </div>
-  <hr>
-  
-<div class="article-date">
-    <div>2024-07-12</div>
-</div>
-<h1>Automation script for VACC jobs</h1>
-<p>
-    
-    I wrote a script called <code>vaccjob</code> to automate the transfer, submission, monitoring, and output retrieval of jobs on UVM's in-house supercomputing cluster.
-
-</p>
-
-    <p>TODO MORE INTRODUCTION ABOUT VACC</p>
-    <h2>Connecting</h2>
-    <p>Most steps in the job lifecycle rely on a channel of communication between your computer and the VACC in the form of a <code>ssh</code> connection to one of its logins node behind <b>login.vacc.uvm.edu</b>. The login node does not support public key authentication, only authentication by username and password. The username is your NetID (your NetID is an identity that UVM generates for its students, faculty, and other affiliates; see their <a href="https://www.uvm.edu/vacc/request-account">Request Account Form</a> if necessary). The password is the same password you associated with your NetID.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash"># Host is the VACC login node
+<!DOCTYPE html><html><head><title>Automation script for VACC jobs</title><meta charset=UTF-8><meta name=robots content="index, follow"><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=author content="Steven Baldasty"><link rel=icon type=image/x-icon href=/logo.png><link rel=stylesheet href=/site.css></head><body><hr><div class=brand><img src=/logo.png title="Website logo" alt="Three stacked blue boxes with binary digits on them" width=86px height=86px><div><div class=title>Bit flipping laboratory &amp; Personal website</div><div class=caption>No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div></div></div><div class=nav><a href=/ >Home</a><a href=/article/ >Articles</a><a href=/media/ >Media</a></div><hr><div class=article-date><div>2024-07-12</div></div><h1>Automation script for VACC jobs</h1><p> I wrote a script called <code>vaccjob</code> to automate the transfer, submission, monitoring, and output retrieval of jobs on UVM's in-house supercomputing cluster. </p><p>TODO MORE INTRODUCTION ABOUT VACC</p><h2>Connecting</h2><p>Most steps in the job lifecycle rely on a channel of communication between your computer and the VACC in the form of a <code>ssh</code> connection to one of its logins node behind <b>login.vacc.uvm.edu</b>. The login node does not support public key authentication, only authentication by username and password. The username is your NetID (your NetID is an identity that UVM generates for its students, faculty, and other affiliates; see their <a href=https://www.uvm.edu/vacc/request-account>Request Account Form</a> if necessary). The password is the same password you associated with your NetID.</p><div class=codesnippet><pre class=lang-bash># Host is the VACC login node
 HOST=login.vacc.uvm.edu
 
 # Let us assume your username is bob
@@ -52,15 +8,7 @@ NETID=bob
 sudo apt install openssh-client
 
 # Optionally test the connection (exit when done)
-ssh $NETID@$HOST</pre>
-    </div>
-
-    <p>For a more elaborate walkthrough, see the <a href="https://www.uvm.edu/vacc/docs/start_guide/ssh/">SSH Section</a> of the VACC documentation site. Note the first time you try connecting, <code>ssh</code> may be unable to establish the host's authenticity and ask to you to confirm. I highly <strong>recommend you try connecting</strong> before moving on, because this behavior <strong>breaks</strong> the <code>sshpass</code> utility I am about to introduce; so best get it out of the way now (or better yet if you find a way to circumvent it, please let me know). Note also, the VACC documentation suggests you must be on campus or on the university VPN to connect; but so far I am able to connect remotely without issue.</p>
-    <p>Authentication by username and password has drawbacks. Ideally the script you eventually write will run without intervention; but instead it may prompt you for passwords as it moves along. One workaround <strong>not without security risks</strong> is to put the password in a local file. You can then use <code>sshpass</code> to feed the password to <code>ssh</code> or <code>scp</code>.</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash"># Optionally create a directory for password
+ssh $NETID@$HOST</pre></div><p>For a more elaborate walkthrough, see the <a href=https://www.uvm.edu/vacc/docs/start_guide/ssh/ >SSH Section</a> of the VACC documentation site. Note the first time you try connecting, <code>ssh</code> may be unable to establish the host's authenticity and ask to you to confirm. I highly <strong>recommend you try connecting</strong> before moving on, because this behavior <strong>breaks</strong> the <code>sshpass</code> utility I am about to introduce; so best get it out of the way now (or better yet if you find a way to circumvent it, please let me know). Note also, the VACC documentation suggests you must be on campus or on the university VPN to connect; but so far I am able to connect remotely without issue.</p><p>Authentication by username and password has drawbacks. Ideally the script you eventually write will run without intervention; but instead it may prompt you for passwords as it moves along. One workaround <strong>not without security risks</strong> is to put the password in a local file. You can then use <code>sshpass</code> to feed the password to <code>ssh</code> or <code>scp</code>.</p><div class=codesnippet><pre class=lang-bash># Optionally create a directory for password
 mkdir $HOME/.sshpasswds
 
 # Path to password (whatever you choose)
@@ -76,43 +24,7 @@ chmod 400 $PWPATH
 sudo apt install sshpass
 
 # Optionally test ssh with sshpass
-sshpass -f $PWPATH ssh $NETID@$HOST pwd</pre>
-    </div>
-
-    <p>The optional test should output your login node home directory. For more information about <code>sshpass</code> and the switches it supports, see the <a href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/">nixCraft sshpass</a> tutorial. My final script makes liberal use of <code>sshpass</code>, but I recall reading somewhere there may be a way to bundle many <code>ssh</code> and <code>scp</code> operations into a single remote session for efficiency.</p>
-
-    <h2>File transfer</h2>
-    <p>TODO Introduce scp</p>
-
-    <h2>Environment</h2>
-    <p>TODO Create conda environment</p>
-
-    <h2>Workflow</h2>
-    <p>Bob the developer has UVM NetID <i>bobsnetid</i>, and a password saved in <code>~/.sshpasswds/uvm</code>. Bob writes a program he wants run on the VACC. The program and associated files are in the <code>~/src/vj</code> directory locally. The job script including any necesssary SLURM directives is <code>~/src/vj/job.sh</code> locally. Bob designed the program to save output files in the <code>~/remoteout</code> directory. Bob wants the to have any output in the <code>~/localout</code> directory locally when the job finishes. Bob runs</p>
-    
-    
-    <div class="codesnippet">
-        <pre class="lang-bash">vaccjob bobsnetid ~/.sshpasswds/uvm ~/src/vj vj/job.sh remoteout ~/localout</pre>
-    </div>
-
-    <p>Due to its length and cumbersome parameters, Bob may choose to save this line as a script of its own for easy reuse. In the happy path, <code>vaccjob</code> will</p>
-    <ol>
-    <li>Recursively copy <code>~/vj</code> to Bob's home directory on the VACC
-    <li>Submit the job by running <code>~/vj/job.sh</code>
-    <li>Create a file <code>~/.vaccjobid</code> locally containing the job ID
-    <li>Poll the job status every 10 minutes until the job completes
-    <li>Recursively copy <code>~/remoteout</code> from the VACC to <code>~/localout</code> on Bob's computer
-    <li>Delete <code>~/.vaccjobid</code>
-    </ol>
-    <p>Bob may need to turn his computer off before his job finishes. Bob can then run <code>vaccjob</code> again later, whereupon <code>vaccjob</code> will notice that <code>~/.vaccjobid</code> already exists and skip straight to polling. If at any point an error occurs, <code>vaccjob</code> terminates immediately with a message.</p>
-
-    <h2>Script</h2>
-    <p>Here is the full <code>vaccjob</code> script in its current form. As always please exercise caution with code that interacts with third party systems, and with code that can potentially modify or delete data.</p>
-    
-    
-    <div class="codesnippet">
-            <div class="header">vaccjob</div>
-        <pre class="lang-bash">#!/bin/bash
+sshpass -f $PWPATH ssh $NETID@$HOST pwd</pre></div><p>The optional test should output your login node home directory. For more information about <code>sshpass</code> and the switches it supports, see the <a href=https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/ >nixCraft sshpass</a> tutorial. My final script makes liberal use of <code>sshpass</code>, but I recall reading somewhere there may be a way to bundle many <code>ssh</code> and <code>scp</code> operations into a single remote session for efficiency.</p><h2>File transfer</h2><p>TODO Introduce scp</p><h2>Environment</h2><p>TODO Create conda environment</p><h2>Workflow</h2><p>Bob the developer has UVM NetID <i>bobsnetid</i>, and a password saved in <code>~/.sshpasswds/uvm</code>. Bob writes a program he wants run on the VACC. The program and associated files are in the <code>~/src/vj</code> directory locally. The job script including any necesssary SLURM directives is <code>~/src/vj/job.sh</code> locally. Bob designed the program to save output files in the <code>~/remoteout</code> directory. Bob wants the to have any output in the <code>~/localout</code> directory locally when the job finishes. Bob runs</p><div class=codesnippet><pre class=lang-bash>vaccjob bobsnetid ~/.sshpasswds/uvm ~/src/vj vj/job.sh remoteout ~/localout</pre></div><p>Due to its length and cumbersome parameters, Bob may choose to save this line as a script of its own for easy reuse. In the happy path, <code>vaccjob</code> will</p><ol><li>Recursively copy <code>~/vj</code> to Bob's home directory on the VACC <li>Submit the job by running <code>~/vj/job.sh</code><li>Create a file <code>~/.vaccjobid</code> locally containing the job ID <li>Poll the job status every 10 minutes until the job completes <li>Recursively copy <code>~/remoteout</code> from the VACC to <code>~/localout</code> on Bob's computer <li>Delete <code>~/.vaccjobid</code></ol><p>Bob may need to turn his computer off before his job finishes. Bob can then run <code>vaccjob</code> again later, whereupon <code>vaccjob</code> will notice that <code>~/.vaccjobid</code> already exists and skip straight to polling. If at any point an error occurs, <code>vaccjob</code> terminates immediately with a message.</p><h2>Script</h2><p>Here is the full <code>vaccjob</code> script in its current form. As always please exercise caution with code that interacts with third party systems, and with code that can potentially modify or delete data.</p><div class=codesnippet><div class=header>vaccjob</div><pre class=lang-bash>#!/bin/bash
 set -e
 
 HOST=vacc-user1.uvm.edu
@@ -161,39 +73,4 @@ rm $JIDF
 echo &#34;Clearing local output directory $6&#34;
 rm -rf &#34;$6/*&#34;
 echo &#34;Copying output to $6&#34;
-sshpass -f &#34;$2&#34; scp -rC &#34;$1&#34;@&#34;$HOST&#34;:&#34;$5&#34; &#34;$6&#34;</pre>
-    </div>
-
-
-    <h2>Shortcomings</h2>
-    <p>On the firest time using <code>ssh</code> to access the VACC, the client may note that the host could not be verified and prompt the user to add it to a known list. This behavior breaks `sshpass`. The solution is to `ssh` into the VACC first, add it to the known hosts, and then continue with the process. Sometimes a harmless error message about an undefined job id appears at the end. I think this happens when the job has been terminated long enough for the SLURM to forget what its id was. Also <code>vaccjob</code> is unaware of whether the job finished successfully or not. It tries to retrieve the output either way.</p>
-
-
-<h2>References</h2>
-<ul>
-    
-    
-    <li>
-    <div><b><a href="https://www.uvm.edu/vacc/kb/knowledge-base/understand-batch-system/">Understanding the batch job system</a></b></div>
-    <div>How to connect to the VACC, write job scripts, install software dependencies, submit jobs, monitor jobs, and retrieve output. Contains links to pages that detail each step.</div>
-
-    
-    <li>
-    <div><b><a href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/">Non-interactive password authentication</a></b></div>
-    <div>Detailed instructions on how to use &lt;code&gt;sshpass&lt;/code&gt;, including examples. How to install &lt;code&gt;sshpass&lt;/code&gt; on many operating systems.</div>
-
-    
-    <li>
-    <div><b><a href="https://snapshooter.com/learn/linux/copy-files-scp">SCP tutorial</a></b></div>
-    <div>At a high level, how to use &lt;code&gt;scp&lt;/code&gt; and some of its switches.</div>
-
-    
-    <li>
-    <div><b><a href="https://www.redhat.com/sysadmin/arguments-options-bash-scripts">Arguments in bash scripts</a></b></div>
-    <div>Good practices for writing and structuring &lt;code&gt;bash&lt;/code&gt; scripts. How to support command line switches and argments in &lt;code&gt;bash&lt;/code&gt; scripts, including examples.</div>
-
-
-</ul>
-
-</body>
-</html>
+sshpass -f &#34;$2&#34; scp -rC &#34;$1&#34;@&#34;$HOST&#34;:&#34;$5&#34; &#34;$6&#34;</pre></div><h2>Shortcomings</h2><p>On the firest time using <code>ssh</code> to access the VACC, the client may note that the host could not be verified and prompt the user to add it to a known list. This behavior breaks `sshpass`. The solution is to `ssh` into the VACC first, add it to the known hosts, and then continue with the process. Sometimes a harmless error message about an undefined job id appears at the end. I think this happens when the job has been terminated long enough for the SLURM to forget what its id was. Also <code>vaccjob</code> is unaware of whether the job finished successfully or not. It tries to retrieve the output either way.</p><h2>References</h2><ul><li><div><b><a href=https://www.uvm.edu/vacc/kb/knowledge-base/understand-batch-system/ >Understanding the batch job system</a></b></div><div>How to connect to the VACC, write job scripts, install software dependencies, submit jobs, monitor jobs, and retrieve output. Contains links to pages that detail each step.</div><li><div><b><a href=https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/ >Non-interactive password authentication</a></b></div><div>Detailed instructions on how to use &lt;code&gt;sshpass&lt;/code&gt;, including examples. How to install &lt;code&gt;sshpass&lt;/code&gt; on many operating systems.</div><li><div><b><a href=https://snapshooter.com/learn/linux/copy-files-scp>SCP tutorial</a></b></div><div>At a high level, how to use &lt;code&gt;scp&lt;/code&gt; and some of its switches.</div><li><div><b><a href=https://www.redhat.com/sysadmin/arguments-options-bash-scripts>Arguments in bash scripts</a></b></div><div>Good practices for writing and structuring &lt;code&gt;bash&lt;/code&gt; scripts. How to support command line switches and argments in &lt;code&gt;bash&lt;/code&gt; scripts, including examples.</div></ul></body></html>
