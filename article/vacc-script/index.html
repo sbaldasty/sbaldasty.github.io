@@ -1,20 +1,23 @@
-<!DOCTYPE html><html><head><title>Automation script for VACC jobs</title><meta charset=UTF-8><meta name=robots content="index, follow"><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=author content="Steven Baldasty"><link rel=icon type=image/x-icon href=/logo.png><link rel=stylesheet href=/site.css></head><body><hr><div class=brand><img src=/logo.png title="Website logo" alt="Three stacked blue boxes with binary digits on them" width=86px height=86px><div><div class=title>Bit flipping laboratory &amp; Personal website</div><div class=caption>No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div></div></div><div class=nav><a href=/ >Home</a><a href=/article/ >Articles</a><a href=/media/ >Media</a></div><hr><div class=article-date><div>2024-07-12</div></div><h1>Automation script for VACC jobs</h1><p> I wrote a script called <code>vaccjob</code> to automate the transfer, submission, monitoring, and output retrieval of jobs on UVM's in-house supercomputing cluster. </p><p>TODO MORE INTRODUCTION ABOUT VACC</p><h2>Connecting</h2><p>Most steps in the job lifecycle rely on a channel of communication between your computer and the VACC in the form of a <code>ssh</code> connection to one of its logins node behind <b>login.vacc.uvm.edu</b>. The login node does not support public key authentication, only authentication by username and password. The username is your NetID (your NetID is an identity that UVM generates for its students, faculty, and other affiliates; see their <a href=https://www.uvm.edu/vacc/request-account>Request Account Form</a> if necessary). The password is the same password you associated with your NetID.</p><div class=codesnippet><pre class=lang-bash># Host is the VACC login node
+<!DOCTYPE html><html><head><title>Pattern for grid search scripting on the VACC</title><meta charset="UTF-8"><meta name="robots" content="index, follow"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Steven Baldasty"><link rel="icon" type="image/x-icon" href="/logo.png"><link rel="stylesheet" href="/site.css"></head><body><div class="brand"><img src="/logo.png" title="Website logo" alt="Three stacked blue boxes with binary digits on them" width="86" height="86"><div><div class="title">Bit flipping laboratory &amp; Personal website</div><div class="caption">No sneaky cookies haunt these pages, but whether someone tracks you I do not know. Information flows through many channels, and every action leaves a trace.</div></div></div><div class="nav"><a href="/">Home</a><a href="/article/">Articles</a><a href="/media/">Media</a></div><hr><div class="article"><div class="date"> 2025-03-11 </div><div class="summary"> Code snippets, design decisions, and learning log from my adventure of implementing a grid search on the University of Vermont's supercomputing cluster. I don't think we're in AWS land anymore. Thanks to the VACC team for their help with my project. </div><h1> Pattern for grid search scripting on the VACC </h1><p> The <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> is a supercomputing cluster at <a href="https://uvm.edu" target="blank_">UVM</a>. Authorized students, faculty, and other affiliates can run computational tasks there, which would be too expensive for a laptop. Access requires a <a href="https://uvm.edu" target="blank_">UVM</a> issued identity called a <a href="https://account.uvm.edu/" target="blank_">NetID</a>, and an <a href="https://www.uvm.edu/vacc/request-allocation" target="blank_">account</a> for billing purposes. In my experience the account usually comes from an advisor or from the instructor of a class, and every student should already have a <a href="https://account.uvm.edu/" target="blank_">NetID</a>. </p><p> The <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> has a graphical user interface called <a href="https://ondemand.vacc.uvm.edu/" target="blank_">OnDemand</a> which may better suit simple manual tasks, but here I focus on building blocks for automation using the Linux command line. I run a Linux distribution on my laptop that is based on <a href="https://www.debian.org/" target="blank_">Debian</a>, but MacOS, Windows, or other varieties of Linux should suffice with minimal adaptation; most of the code just runs on the <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> anyway. The idea is to upload a <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a> project to the <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a>, queue jobs using the <a href="https://slurm.schedmd.com/documentation.html" target="blank_">SLURM</a> scheduling system, and download the results when the jobs finish. </p><h2> Connecting </h2><p> Interacting with the <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> requires a secure channel of communication in the form of a <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> connection to one of its login nodes behind <b>login.vacc.uvm.edu</b>. The login nodes unfortunately do not support public key authentication, only authentication by username and password. The username is a valid <a href="https://account.uvm.edu/" target="blank_">NetID</a>, and the password is the password associated with that <a href="https://account.uvm.edu/" target="blank_">NetID</a>. I run this code on my laptop. I use environment variables, but they aren't necessary. </p><pre class="snippet"># Host is the VACC login node
 HOST=login.vacc.uvm.edu
 
-# Let us assume your username is bob
+# Assuming the username is bob
 NETID=bob
 
-# Install ssh and scp clients if not yet installed
+# Install ssh and scp clients
 sudo apt install openssh-client
 
-# Optionally test the connection (exit when done)
-ssh $NETID@$HOST</pre></div><p>For a more elaborate walkthrough, see the <a href=https://www.uvm.edu/vacc/docs/start_guide/ssh/ >SSH Section</a> of the VACC documentation site. Note the first time you try connecting, <code>ssh</code> may be unable to establish the host's authenticity and ask to you to confirm. I highly <strong>recommend you try connecting</strong> before moving on, because this behavior <strong>breaks</strong> the <code>sshpass</code> utility I am about to introduce; so best get it out of the way now (or better yet if you find a way to circumvent it, please let me know). Note also, the VACC documentation suggests you must be on campus or on the university VPN to connect; but so far I am able to connect remotely without issue.</p><p>Authentication by username and password has drawbacks. Ideally the script you eventually write will run without intervention; but instead it may prompt you for passwords as it moves along. One workaround <strong>not without security risks</strong> is to put the password in a local file. You can then use <code>sshpass</code> to feed the password to <code>ssh</code> or <code>scp</code>.</p><div class=codesnippet><pre class=lang-bash># Optionally create a directory for password
+# Test the connection
+ssh $NETID@$HOST
+
+# If working then exit when done
+exit</pre><p> The first time I connect, <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> is unable to establish the host's authenticity and prompts me to confirm the connection by entering <kbd>yes</kbd>. This prompt causes the <a class="tech" href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider" target="blank_" title="Password forwarder for ssh and scp">sshpass</a> utility I introduce next to fail, so I get it out of the way now; the prompt will not reappear for subsequent connection attempts. Or better yet, perhaps there is a switch to circumvent the authenticity check altogether? Also, the <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> documentation suggests I must be on campus or on the university's VPN to connect, but so far I have had no issues. </p><p> Authentication by username and password has the drawback that any scripts I eventually write will prompt me for my password every time they need to connect. One workaround <strong>not without security risks</strong> is to put the password in a local file. I can then use <a class="tech" href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider" target="blank_" title="Password forwarder for ssh and scp">sshpass</a> to feed the password to <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> or <a class="tech" href="https://snapshooter.com/learn/linux/copy-files-scp" target="blank_" title="Copies files between computers securely">scp</a>. </p><pre class="snippet"># Create a directory for password file
 mkdir $HOME/.sshpasswds
 
-# Path to password (whatever you choose)
+# Path to file containing password
 PWPATH=$HOME/.sshpasswds/uvm
 
-# Save your password in a file
+# Save password in a file
 vim $PWPATH
 
 # Optionally lock down access somewhat
@@ -24,53 +27,106 @@ chmod 400 $PWPATH
 sudo apt install sshpass
 
 # Optionally test ssh with sshpass
-sshpass -f $PWPATH ssh $NETID@$HOST pwd</pre></div><p>The optional test should output your login node home directory. For more information about <code>sshpass</code> and the switches it supports, see the <a href=https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/ >nixCraft sshpass</a> tutorial. My final script makes liberal use of <code>sshpass</code>, but I recall reading somewhere there may be a way to bundle many <code>ssh</code> and <code>scp</code> operations into a single remote session for efficiency.</p><h2>File transfer</h2><p>TODO Introduce scp</p><h2>Environment</h2><p>TODO Create conda environment</p><h2>Workflow</h2><p>Bob the developer has UVM NetID <i>bobsnetid</i>, and a password saved in <code>~/.sshpasswds/uvm</code>. Bob writes a program he wants run on the VACC. The program and associated files are in the <code>~/src/vj</code> directory locally. The job script including any necesssary SLURM directives is <code>~/src/vj/job.sh</code> locally. Bob designed the program to save output files in the <code>~/remoteout</code> directory. Bob wants the to have any output in the <code>~/localout</code> directory locally when the job finishes. Bob runs</p><div class=codesnippet><pre class=lang-bash>vaccjob bobsnetid ~/.sshpasswds/uvm ~/src/vj vj/job.sh remoteout ~/localout</pre></div><p>Due to its length and cumbersome parameters, Bob may choose to save this line as a script of its own for easy reuse. In the happy path, <code>vaccjob</code> will</p><ol><li>Recursively copy <code>~/vj</code> to Bob's home directory on the VACC <li>Submit the job by running <code>~/vj/job.sh</code><li>Create a file <code>~/.vaccjobid</code> locally containing the job ID <li>Poll the job status every 10 minutes until the job completes <li>Recursively copy <code>~/remoteout</code> from the VACC to <code>~/localout</code> on Bob's computer <li>Delete <code>~/.vaccjobid</code></ol><p>Bob may need to turn his computer off before his job finishes. Bob can then run <code>vaccjob</code> again later, whereupon <code>vaccjob</code> will notice that <code>~/.vaccjobid</code> already exists and skip straight to polling. If at any point an error occurs, <code>vaccjob</code> terminates immediately with a message.</p><h2>Script</h2><p>Here is the full <code>vaccjob</code> script in its current form. As always please exercise caution with code that interacts with third party systems, and with code that can potentially modify or delete data.</p><div class=codesnippet><div class=header>vaccjob</div><pre class=lang-bash>#!/bin/bash
-set -e
+sshpass -f $PWPATH ssh $NETID@$HOST pwd</pre><p> The optional test on the last line outputs my home directory on the login node. Then <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> lands me back on my laptop right away when the command finishes. See also this <a href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider" target="blank_">tutorial</a> for more about <a class="tech" href="https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider" target="blank_" title="Password forwarder for ssh and scp">sshpass</a> and its switches. </p><p> An inconvenience I have not solved is that the <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> sometimes forces a cooldown period if I connect too many times. It doesn't really happen during normal use, but it can happen during the iterative process of debugging a script. I recall reading somewhere about a way to bundle many <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> and <a class="tech" href="https://snapshooter.com/learn/linux/copy-files-scp" target="blank_" title="Copies files between computers securely">scp</a> operations into a single remote session, which may help avoid this. </p><h2> Project organization </h2><p> The <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a> community maintains an enormous number of <a href="https://vinayak-hegde.medium.com/top-10-tools-for-creating-isolated-environments-152d665640f2" target="blank_">complicated tools</a> to manage python installations, project dependencies, and version conflicts. Different projects use different tools. The <a href="https://www.uvm.edu/vacc" target="blank_">VACC</a> strongly encourages projects to use <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a>, so I add an <code>environment.yaml</code> file to my project, defining the <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment; but to support the use of my project without <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a>, I list all my <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a> package dependencies in a <code>requirements.txt</code> file like so. </p><pre class="snippet">mpyc==0.10
+numpy==2.0.1
+pandas==2.2.2</pre><p> Then the <code>environment.yaml</code> file for <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> essentially becomes a thin wrapper around <a class="tech" href="https://github.com/pypa/pip" target="blank_" title="Standard python package manager">pip</a>. The <code>environment.yaml</code> file tells <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> to install <a class="tech" href="https://github.com/pypa/pip" target="blank_" title="Standard python package manager">pip</a> and then use it to install the package dependencies from <code>requirements.txt</code>. Another benefit of this approach is the certainty of having access to all the packages. Not all packages are available in <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> natively. </p><pre class="snippet">name: myproject
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - -r requirements.txt</pre><p> I also like to install the project itself as a package. Then if the project had multiple source files, I could freely import them from each other without worrying about their relative paths. Installing the project as a package also helps with unit testing. Different approaches are possible. I use a <code>pyproject.toml</code> file. This configuration works because all my source code is in a <code>src</code> directory in my project, and I do not have any nested source directories. </p><pre class="snippet">[project]
+name = &#34;src&#34;
+version = &#34;0.1&#34;
 
-HOST=vacc-user1.uvm.edu
-JIDF=~/.vaccjobid
-DELAY=600
+[build-system]
+requires = [&#34;setuptools&#34;]
+build-backend = &#34;setuptools.build_meta&#34;
 
-if ! [ $# -eq 6 ]; then
-   echo &#34;Requires 6 parameters.&#34;
-   exit 1
+[tool.setuptools]
+packages = [&#34;src&#34;]</pre><p> I install the project as a package in <i>editable mode</i>. Editable mode means that changes to the source code get immediately reflected in the installed package: a very useful feature for iterative development. I do this step locally on my laptop, as well as on the VACC. </p><pre class="snippet">python -m pip install -e .</pre><p> At risk of further complicating an already complicated process, I use <a class="tech" href="https://github.com/pyenv/pyenv" target="blank_" title="Python version manager and manager of other managers">pyenv</a> on my laptop to isolate from each other all the versions of <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a>, build tools, and package dependencies which the projects I work on require. I create a new environment with <a class="tech" href="https://github.com/pyenv/pyenv" target="blank_" title="Python version manager and manager of other managers">pyenv</a>, and add a <code>.python-version</code> file to my project containing the name of the environment. My <a class="tech" href="https://ss64.com/bash/bash.html" target="blank_" title="Common shell for Linux">bash</a> shell detects this file when I enter the project directory, and has <a class="tech" href="https://github.com/pyenv/pyenv" target="blank_" title="Python version manager and manager of other managers">pyenv</a> activate the appropriate environment automatically. Conversely when I leave the project directory, <a class="tech" href="https://github.com/pyenv/pyenv" target="blank_" title="Python version manager and manager of other managers">pyenv</a> deactivates the environment again. </p><h2> The scripts </h2><p> The remaining code snippets will fit nicely into scripts. You can optionally keep your scripts in the script directory of your project. Depending on how you choose to start your jobs, you may be able to administer the entire process from your laptop. However, some of these scripts are intended to run on your laptop, whereas others are intended to run on the VACC. Some are specific to projects based on a grid search. </p><table><tr><th>Script</th><th>Purpose</th><th>Target</th></tr><tr><td><code>copy_project.sh</code></td><td>Copies the project from the Laptop to the VACC. Recreates a <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment on the VACC with the project's stated dependencies.</td><td>Laptop</td></tr><tr><td><code>copy_output.sh</code></td><td>Verifies none of the project's jobs are running on the VACC. Clears out the output directory on the Laptop. Recursively copies the output directory from VACC to the Laptop.</td><td>Laptop</td></tr><tr><td><code>vacc_init_env.sh</code></td><td>Recreates a <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment on the VACC with the project's stated dependencies.</td><td>VACC</td></tr><tr><td><code>set_vars.sh</code></td><td>Sets common project related environment variables for use in other scripts.</td><td>Both</td></tr><tr><td><code>vacc_job.sh</code><br><i><small>Grid search only</small></i></td><td>Loads the project's <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment. Calls the main <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a> script, supplying appropriate command line arguments from environment variables.</td><td>VACC</td></tr><tr><td><code>vacc_batch.sh</code><br><i><small>Grid search only</small></i></td><td>Creates many <a class="tech" href="https://ss64.com/bash/bash.html" target="blank_" title="Common shell for Linux">bash</a> scripts for submitting individual jobs with different parameters. Projects may have multiple batch scripts.</td><td>VACC</td></tr><tr><td><code>vacc_run_all.sh</code><br><i><small>Grid search only</small></i></td><td>Runs all the <a class="tech" href="https://ss64.com/bash/bash.html" target="blank_" title="Common shell for Linux">bash</a> scripts created by <code>vacc_batch.sh</code> at once, thereby submitting many jobs to SLURM.</td><td>VACC</td></tr></table><p> A number of environment variables will be shared across the scripts, both scripts that run on your laptop and those that run on the VACC. Many of these we have seen and used already. Add them to <code>set_vars.sh</code> and use <a class="tech" href="https://ss64.com/bash/source.html" target="blank_" title="Runs scripts in the current bash shell">source</a> to activate them from your other scripts. </p><pre class="snippet"># Host is the VACC login node
+HOST=login.vacc.uvm.edu
+
+# Assuming your username is bob
+NETID=bob
+
+# Name of the project
+PRJNAME=project
+
+# Where project lives locally
+PRJPATH=$HOME/src/$PRJNAME
+
+# Path to password (whatever you choose)
+PWPATH=$HOME/.sshpasswds/uvm
+
+# Where output lives on VACC
+OUTPATH=out
+
+# Where output will be analyzed on laptop
+ANPATH=$HOME/analysis
+
+# Conda module
+CONMOD=python3.11-anaconda/2023.09-0</pre><h2> Uploading the project </h2><p> The package for <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> comes with a utility called <a class="tech" href="https://snapshooter.com/learn/linux/copy-files-scp" target="blank_" title="Copies files between computers securely">scp</a> for copying files securely between computers. Its syntax is similar to <a class="tech" href="https://ss64.com/bash/cp.html" target="blank_" title="Copies files and directories locally">cp</a>, but with either the source or destination prefixed by the username and host. The main responsibility of <code>copy_project.sh</code> then is to upload my project to my home directory on the VACC using <a class="tech" href="https://snapshooter.com/learn/linux/copy-files-scp" target="blank_" title="Copies files between computers securely">scp</a>. The <code>-r</code> switch is for also uploading any subdirectories my project may have. </p><pre class="snippet"># Clear out any older version
+CMD=&#34;rm -rf $PRJNAME&#34;
+sshpass -f $PWPATH ssh $NETID@$HOST &#34;$CMD&#34;
+
+# Copy project to VACC
+sshpass -f $PWPATH scp -rC $PRJPATH $NETID@$HOST:</pre><p> The VACC uses <a class="tech" href="https://lmod.readthedocs.io/en/latest/080_hierarchy.html" target="blank_" title="Manages available Lmod modules">module</a> to install <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a>, and <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> to install all the project's dependencies including <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a>. One option is to do these steps once at the outset, independent of everything else. I prefer to bundle the whole environment setup into the same script that copies my project to the VACC. This way I recreate the environment every time, and I never have to worry about whether it is synced up with what my project needs. I do this in a script called <code>vacc_init_env.sh</code>, starting with setting up <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a>. </p><pre class="snippet"># Clear out any loaded modules
+module purge
+
+# Load python and anaconda
+module load ${CONMOD}
+
+# Put anaconda binaries on the path
+source ${ANACONDA_ROOT}/etc/profile.d/conda.sh</pre><p> The <code>vacc_init_env.sh</code> script goes on to configure the <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment. I recreate the environment only if necessary, and install without prompting for confirmation. The <code>--prune</code> switch removes any dependencies I may have removed from my project. </p><pre class="snippet"># Create the environment if needed
+if ! conda env list | grep $PRJNAME &gt;/dev/null 2&gt;&amp;1; then
+    yes | conda create --name $PRJNAME python=3.11
 fi
 
-if [ -f $JIDF ]; then
-   jid=$(cat &#34;$JIDF&#34;)
-   echo &#34;Resuming job id $jid&#34;
-else
-   echo &#34;Clearing payload directory on $HOST&#34;
-   payloaddir=$(basename &#34;$3&#34;)
-   sshpass -f &#34;$2&#34; ssh &#34;$1&#34;@&#34;$HOST&#34; &#34;rm -rf $payloaddir&#34;
-   echo &#34;Copying payload $3&#34;
-   sshpass -f &#34;$2&#34; scp -rC &#34;$3&#34; &#34;$1&#34;@&#34;$HOST&#34;:
-   echo &#34;Clearing output directory on $HOST&#34;
-   clrcmd=&#34;mkdir -p $5; rm -rf $5/*&#34;
-   sshpass -f &#34;$2&#34; ssh &#34;$1&#34;@&#34;$HOST&#34; &#34;$clrcmd&#34;
-   echo &#34;Submitting job $4&#34;
-   jobcmd=&#34;sbatch $4&#34;
-   resp=$(sshpass -f &#34;$2&#34; ssh &#34;$1&#34;@&#34;$HOST&#34; &#34;$jobcmd&#34;)
-   jid=&#34;${resp##* }&#34;
-   echo &#34;Job id is $jid&#34;
-   echo &#34;$jid&#34; &gt; &#34;$JIDF&#34;
-   sleep &#34;$DELAY&#34;
-fi
+# Update the environment with latest project dependencies
+conda env update --file environment.yaml --prune
+conda activate $PRJNAME
 
-while true; do
-   pollcmd=&#34;squeue -h -j $jid -o %T&#34;
-   set +e
-   resp=$(sshpass -f &#34;$2&#34; ssh &#34;$1&#34;@&#34;$HOST&#34; &#34;$pollcmd&#34;)
-   set -e
-   if [ -z &#34;$resp&#34; ]; then
-      break
-   fi
-   echo &#34;$resp&#34;
-   sleep &#34;$DELAY&#34;
-done
+# Install ourself locally
+python -m pip install -e .</pre><p> The <code>vacc_init_env.sh</code> script gets copied to the VACC along with my project. I run the <code>vacc_init_env.sh</code> script on the VACC using <a class="tech" href="https://www.uvm.edu/vacc/docs/start_guide/ssh" target="blank_" title="Opens secure shells on remote systems">ssh</a> at the <code>copy_project.sh</code>, after the project is copied over. </p><h2> Starting jobs </h2><p> Projects use the VACC in different ways. Some have a single job that runs within the maximum allotted time. Others have a single job that exceeds the maximum allotted time, and must save the job state and resume it in another job. My project is a grid search. It has many jobs that run independently of each other using the same code but ranging over a variety of parameters. Jobs are scheduled using the SLURM job scheduler <a class="tech" href="https://slurm.schedmd.com/sbatch.html" target="blank_" title="Queues jobs in the slurm scheduling system">sbatch</a>. While starting the jobs from my laptop is possible, I prefer to do it directly on the VACC. </p><p> Rather than a grid search that submits jobs directly, there are certain advantages to having the grid search instead <i>create</i> job submission scripts, one for every combination of parameters. Then I can either submit all the jobs together, or easily rerun jobs that have failed. The <code>vacc_battery.sh</code> script starts by getting the directory it lives in. This is important so it knows the correct fully qualified path to use for the actual script that runs the job, which lives in the same directory. </p><pre class="snippet">SCRIPT_DIR=$(dirname &#34;$(realpath &#34;$0&#34;)&#34;)</pre><p> The name of the battery and the number of the job are used for consistency, and to distinguish one battery from another in case there is more than one. It is helpful for the <code>.out</code> files, the job logs, and the artifacts produced by the jobs to be easily associated with one another. </p><pre class="snippet">battery=&#34;example_battery&#34;
+job=0</pre><p> I assume here that all the jobs in the battery require the same resources to run, but the script may need to be more sophisticated if this is not the case. The nested loops iterate over all the possible combinations of parameter values. They <i>export</i> the parameter values for use by the job submission script. </p><pre class="snippet"># Parameter ranges
+p1s=(&#34;1&#34; &#34;2&#34; &#34;3&#34; &#34;4&#34;)
+p2s=(&#34;a&#34; &#34;b&#34; &#34;c&#34;)
 
-rm $JIDF
-echo &#34;Clearing local output directory $6&#34;
-rm -rf &#34;$6/*&#34;
-echo &#34;Copying output to $6&#34;
-sshpass -f &#34;$2&#34; scp -rC &#34;$1&#34;@&#34;$HOST&#34;:&#34;$5&#34; &#34;$6&#34;</pre></div><h2>Shortcomings</h2><p>On the firest time using <code>ssh</code> to access the VACC, the client may note that the host could not be verified and prompt the user to add it to a known list. This behavior breaks `sshpass`. The solution is to `ssh` into the VACC first, add it to the known hosts, and then continue with the process. Sometimes a harmless error message about an undefined job id appears at the end. I think this happens when the job has been terminated long enough for the SLURM to forget what its id was. Also <code>vaccjob</code> is unaware of whether the job finished successfully or not. It tries to retrieve the output either way.</p><h2>References</h2><ul><li><div><b><a href=https://www.uvm.edu/vacc/kb/knowledge-base/understand-batch-system/ >Understanding the batch job system</a></b></div><div>How to connect to the VACC, write job scripts, install software dependencies, submit jobs, monitor jobs, and retrieve output. Contains links to pages that detail each step.</div><li><div><b><a href=https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/ >Non-interactive password authentication</a></b></div><div>Detailed instructions on how to use &lt;code&gt;sshpass&lt;/code&gt;, including examples. How to install &lt;code&gt;sshpass&lt;/code&gt; on many operating systems.</div><li><div><b><a href=https://snapshooter.com/learn/linux/copy-files-scp>SCP tutorial</a></b></div><div>At a high level, how to use &lt;code&gt;scp&lt;/code&gt; and some of its switches.</div><li><div><b><a href=https://www.redhat.com/sysadmin/arguments-options-bash-scripts>Arguments in bash scripts</a></b></div><div>Good practices for writing and structuring &lt;code&gt;bash&lt;/code&gt; scripts. How to support command line switches and argments in &lt;code&gt;bash&lt;/code&gt; scripts, including examples.</div></ul></body></html>
+for p1 in &#34;${p1s[@]}&#34;;
+do
+  for p2 in &#34;${p2s[@]}&#34;;
+    ((job++))
+    outfile=&#34;$HOME/stage/${batch}_$job.sh&#34;
+    echo &#34;sbatch
+      --nodes=1
+      --time=12:00:00
+      --ntasks=1
+      --cpus-per-task=1
+      --mem=16G
+      --job-name=${batch}_$job
+      --output=${batch}_$job.out
+      \&#34;--export=batch=$batch,job=$job,p1=$p1,p2=$p2\&#34;
+      \&#34;$SCRIPT_DIR/vacc_job.sh\&#34;&#34; &gt; &#34;$outfile&#34;
+  done
+done</pre><p> This is <code>vacc_job.sh</code>. It assumes the <code>$batch</code> environment variable is set to the name of the batch. It assumes the <code>$job</code> environment variable is set to the job number. It assumes the <code>$p1</code> and <code>$p2</code> environment variables are set to the parameters for the job. The script loads the <a class="tech" href="https://docs.conda.io/en/latest/" target="blank_" title="Python package manager, environment manager, and build system">conda</a> environment, and runs the main <a class="tech" href="https://www.python.org/" target="blank_" title="Fairly ubiquitous programming language">python</a> script with the parameters. </p><pre class="snippet"># Load conda environment
+module load python3.11-anaconda/2024.02-1
+source ${ANACONDA_ROOT}/etc/profile.d/conda.sh
+conda activate mpyc-random-forest
+
+cd $HOME/$PRJNAME
+python src/main.py \
+  --batch=$batch \
+  --job=$job \
+  --p1=$p1 \
+  --p2=$p2</pre><p> Depending on number of dimensions in the grid search and their sizes, it may be very inconvenient to run the generated submission scripts one at a time. I use the <code>vacc_run_all.sh</code> to run all the submission scripts in the <code>stage</code> directory. </p><pre class="snippet">for script in $HOME/stage/*.sh; do
+    bash &#34;$script&#34;
+done</pre><p> However, I can still rerun failed jobs individually. I can also delete just some of the submission scripts if I want to run them all except for a few. </p><h2> Downloading the output </h2><p> The last step is to copy its output back to my laptop with <code>copy_output.sh</code> for analysis, but how can I know if the batch finished? SLURM can send email notifications when individual jobs finish, but getting alerted when a whole batch finishes would require a long-running script, as far as I can tell. I instead determined whether the batch finished with a simple manual check. </p><pre class="snippet">sshpass -f $PWPATH ssh $NETID@$HOST &#34;squeue --me&#34;</pre><p>The check shows any SLURM jobs associated with my user. If the list is empty, I can go ahead and copy the batch output. The check is good enough for my purposes, but it has weaknesses that could hinder automation: </p><ul><li><p>I may be running other jobs on the VACC besides those in the batch. Then the list would contain jobs even though the batch finished. Luckily <a class="tech" href="https://ss64.com/bash/grep.html" target="blank_" title="Searches files for lines matching a pattern">grep</a> can help here because I prefixed the job names with the batch name. Perhaps one of the many available <a class="tech" href="https://slurm.schedmd.com/squeue.html" target="blank_" title="Displays the slurm job queue">squeue</a> switches could also help.</p></li><li><p>The check cannot distinguish between jobs that finished because they succeeded, and jobs that finished because they failed. Even though SLURM has job statuses for <i>Success</i> and <i>Failure</i>, it forgets the jobs shortly after the jobs finish. Possibly this has more to do with the configuration of SLURM on the VACC than with SLURM generally. My jobs only write output when they succeed, so instead I identify job failures by an empty queue and missing output files.</p></li></ul><p> Beyond the question of whether the batch finished (and finished successfully), <code>copy_output.sh</code> is a straightforward process of preparing space for the output files on my laptop, and copying them over with the <a class="tech" href="https://snapshooter.com/learn/linux/copy-files-scp" target="blank_" title="Copies files between computers securely">scp</a> utility. </p><pre class="snippet"># Remove any old output
+rm -rf $ANPATH
+
+# Recreate directory for output analysis
+mkdir $ANPATH
+
+# Copy output to laptop
+sshpass -f $PWPATH scp -rC $NETID@$HOST:$OUTPATH $ANPATH</pre><p> And with the output files on my laptop, the joy of data analysis can begin! </p></div><hr><div class="author"><div><div class="title">Steven Baldasty</div><div class="caption">Proud father, Barefoot runner, Chocolate enthusiast, Seasoned software engineer, Starry eyed PhD student, Novice human</div></div><img src="/selfie.png" title="Sketch courtesy of my daughter" alt="Handsome brown haired man with glasses" width="80" height="88"></div></body></html>
